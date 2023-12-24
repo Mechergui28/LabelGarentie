@@ -1,0 +1,63 @@
+<div class="bg-cover relative grid grid-cols-2 hide-div mt-20">
+	<div class="text-white TekoRegular col-span-2 lg:col-span-1 picture_Footer text-center lg:text-left footer_img mt-20" style="background-clip: content-box;">
+		<div class="lg:py-32 lg:px-32 mx-4 my-4  lg:mx-0 lg:my-0">
+			<h2 class="lg:text-8xl text-5xl pb-10 text-left">
+				Nous contacter
+			</h2>
+			<div class="mb-10 text-left">
+				<a class="text-4xl" href="tel:+33428632020">
+					04-28-63-20-20
+				</a>
+			</div>
+			<div class="text-3xl TekoLight leading-none pb-16">
+				<p class="text-left">
+					<span class="font-bold">
+						Adresse
+					</span>
+				</p>
+				<p class="text-left">
+					37 Avenue Général de Gaulle
+				</p>
+				<p class="pb-8 text-left">
+					69300 Caluire-et-Cuire
+				</p>
+				<p class="text-left">
+					<span class="font-bold">
+						Email
+					</span>
+				</p>
+				<p class="text-left">
+					<a class="hover:underline" href="mailto:contact@labellegarantie.com">
+						contact@labellegarantie.com
+					</a>
+				</p>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer-contact" class="bg-red-600 col-span-2 lg:col-span-1 px-4 md:px-10 pb-20">
+		<div class="text-white TekoRegular">
+			<h2 class="pt-12  lg:pt-40 pb-4 text-5xl">
+				Envoyer un message
+			</h2>
+			<form method='POST' id="form_footer">
+				<div>
+					<div class="grid grid-rows-4">
+						<input class="formfont px-3 py-3" type="text" name="name" id="name" placeholder="Nom*" required="required"></input>
+					<input class="formfont px-3" type="number" name="tel" id="tel" placeholder="Telephone*" required="required"></input>
+				<input class="formfont px-3" type="email" name="email" id="email" placeholder="Email*" required="required"></input>
+			<input class="formfont px-3" type="text" name="immat" id="immat" placeholder="Immatriculation"></input>
+		<textarea class="formfont px-3 w-full resize-none" name="message" id="message" placeholder="Message*" rows="4" required="required"></textarea>
+	</div>
+</div>
+<div class="text-center lg:text-right text-3xl pb-10">
+		<div id="recaptcha-google"></div>
+	<div class="grow flex flex-col-reverse z-50">
+		<div class="group mx-auto flex flex-row relative" style="color: transparent;">
+			<button type="submit" data-sitekey="6Le7tYUaAAAAAP5mg0gKa4IdgaZeKmfK_PouMx08" data-callback='onSubmit' data-action='submit' name="Envoyer_mail" id="Envoyer_mail" class="w-full form-border text-red-600 bg-white lg:text-2xl text-lg py-3 px-10 btn_lbg">Envoyer</button>
+		</div>
+	</div>
+</div></form></div></div>
+</div><div class="bg-cover" style="background-color: #333"><div class="container TekoRegular text-xl py-4 text-center" style="color: #CCC">© Label Garantie -<a href="{{ path('app_mentions_legales') }}" class="hover:underline">Mentions légales</a>-<a href="{{path('info')}}" class="hover:underline">Informations sur les cookies</a>-<a href="{{path('donnee')}}" class="hover:underline">Données personnelles</a>-<a href="{{path('cgu')}}" class="hover:underline">CGU</a></div></div>
+
+<script defer src="https://tarteaucitron.io/load.js?domain=bestgarantie.com&uuid=b7a2703f9c50b6cba3963cde5defa5c1e8eca52f"></script>

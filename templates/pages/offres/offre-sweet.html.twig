@@ -1,0 +1,128 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Offre SWEET - Garantie panne mécanique - La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez votre véhicule à petit prix avec notre offre SWEET en garantie panne mécanique ! Découvrez notre formule basique pour une protection optimale contre les pannes.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+
+		{#<div class="bg-center bg-no-repeat bg-cover bg_sweet animation h-fit">
+			<div class="lg:container py-20 px-2 md:px-16 lg:px-48">
+				<div>
+					<h1 class="text-center uppercase sweet lg:text-8xl  text-5xl  tracking-wide Oswald TekoMedium py-4 lg:py-3">
+						la garantie sweet
+					</h1>
+				</div>
+			</div>
+			 <div class="bg-triangle-offre w-full h-32 bg-no-repeat bg-cover"></div> 
+		</div>#}
+
+		<div class="bg_sweet bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36">
+					<h1 class="TekoMedium sweet uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						La garantie SWEET
+					</h1>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="animation">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-40 px-4 hide-div pt-20 fadeIn">
+				<div class="grid lg:grid-cols-3 lg:grid-rows-1 xl:grid-cols-3 xl:grid-rows-1 grid-cols-1 grid-rows-1 grid-flow-row gap-y-6 gap-x-6">
+					<div class="lg:col-start-1 lg:col-span-1 xl:col-start-1 xl:col-span-1 row-start-1 bg-white py-8 hide-div shadow-lg rounded h-fit">
+						<div class="my-8">
+							<img src="{{ asset('build/img/sweet1.webp') }}" alt="Offre garantie SWEET" width="150" class="text-center mx-auto my-auto "/>
+						</div>
+						<h2 class="text-red uppercase text-center lg:text-4xl  text-2xl TekoRegular">
+							sweet
+						</h2>
+						<p class="text-center lg:text-2xl text-xl TekoRegular" style="color: #333333;">
+							+ de 50 pièces couvertes
+						</p>
+						<div class="flex flex-col text-left text-xl TekoLight px-2 link-offre">
+							<p class="mx-2 italic cursor-default text-lg py-2 text-red-600">Cliquez sur une famille de pièces pour plus de détail sur les composants couverts :</p>
+							<a href="{{ path('app_offres_pieces_sweet') }}#moteur" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Moteur</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#boite-de-vitesse" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Boîte de vitesses</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#boite-vitesse-automatique" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Boîte de vitesses automatique</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#pont" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Pont</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#carter" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Carter</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#circuit-electrique-electronique" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Circuit électrique</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#refroidissement" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Circuit de refroidissement</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#alimentation" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Alimentation</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#systeme-suspension" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Système de suspension</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#compresseur-climatisation" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Compresseur de climatisation</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#direction" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Direction</a>
+							<a href="{{ path('app_offres_pieces_sweet') }}#freinage" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Freinage</a>
+							<p class="mx-8 lg:mx-2 xl:mx-2 text-left">Ingrédients</a>
+							<p class="mx-8 lg:mx-2 xl:mx-2 text-left">Diagnostic</a>
+						</div>
+						<div class="text-center flex flex-col TekoLight text-xl pt-4">
+							<a href="{{ asset('build/docs/sweet/cg_lbg_sweet.pdf') }}" class="links-offres">Conditions générales de vente</a>
+							<a href="{{ asset('build/docs/sweet/cp_lbg_sweet.pdf') }}" class="links-offres">Conditions particulières</a>
+						</div>
+					</div>
+					<div class="lg:col-start-2 lg:col-span-2 lg:row-start-1 xl:col-start-2 xl:col-span-2 xl:row-start-1 row-start-2 hide-div h-fit flex flex-col">
+						<h2 class="sweet uppercase text-center text-4xl TekoRegular flex-none">La plus douce</h2>
+						<p class="text-center text-2xl TekoLight flex-none" style="color: #333333;">
+							Roulez l’esprit tranquille sans impacter votre budget : vous êtes couvert contre les principales pannes à un prix défiant toute concurrence.
+							A ce prix-là, on n'hésite pas, on fonce !</p>
+						<div class="bg-white grow grid lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-2 xl:grid-cols-2 grid-rows-4 grid-cols-1 gap-y-4 gap-x-4 shadow-lg rounded">
+							<div class="lg:col-start-1 xl:col-start-1 row-start-1 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/hourglass.webp') }}" width="100" alt="Offre garantie SWEET" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Possibilité de souscrire jusqu’à 60 mois sans aucune dégradation de la garantie liée au vieillissement de la
+									                                    voiture ou de l’augmentation de son kilométrage durant toute la durée du contrat.
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-1 xl:col-start-2 xl:row-start-1 row-start-2">
+								<div class="my-8">
+									<img src="{{ asset('build/img/lift.webp') }}" width="100" alt="Eligibilite" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Eligibilité : 20 ans et/ou 200 000km en date de prise d’effet du contrat pour tous les véhicules de moins
+									                                    de 150 000 €, valeur à neuf.
+								</p>
+							</div>
+							<div class="lg:col-start-1 lg:row-start-2 xl:col-start-1 xl:row-start-2 row-start-3 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/car2.webp') }}" width="100" alt="Diagnostic" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Forfait diagnostic remboursé à hauteur de 80 € et forfait
+									                                    ingrédients de 50 €
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-2 xl:col-start-2 xl:row-start-2 row-start-4 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/transfer.webp') }}" width="100" alt="Vestuste" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Pas de vétusté, pas de franchise.
+								</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

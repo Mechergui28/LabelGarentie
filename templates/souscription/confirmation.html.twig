@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Confirmation de souscription</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 py-8 TekoRegular">
+			<h2 class="lg:text-5xl xl:text-5xl text-3xl text-left">FÉLICITATIONS</h2>
+			<div class="py-4">
+				<p class="lg:text-4xl xl:text-4xl text-2xl text-left">
+					Votre contrat est enregistré sous le numéro
+					{{ contrat.numeroContrat }}
+					pour votre véhicule
+					{{ contrat.vehicule.marque }}
+					{{ contrat.vehicule.modele }}
+					immatriculé
+					{{ contrat.vehicule.immatriculation }}
+				</p>
+			</div>
+
+			{% if contrat.moyenPaiement != 'Paiement par carte bancaire' %}
+
+				{% if contrat.typePaiement == 'Règlement mensuel'  %}
+
+					<div class="pb-4 text-xl">
+
+						<p>
+							Montant de la prime :
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc }}
+								€</span>
+							par prélèvement mensuel de
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc / contrat.garantie.duree }}
+								€/mois</span>
+							pendant
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.duree }}
+								mois</span>.
+						</p>
+
+					</div>
+
+				{% elseif contrat.typePaiement == 'Règlement en 3 fois' %}
+
+					<div class="pb-4 text-xl">
+						<p>
+							Montant de la prime :
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc }}
+								€</span>
+							par prélèvement mensuel de
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc / 3 }}
+								€/mois</span>
+							pendant
+							<span class="uppercase font-medium">
+								3 mois</span>.
+						</p>
+					</div>
+
+				{% elseif contrat.typePaiement == 'Règlement en 1 fois' %}
+
+					<div class="pb-4 text-xl">
+						<p>
+							Montant de la prime :
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc }}
+								€</span>
+							par prélèvement mensuel de
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc / contrat.garantie.duree }}
+								€/mois</span>
+							pendant
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.duree }}
+								mois</span>.
+						</p>
+					</div>
+
+				{% endif %}
+
+
+				<div class="pb-4 text-xl">
+					<p>
+						Nous vous remercions de nous adresser les documents suivants :
+						<ul>
+							<li>- Votre RIB</li>
+							<li>- Une copie de votre carte d’identité</li>
+							<li>- et une copie de la carte grise du véhicule</li>
+						</ul>
+					</p>
+				</div>
+
+				{% else %}
+
+				<div class="pb-4 text-xl">
+
+						<p>
+							Montant de la prime :
+							<span class="uppercase font-medium">
+								{{ contrat.garantie.mtttc }}
+								€</span>
+							par règlement carte bancaire
+						</p>
+
+					</div>
+
+
+			{% endif %}
+
+
+			<div class="pb-4 text-xl">
+				<p class="pb-2">
+					Nous vous avons envoyé un mail de confirmation avec votre numéro de contrat, pensez toutefois à vérifier vos spams (il se peut que notre courriel soit automatiquement classé dans les spams par votre service de messagerie).
+				</p>
+				<p class="pb-2">
+					<span class="font-medium">Nous vous rappelons que tous vos documents sont disponibles dans votre espace client.</span>
+				</p>
+				<p class="pb-2">
+					Pour toutes questions supplémentaires sur votre contrat, vous pouvez joindre le service Gestion par mail à l’adresse suivante : contact@labelgarantie.com ou par téléphone au 04.87.91.49.74.
+				</p>
+				<p>
+					Nous vous remercions de votre confiance.
+				</p>
+			</div>
+
+			<div class="grow flex flex-col ">
+				<div class="group mx-auto flex flex-row" style="color: transparent;">
+					<a href="https://espaceclient.labelgarantie.com/" target="_blank" class="relative text-white w-40 py-2 px-4 text-2xl bg-red-600 shadow-xl text-center TekoRegular a_lbg">Espace Client
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		(function (global) {
+
+if (typeof(global) === "undefined") {
+throw new Error("window is undefined");
+}
+
+var _hash = "!";
+var noBackPlease = function () {
+global.location.href += "#";
+
+// Making sure we have the fruit available for juice (^__^)
+global.setTimeout(function () {
+global.location.href += "!";
+}, 50);
+};
+
+global.onhashchange = function () {
+if (global.location.hash !== _hash) {
+global.location.hash = _hash;
+}
+};
+
+global.onload = function () {
+noBackPlease();
+
+// Disables backspace on page except on input fields and textarea..
+document.body.onkeydown = function (e) {
+var elm = e.target.nodeName.toLowerCase();
+if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
+e.preventDefault();
+}
+// Stopping the event bubbling up the DOM tree...
+e.stopPropagation();
+};
+}
+})(window);
+	</script>
+
+
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+{% endblock %}

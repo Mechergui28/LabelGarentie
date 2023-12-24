@@ -1,0 +1,505 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces circuit électrique électronique | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le circuit électronique de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces du circuit électronique, y compris le système de démarrage, le système d'allumage, le faisceau électrique et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Circuit électrique/électronique
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Régulateur et limiteur de vitesse</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le régulateur et le limiteur de vitesse sont des composants électroniques qui permettent de maintenir une vitesse constante et de limiter la vitesse maximale de la voiture pour une conduite en toute sécurité.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Alternateur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">L'alternateur est un générateur électrique qui recharge la batterie de la voiture et fournit également de l'énergie électrique aux différents composants électroniques pendant que le moteur est en marche.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Démarreur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le démarreur est un moteur électrique qui aide à démarrer le moteur de la voiture en transmettant une impulsion électrique au moteur.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Allumeur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">L'allumeur est un composant électronique qui envoie une étincelle à la bougie d'allumage pour provoquer l'inflammation du mélange air/carburant dans le moteur.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Module d'allumage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le module d'allumage est un composant électronique qui gère la synchronisation et le timing de l'étincelle de la bougie d'allumage pour une combustion optimale du mélange air/carburant dans le moteur.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Faisceaux</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Les faisceaux sont des ensembles de fils électriques et de connecteurs qui transportent l'énergie électrique et les données de commande entre les différents composants électroniques d'une voiture. Ils sont un élément clé pour le bon fonctionnement de la voiture, car ils permettent aux différents systèmes électroniques de communiquer et de travailler ensemble.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Calculateur moteur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le calculateur moteur est un composant électronique qui gère le fonctionnement du moteur de la voiture. Il reçoit des informations provenant de différents capteurs situés dans le moteur, comme le capteur de régime, le capteur de pression d'air, et le capteur PMH, et utilise ces informations pour déterminer la meilleure manière de faire fonctionner le moteur. Il peut effectuer des réglages en temps réel pour améliorer la performance et la consommation d'essence, et signaler des problèmes potentiels dans le système moteur.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur PMH</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le capteur PMH (Position du Moyeu de la Pompe d'Injection) mesure la position de la pompe d'injection de carburant par rapport au moteur. Cette information est utilisée par le calculateur moteur pour déterminer la quantité de carburant nécessaire à l'injection dans le moteur. Le capteur PMH est crucial pour le fonctionnement correct et efficient du moteur, et une défaillance peut entraîner une perte de puissance, une consommation d'essence accrue et des émissions nocives pour l'environnement.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Calculateur toit ouvrant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le calculateur de toit ouvrant est un composant électronique qui contrôle les fonctionnalités du toit ouvrant d'une voiture. Il enregistre les informations sur l'ouverture et la fermeture du toit, et gère les commandes du toit, telles que la vitesse et la direction. Il peut également surveiller les systèmes de sécurité associés au toit, tels que les détecteurs de pluie et de vent.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacts toit ouvrant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Les contacteurs de toit ouvrant sont des interrupteurs électriques qui permettent à l'utilisateur de contrôler l'ouverture et la fermeture du toit ouvrant. Ils sont connectés au calculateur de toit ouvrant et peuvent être activés manuellement ou via la commande centrale. Les contacteurs sont souvent conçus pour protéger le moteur électrique du toit ouvrant en arrêtant la circulation de courant en cas de surcharge ou de panne.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur électrique de toit ouvrant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le moteur électrique de toit ouvrant est un moteur qui actionne la mechanisme pour ouvrir et fermer le toit ouvrant d'une voiture. Il est contrôlé par le calculateur de toit ouvrant et peut être activé manuellement à l'aide de boutons de commande. Le moteur électrique peut être alimenté par une batterie ou une alimentation électrique directe de la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Calculateur de recul</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le calculateur de recul est un composant électronique qui contrôle et gère les fonctions du système de recul dans une voiture. Il est responsable de l'affichage des images vidéo sur l'écran de recul et de la détection des obstacles qui se trouvent derrière la voiture. Il peut également aider à maintenir une distance de sécurité entre la voiture et les objets qui se trouvent derrière elle.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur de pression d’air</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur de pression d'air est un composant électronique qui mesure la pression de l'air dans le système de carburant d'une voiture. Il transmet cette information au calculateur moteur, qui utilise ces données pour ajuster la quantité de carburant injecté dans le moteur. Cela aide à maintenir un mélange carburant/air optimal pour une performance optimale du moteur et une consommation de carburant minimale.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur FAP</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur FAP (Filtre à particules) est un composant qui mesure la qualité de l'air qui sort du moteur d'une voiture. Il est utilisé dans les voitures équipées d'un filtre à particules pour aider à réguler les émissions polluantes. Le capteur FAP transmet des informations au calculateur moteur sur la quantité de particules de suie dans les gaz d'échappement, ce qui aide à ajuster la quantité de carburant injecté pour minimiser les émissions polluantes.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Fermeture centralisée</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La fermeture centralisée est un système qui permet de verrouiller et déverrouiller toutes les portes d'une voiture à partir d'un seul bouton ou d'une télécommande sans avoir besoin de manipuler chaque serrure individuellement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur pédale d'embrayage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur de pédale d'embrayage est un capteur de position qui informe le calculateur de la position de la pédale d'embrayage. Cela permet au moteur de savoir quand la boîte de vitesses doit être débrayée pour permettre une sélection de vitesse en douceur et en toute sécurité.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur de régime</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur de régime mesure le nombre de tours par minute (RPM) du moteur. Il envoie cette informatino au calculateur de moteur qui utilise ces données pour déterminer la quantité de carburant nécessaire à injecter et d'autres paramètres moteur importants.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur de recul</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur de recul est un capteur de distance qui permet au véhicule de mesurer la distance entre lui et tout objet se trouvant derrière lui. Il est généralement utilisé pour aider le conducteur lorsqu'il fait marche arrière en fournissant des informations visuelles ou sonores sur l'obstacle qui se trouve derrière lui.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur de coffre</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le moteur de coffre est un moteur électrique qui contrôle l'ouverture et la fermeture du coffre de la voiture. Il est généralement commandé par un bouton sur la télécommande de la voiture ou par un bouton sur le tableau de bord.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur de trappe</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le moteur de trappe est un moteur électrique utilisé pour ouvrir et fermer la trappe de carburant de la voiture.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Réchauffeur de gazole</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le réchauffeur de gazole est un dispositif utilisé pour maintenir la température du gazole à un niveau optimal pour une meilleure performance du moteur.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Actionneur de trappe</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">L'actionneur de trappe est un dispositif qui convertit un signal électrique en un mouvement mécanique pour actionner la trappe de carburant.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Résistance de moto-ventilateur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La résistance de moto-ventilateur est un composant électrique qui contrôle la vitesse du ventilateur de refroidissement en modifiant sa résistance électrique.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacts</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Les contacteurs sont des interrupteurs électromécaniques qui permettent de connecter et de déconnecter des circuits électriques en réponse à un signal électrique.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Actionneur de porte</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">L'actionneur de porte est un dispositif qui convertit un signal électrique en un mouvement mécanique pour ouvrir ou fermer la porte de la voiture.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Anti-démarrage codé</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le système anti-démarrage codé empêche le démarrage du moteur sans la saisie d'un code correct. C'est un dispositif de sécurité utilisé pour prévenir le vol de voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur essuie-glaces</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le moteur d'essuie-glaces est un moteur électrique qui actionne le balai d'essuie-glaces pour enlever la pluie, la neige et d'autres débris de la surface du pare-brise.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteurs lave-glaces (AV, AR)</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les moteurs lave-glaces sont des moteurs électriques qui actionnent les jets d'eau pour nettoyer la surface du pare-brise. Les moteurs lave-glaces AV et AR sont responsables respectivement du nettoyage de la partie avant et arrière du pare-brise.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Relais préchauffage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le relais de préchauffage est un composant électrique qui contrôle le fonctionnement du préchauffage du moteur diesel. Il permet de préchauffer le moteur pour une démarrage plus rapide et plus facile.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Actionneur de coffre</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'actionneur de coffre est un composant électrique qui contrôle l'ouverture et la fermeture du coffre. Il est généralement commandé par un interrupteur dans l'habitacle ou par une télécommande à distance.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">BSI</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								BSI signifie "Boîtier de Service Intégré" en français. Il s'agit d'un boîtier électronique qui gère les fonctions de la voiture telles que la climatisation, la radio, les feux et la gestion de la batterie.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">BSM</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								BSM signifie "Boîtier de Service Moteur" en français. C'est un boîtier électronique qui gère les fonctions du moteur telles que le contrôle du mélange air-carburant, la gestion de l'allumage et la surveillance des émissions.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur de pluie</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur de pluie est un capteur qui détecte la présence de pluie sur le pare-brise de la voiture. Il permet d'ajuster automatiquement la vitesse des essuie-glaces en fonction de l'intensité de la pluie.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Com 2000</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Com 2000 est le système de communication intérieure de la voiture, permettant au conducteur de contrôler diverses fonctions de la voiture sans quitter la route des yeux.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Ecran vidéo</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'écran vidéo est un écran d'affichage à haute définition intégré au système de navigation et d'infotainment de la voiture. Il peut être utilisé pour afficher des images de la caméra de recul, des informations de navigation, des menus de système audio et plus encore.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">GPS et lecteur DVD</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le GPS et le lecteur DVD sont des composants du système de navigation et d'infotainment de la voiture. Le GPS peut fournir des instructions de navigation en temps réel, tandis que le lecteur DVD peut être utilisé pour lire des DVD et des fichiers vidéo.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Autoradio</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'autoradio est un composant du système audio de la voiture qui permet de jouer de la musique et d'autres types de contenu audio. Il peut être équipé de fonctionnalités telles que la radio AM/FM, la lecture de CD, la lecture de fichiers audio enregistrés sur une clé USB et plus encore.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Installation Bluetooth</h2>
+							<p class="TekoRegular lg:xl granite-gray">
+								L'installation Bluetooth est un système qui permet à la voiture de se connecter en toute sécurité à un appareil mobile, comme un téléphone intelligent, pour permettre la diffusion de musique en streaming, la réception de coups de téléphone et plus encore. Cela peut se faire sans fil et sans aucun fil de connexion physique entre l'appareil mobile et la voiture.
+
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Afficheur tête-haute</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'afficheur tête-haute est un écran qui affiche des informations telles que la vitesse, la navigation et d'autres informations pertinentes pour le conducteur directement devant le pare-brise. Cela permet au conducteur de voir les informations importantes sans avoir à détourner les yeux de la route.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Système d’aide au stationnement</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le système d'aide au stationnement est un système électronique qui aide le conducteur à manœuvrer sa voiture dans un espace de stationnement en utilisant des capteurs de distance et d'autres technologies. Il peut émettre des signaux sonores et visuels pour indiquer au conducteur la distance entre la voiture et d'autres objets et donner des instructions sur la direction à prendre pour se garer.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Commodo essuie-vitres</h2>
+							<p class="TekoRegular lg:text-2l text-xl granite-gray">
+								Le commodo essuie-vitres est un bouton ou une commande située sur le volant ou sur la console centrale qui permet au conducteur de contrôler les essuie-glaces de la voiture. Il peut être utilisé pour déclencher une cycle d'essuyage unique, sélectionner des cycles d'essuyage répétés et ajuster la vitesse d'essuyage des essuie-glaces.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Commodo phare</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le commodo phare est un composant qui permet de contrôler et de commander les phares de la voiture, en incluant l'allumage, l'extinction, le réglage de l'angle et la sélection du mode (feux de route, feux de croisement, feux antibrouillard, etc.).</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Connexion air bag</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La connexion air bag est un composant électrique qui connecte les systèmes de sécurité airbag et l'ordinateur de la voiture, permettant ainsi une activation rapide et précise des airbags en cas de collision.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacteur tournant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le contacteur tournant est un dispositif électrique qui permet de connecter et de déconnecter électriquement le système de démarrage de la voiture. Il est activé par la clé de contact et peut s'usager avec le temps et nécessiter un remplacement.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Bobine d’allumage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La bobine d'allumage est un composant qui génère un champ électrique intense pour allumer la bougie d'allumage et démarrer la combustion dans le moteur. Les bobines d'allumage peuvent s'user avec le temps et nécessiter un remplacement.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Bougies d’allumage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Les bougies d'allumage sont des composants importants dans le système d'allumage d'un moteur. Elles transforment l'énergie électrique en énergie thermique pour allumer le mélange air-carburant dans les cylindres du moteur. Les bougies doivent être de haute qualité pour garantir un fonctionnement optimal du moteur et une performance optimale.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Sonde lambda</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La sonde lambda est un capteur qui mesure la proportion d'oxygène dans les gaz d'échappement d'un moteur à combustion interne. Elle envoie ces informations au calculateur de moteur, qui utilise ces données pour ajuster la quantité de carburant injectée dans le moteur pour maintenir un mélange air-carburant optimal. La sonde lambda aide à améliorer l'efficacité du moteur, la performance et la qualité de l'air rejeté.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Antenne transpondeur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">L'antenne transpondeur est utilisée dans les systèmes de verrouillage et déverrouillage sans clé. Elle communique avec la clé sans fil pour déverrouiller et verrouiller les portes de la voiture. L'antenne transpondeur peut également communiquer avec le système de sécurité pour déclencher une alarme en cas d'intrusion non autorisée.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Commodo de clignotant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le commodo de clignotant est un bouton qui contrôle les clignotants du véhicule. Il peut être placé sur le volant, la console centrale ou la poignée de porte. En appuyant sur ce bouton, vous pouvez faire clignoter les feux de signalisation pour indiquer un changement de direction ou un avertissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacteur de frein à main</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le contacteur de frein à main est un composant électrique qui permet de détecter lorsque le frein à main est actionné. Il envoie un signal au calculateur pour activer une lumière sur le tableau de bord qui indique que le frein à main est serré.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Motoréducteur de clim</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le motoréducteur de clim est un moteur électrique qui permet de commander l’ouverture et la fermeture de la bouche d’air climatisé. Il est relié au système de climatisation pour permettre la régulation de la température dans l'habitacle du véhicule.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Calculateur de FAP</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le calculateur de FAP est un boîtier électronique qui permet de contrôler le fonctionnement du filtre à particules (FAP) d'un véhicule diesel. Il gère le processus de nettoyage du FAP en utilisant des injections supplémentaires de carburant pour brûler les particules accumulées dans le filtre.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Pompe à vide</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La pompe à vide est un composant mécanique qui utilise la pression différentielle pour créer un vide à l'intérieur d'un système. Elle est souvent utilisée dans les systèmes de freinage et d'embrayage pour aider à actionner les actionneurs et à maintenir les fonctions en place.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Pompes lave-glaces (AV et AR)
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les pompes lave-glaces (AV et AR) sont des composants responsables de la distribution de l'eau pour nettoyer les vitres avant et arrière de votre voiture. Elles sont alimentées par le système d'alimentation en eau du véhicule et permettent d'assurer une bonne visibilité en tout temps. En cas de dysfonctionnement, vous pourriez constater que le nettoyage de vos vitres est insuffisant ou absent, il est donc important de faire vérifier et remplacer ces composants si nécessaire.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Porte ampoule
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La porte ampoule est un petit composant en plastique qui permet de maintenir les ampoules en place dans leurs logements. C'est un élément crucial pour assurer la sécurité de la conduite de votre véhicule, car il permet de retenir les ampoules en cas de chocs ou de vibrations, ce qui empêche une panne d'éclairage inattendue. Si vous remarquez que votre éclairage est défaillant ou que la porte ampoule est endommagée, il est important de la remplacer pour éviter des problèmes futurs.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Pulseur de chauffage (intérieur)
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le pulseur de chauffage (intérieur) est un composant qui permet de souffler de l'air chaud dans l'habitacle de votre véhicule. Il est relié à la climatisation et au système de chauffage pour permettre de régler la température à l'intérieur de votre voiture. Si vous remarquez que votre système de chauffage ne fonctionne pas correctement, il est possible que le pulseur soit défectueux et nécessite une inspection et une réparation.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur pression d'admission</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le capteur de pression d'admission mesure la pression dans le conduit d'admission de l'air dans le moteur. Cette informations est utilisée par le calculateur moteur pour régler le rapport air/carburant et ainsi optimiser les performances du moteur et réduire les émissions polluantes. Si le capteur de pression d'admission ne fonctionne pas correctement, cela peut entraîner des problèmes de performance du moteur et une réduction de l'efficacité énergétique.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacteur de marche arrière</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le contacteur de marche arrière est un interrupteur qui permet de détecter quand le véhicule est en marche arrière. Il envoie un signal au système électrique pour activer des fonctions spécifiques telles que la rétro-vision ou l'affichage d'informations sur l'écran de bord. Si le contacteur de marche arrière ne fonctionne pas correctement, il peut y avoir des problèmes avec la détection de la marche arrière ou des fonctionnalités associées.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Relais de moto-ventilateur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le relais de moto-ventilateur est un composant électrique qui contrôle le fonctionnement du moteur du ventilateur de refroidissement du moteur. Il est activé par le calculateur moteur en fonction de la température du moteur et permet de maintenir la bonne température du moteur en activant le ventilateur lorsque cela est nécessaire. Si le relais de moto-ventilateur ne fonctionne pas correctement, cela peut entraîner une surchauffe du moteur et des problèmes de performance.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Platine de lève-vitres</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La platine de lève-vitres est un composant électrique qui contrôle le mouvement des fenêtres de la voiture. Elle reçoit les commandes provenant du commutateur des lève-vitres et agit sur les moteurs des fenêtres pour les soulever ou les abaisser. En cas de dysfonctionnement, les fenêtres peuvent ne plus fonctionner correctement ou ne plus fonctionner du tout, il est alors nécessaire de faire remplacer la platine de lève-vitres.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Potentiomètre de pédale</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le potentiomètre de pédale est un composant électronique qui mesure la position de la pédale d'accélérateur. Il envoie des informations à la centrale électronique du véhicule pour permettre une gestion précise de la puissance du moteur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur de pédale</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le capteur de pédale est un composant électronique qui mesure la position de la pédale d'accélérateur. Il envoie des informations à la centrale électronique du véhicule pour permettre une gestion précise de la puissance du moteur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Contacteur de stop</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Le contacteur de stop est un interrupteur qui permet de détecter la position de la pédale de frein. Il est généralement utilisé pour activer les feux de stop du véhicule ou pour déclencher une alarme dans le cas où le véhicule est en mouvement et que la pédale de frein est actionnée.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Systèmes d’assistance à la conduite (correcteur d’assiette, suspension pilotée)</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">Les systèmes d'assistance à la conduite comprennent des technologies comme le correcteur d'assiette et la suspension pilotée qui aident à améliorer la stabilité et le confort du véhicule. Le correcteur d'assiette utilise des capteurs pour surveiller la position du véhicule et ajuster les suspensions en conséquence, tandis que la suspension pilotée permet d'ajuster la hauteur du véhicule en fonction des conditions de conduite.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Relais double</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le relais double est un composant électronique qui permet de commander l'alimentation électrique d'un circuit électrique. Il est utilisé dans les systèmes électroniques automobiles pour contrôler diverses fonctions, telles que les feux, la climatisation, la ventilation et les systèmes d'assistance à la conduite. Le relais double est conçu pour gérer deux circuits différents et peut fonctionner en parallèle ou en série. Il est généralement alimenté par la batterie du véhicule et comprend une bobine et un contact mobile qui sont activés par un signal électrique provenant d'un autre composant de la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Capteur d’arbre à came</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur d'arbre à came est un composant de capteur de position qui mesure la position de l'arbre à came d'un moteur. Il permet au moteur de fonctionner correctement en envoyant des signaux à la centrale d'injection de carburant qui contrôle le mélange air-carburant et la synchronisation de l'allumage. Le capteur d'arbre à came peut être situé à divers endroits selon le moteur, mais généralement sur le bloc-moteur ou sur le couvercle du cache arbre à cames. Les défaillances du capteur d'arbre à came peuvent causer des problèmes de démarrage, des problèmes de puissance et des codes d'erreur dans le système de gestion du moteur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Interrupteurs</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les interrupteurs sont des dispositifs mécaniques ou électroniques utilisés pour activer ou désactiver un circuit électrique. Ils peuvent être utilisés pour contrôler des lumières, des moteurs, des pompes, entre autres, en permettant l'allumage et l'extinction de ces dispositifs.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Boîtier de préchauffage</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le boîtier de préchauffage est un composant du système de préchauffage qui aide à démarrer le moteur en fournissant une source d'alimentation électrique à la bobine d'allumage et aux injecteurs lorsque le moteur est à froid. Cela améliore la performance du moteur et réduit la consommation de carburant.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Centrale clignotant</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La centrale clignotant est un élément qui contrôle les clignotants du véhicule. Elle envoie un signal électrique aux feux de signalisation pour les faire clignoter à un rythme déterminé. Cette centrale peut être intégrée au tableau de bord ou au boîtier de commande de la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Relais</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les relais sont des composants électroniques qui permettent de transmettre un signal électrique à une charge plus importante que celle que peut gérer un commutateur normal. Ils sont utilisés dans les systèmes électriques automobiles pour alimenter des équipements tels que les phares, les essuie-glaces et les ventilateurs de refroidissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Résistance de pulseur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La résistance de pulseur est un composant électrique qui est utilisé pour contrôler la vitesse d'un pulseur d'air chaud ou d'air frais dans les systèmes de chauffage et de climatisation de la voiture. Elle est généralement connectée à la platine de commande pour permettre au système de réguler la température à l'intérieur du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Sonde de température extérieure</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La sonde de température extérieure est un capteur installé à l'extérieur du véhicule qui mesure la température ambiante. Elle envoie des informations à la centrale électronique pour permettre au système de climatisation de réguler la température à l'intérieur de la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Sonde de niveau d'eau</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La sonde de niveau d'eau est un capteur qui mesure le niveau d'eau dans le système de refroidissement du moteur. Elle envoie les informations à la centrale électronique du véhicule qui utilise ces données pour contrôler la température du moteur et pour prévenir les surchauffes. Si le niveau d'eau est trop bas, la centrale électronique peut afficher une alerte ou activer un témoin d'avertissement sur le tableau de bord pour informer le conducteur de remplir le système de refroidissement du moteur avec de l'eau ou du liquide de refroidissement.</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Sonde de température moteur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La sonde de température moteur est un capteur qui mesure la température du liquide de refroidissement du moteur. Elle est reliée à la centrale électronique de gestion du moteur et permet de contrôler la température de fonctionnement du moteur pour une utilisation optimale et une protection contre les dommages causés par une température excessive. La sonde de température moteur joue également un rôle important dans le contrôle de la qualité des gaz d'échappement et dans la régulation de la température de fonctionnement des catalyseurs de dépollution.</p>
+						</div>
+						
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Sonde de niveau d’huile</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">La sonde de niveau d'huile est un capteur qui mesure le niveau d'huile du moteur. Elle est installée sur le carter d'huile du moteur et transmet les informations de niveau d'huile à la centrale électronique de gestion du moteur. La sonde de niveau d'huile est essentielle pour garantir un fonctionnement sûr et optimal du moteur, car elle permet de surveiller le niveau d'huile pour éviter une surchauffe du moteur causée par un manque d'huile. Elle peut également être utilisée pour déclencher une alarme lorsque le niveau d'huile est insuffisant.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% include('footer.html.twig') %}
+		{% include('header2.html.twig') with vars %}
+	{% endblock %}

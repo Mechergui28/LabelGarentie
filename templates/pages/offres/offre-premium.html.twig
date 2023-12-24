@@ -1,0 +1,127 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Offre PREMIUM - Garantie panne mécanique - La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Optez pour notre offre PREMIUM en garantie panne mécanique pour une protection complète de votre véhicule ! Profitez de la couverture la plus étendue et de prestations haut de gamme.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		{# <div class="bg-center bg-no-repeat bg-cover bg_sweet animation h-fit">
+			<div class="lg:container py-20 px-2 md:px-16 lg:px-48">
+				<div>
+					<h1 class="text-center uppercase premium lg:text-8xl text-5xl tracking-wide Oswald TekoMedium py-4 lg:py-3">
+						la garantie premium
+					</h1>
+				</div>
+			</div>
+			<div class="bg-triangle-offre w-full h-32 bg-no-repeat bg-cover"></div>
+		</div> #}
+
+		<div class="bg_sweet bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36">
+					<h1 class="TekoMedium premium uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						La garantie PREMIUM
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="animation">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-40 px-4 hide-div pt-20 fadeIn">
+				<div class="grid lg:grid-cols-3 lg:grid-rows-1 xl:grid-cols-3 xl:grid-rows-1 grid-cols-1 grid-rows-1 gap-y-6 gap-x-6">
+					<div class="lg:col-start-1 lg:col-span-1 xl:col-start-1 xl:col-span-1 row-start-1 bg-white py-8 hide-div shadow-lg rounded h-fit">
+						<div class="my-8">
+							<img width="150" src="{{ asset('build/img/premium1.webp') }}" alt="Offre garantie PREMIUM" class="text-center mx-auto my-auto "/>
+						</div>
+						<h2 class="text-red uppercase text-center text-4xl TekoMedium">
+							premium
+						</h2>
+						<p class="text-center lg:text-2xl text-xl TekoRegular" style="color: #333333;">
+							+ de 250 pièces couvertes
+						</p>
+						<div class="flex flex-col text-left text-xl TekoLight px-2">
+							<p class="mx-2 italic cursor-default text-lg py-2 text-red-600">Cliquez sur une famille de pièces pour plus de détail sur les composants couverts :</p>
+							<a href="{{ path('app_offres_pieces_premium') }}#moteur" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Moteur</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#systeme-alimentation" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Système d’alimentation</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#boite-de-vitesse" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Boîte de vitesses</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#dispositif-embrayage" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Dispositif d’embrayage</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#boite-vitesse-automatique" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Boîte de vitesses automatique</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#circuit-electrique-electronique" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Circuit électrique</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#circuit-electrique-electronique" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Circuit électronique</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#climatisation" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Climatisation</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#direction" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Direction</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#freinage" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Freinage</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#circuit-de-refroidissement" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Circuit de refroidissement</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#securite" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Sécurité</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#transmission" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Transmissions/Pont</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#suspension" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Suspension</a>
+							<a href="{{ path('app_offres_pieces_premium') }}#systeme-alimentation" class="mx-8 lg:mx-2 xl:mx-2 text-left hover:underline">Vanne EGR</a>
+							<p class="mx-8 lg:mx-2 xl:mx-2 text-left">Organes de confort</p>
+							<p class="mx-8 lg:mx-2 xl:mx-2 text-left">Ingrédients</p>
+							<p class="mx-8 lg:mx-2 xl:mx-2 text-left">Diagnostic</p>
+						</div>
+						<div class="text-center flex flex-col TekoLight text-xl pt-4">
+							<a href="{{ asset('build/docs/premium/cg_lbg_premium.pdf') }}" class="links-offres">Conditions générales de vente</a>
+							<a href="{{ asset('build/docs/premium/cp_lbg_premium.pdf') }}" class="links-offres">Conditions particulières</a>
+						</div>
+					</div>
+					<div class="lg:col-start-2 lg:col-span-2 lg:row-start-1 xl:col-start-2  xl:col-span-2 xl:row-start-1 row-start-2 hide-div h-fit flex flex-col">
+						<h2 class="premium uppercase text-center text-4xl TekoRegular flex-none">La plus belle</h2>
+						<p class="text-center  text-2xl TekoLight flex-none" style="color: #333333;">Parce que votre véhicule le vaut bien ! Optez pour le must des garanties avec notre offre PREMIUM :
+							                            le grand luxe à petit prix.
+							                            Une couverture incomparable, semblable à votre garantie Constructeur, à un prix imbattable, pourquoi s’en priver ? .</p>
+						<div class="bg-white grow grid lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-2 xl:grid-cols-2 grid-cols-1 grid-rows-4 gap-y-4 gap-x-4 shadow-lg rounded">
+							<div class="lg:col-start-1 lg:row-start-1 xl:col-start-1 xl:row-start-1 col-start-1 row-start-1 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/hourglassjaune.webp') }}" width="100" alt="Offre garantie PREMIUM" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Possibilité de souscrire jusqu’à 60 mois sans aucune dégradation de la garantie liée au vieillissement de la voiture
+									                                    ou de l’augmentation de son kilométrage durant toute la durée du contrat.
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-1 xl:col-start-2 xl:row-start-1 col-start-1 row-start-2 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/liftjaune.webp') }}" width="100" alt="Eligibilite" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Eligibilité : 6 ans et/ou 120 000km en date de prise d’effet du contrat pour tous les véhicules de moins de 150 000 €, valeur à neuf.
+								</p>
+							</div>
+							<div class="lg:col-start-1 lg:row-start-2 xl:col-start-1 xl:row-start-2 col-start-1 row-start-3  flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/car.webp') }}" width="100" alt="Dignostic" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Forfait diagnostic remboursé à hauteur de 150 € et
+									                                    forfait ingrédients de 100 €
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-2 xl:col-start-2 xl:row-start-2 col-start-1 row-start-4 flex flex-col">
+								<div class="my-8">
+									<img src="{{ asset('build/img/transferjaune.webp') }}" width="100" alt="Vetuste" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Pas de vétusté, pas de franchise.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

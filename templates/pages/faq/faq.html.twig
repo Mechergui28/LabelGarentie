@@ -1,0 +1,365 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	FAQ | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Besoin de réponses à vos questions sur les garanties panne mécanique ? Consultez notre FAQ pour tout savoir sur nos produits et services. Trouvez des solutions à vos problèmes en un clin d'œil.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'faq'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg-center bg-no-repeat bg-cover bg_faq animation">
+			<div class="container py-20 px-2 md:px-16 lg:px-48">
+				<div>
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8" style="color: #333333;">
+						FAQ
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg_faq_body animation">
+			{# <div class="faq_bloc_triangle w-full h-32 bg-no-repeat bg-cover"></div> #}
+
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 py-10 TekoMedium lg:text-4xl text-2xl" style="color: #333333;">
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(1)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Qu’est ce qu’une garantie Panne Mécanique ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_1">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_1 mt-4" id="faq_texte_1" style="display:none;">
+						C’est un contrat d’assurance qui vous protège financièrement en cas de panne mécanique, électrique et électronique.
+						<br>
+						<br>
+						En cas de sinistre, la garantie Panne Mécanique permet la prise en charge par l’assureur des frais de réparations liés à la remise en état du véhicule.
+						<br>
+						<br>
+						La garantie ne sera pas acquise pour les pannes affectant les pièces d'usure ou celles dont la dégradation n'est pas aléatoire et/ou qui relèvent de l’entretien classique du véhicule (ex : plaquettes et disques de frein, carrosserie…). Elle doit, par ailleurs, être liée à une utilisation normale  du véhicule par son propriétaire.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(2)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Qu’est-ce qu’une Panne Mécanique ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_2">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_2 mt-4" id="faq_texte_2" style="display:none;">
+						Une panne mécanique peut être définie comme un sinistre, à caractère imprévu et aléatoire, résultant d'une cause interne au véhicule et survenant sur l'un de ses éléments mécaniques, hydrauliques, électroniques ou électriques.
+						<br>
+						<br>
+						Pour que la garantie puisse fonctionner, la panne mécanique ne doit pas résulter d’un vice caché et doit survenir à la suite d’une panne imprévisible, aléatoire et non de l’usure normale du véhicule.
+						<br>
+						<br>
+						Les pannes prises en charge par nos garanties Panne Mécanique diffèrent selon le contrat et la couverture que vous aurez choisis (PREMIUM – SWEET – ZEN).
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(3)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Quelle est la différence avec la Garantie Constructeur ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_3">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_3 mt-4" id="faq_texte_3" style="display:none;">
+						A l’achat d’un véhicule neuf, le propriétaire bénéficie de la garantie Constructeur : garantie légale gratuite pour le consommateur qui oblige le constructeur du véhicule à prendre en charge les réparations de tout problème lié aux caractères défectueux des pièces mécaniques, électriques ou électroniques.
+						<br>
+						<br>
+						La Garantie Panne Mécanique est quant à elle une option facultative et peut être souscrite indépendamment de votre Assurance automobile. Il s'agit d'une garantie ayant pour objet de vous indemniser financièrement suite à une panne aléatoire survenue sur votre véhicule.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(4)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Quelle est la différence avec une Assurance Automobile ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_4">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_4 mt-4" id="faq_texte_4" style="display:none;">
+						Souscrire un contrat d’Assurance Automobile est obligatoire pour circuler avec son véhicule. Ce contrat couvre, en cas d’accident, les dommages corporels et matériels.
+						<br>
+						<br>
+						La Garantie Panne Mécanique est un contrat d’Assurance optionnel, couvrant les frais éventuels liés à la survenance d’une panne mécanique, électrique ou électronique sur le véhicule.
+						<br>
+						<br>
+						Elle est facultative et souscrite en complément du contrat d’Assurance Automobile (quel que soit votre type de contrat d’Assurance : au tiers, intermédiaire ou tous risques).
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(5)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Pourquoi souscrire une Garantie Panne Mécanique LaBelleGarantie ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7 lg:text-xl text-xl" style="justify-self: right;" id="faq_+_5">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_5 mt-4" id="faq_texte_5" style="display:none;">
+						<span class="font-medium">Pour sécuriser votre bien et palier aux imprévus :
+						</span>
+						parce qu’une panne Mécanique coûte souvent chère et peut impacter votre budget, évitez vous les mauvaises surprises en protégeant votre véhicule contre les dépenses imprévues !
+						<br>
+						<br>
+						<span class="font-medium">Parce que vous vendez ou achetez un véhicule :</span>
+						vous souhaitez tirer le meilleur prix de vente pour votre auto ou sécuriser votre nouvel achat, sécurisez votre opération en souscrivant une Garantie Panne Mécanique LaBelleGarantie.  Elle constitue en effet un solide argument en cas de revente ou d’achat car elle rassure, vous ou votre futur acheteur, sur l’état du véhicule.
+						<br>
+						<br>
+						<span class="font-medium">Parce que vous n’êtes plus couvert par votre Garantie Constructeur :</span>
+						statistiquement le risque de panne s’accroît fortement après les 2 ans du véhicule, c’est donc le moment de penser à protéger votre bien.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(6)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Comment souscrire une garantie Panne Mécanique LaBelleGarantie ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7 lg:text-xl text-xl" style="justify-self: right;" id="faq_+_6">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_6 mt-4" id="faq_texte_6" style="display:none;">
+						Si votre véhicule à moins de 120 000 km et est âgé de moins de 10 ans, vous pouvez souscrire l’une de nos offres en quelques clics. Rendez-vous sur l’espace « Souscription » et renseignez l’immatriculation de votre véhicule, les offres éligibles ainsi que leurs tarifs vous seront automatiquement proposés.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(7)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Comment déclarer une panne ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7 lg:text-xl text-xl" style="justify-self: right;" id="faq_+_7">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_7 mt-4" id="faq_texte_7" style="display:none;">
+						Pas de réseau de Garages Réparateurs agréés imposé : vous pouvez vous rendre auprès du professionnel de votre choix pour faire établir un devis et procéder aux réparations.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(8)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							En cas de panne, dois-je avancer des frais de réparation ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_8">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_8 mt-4" id="faq_texte_8" style="display:none;">
+						Pas d’avance de frais : la prise en charge et le règlement correspondant à la panne survenue sur les pièces couvertes par votre contrat se font directement auprès du Garage Réparateur de votre véhicule.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(9)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Qu’est-ce que la vétusté ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_9">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_9 mt-4" id="faq_texte_9" style="display:none;">
+						Pas de soucis, il n' y en a aucune sur nos contrats LaBelleGarantie ! Le taux de vétusté est généralement appliqué en fonction du kilométrage du véhicule en date de sinistre et déduit du montant de la prise en charge.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(10)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							La main d’œuvre est-elle prise en charge ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_10">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_10 mt-4" id="faq_texte_10" style="display:none;">
+						La main d’œuvre relative aux pièces défectueuses garanties est prise en charge à 100% selon le temps barème du constructeur, tout comme les ingrédients (huile moteur, huile de boite de vitesses, huile de direction, huile de pont, liquide de freins, liquide de refroidissement) et le diagnostic en cas de panne couverte par le contrat.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(11)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Devrez-vous régler des frais de franchise ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_11">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_11 mt-4" id="faq_texte_11" style="display:none;">
+						Tout comme nous n’appliquons pas de vétusté contractuelle sur nos contrats, vous n’aurez aucune franchise à régler en cas de réparations suite à une panne couverte.
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(12)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Mon contrat est il cessible en cas de vente de mon véhicule ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_12">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_12 mt-4" id="faq_texte_12" style="display:none;">
+						Possible et gratuit ! Vous rassurez l’acquéreur de votre véhicule tout en évitant de rogner votre marge.  Il vous suffit de nous faire parvenir par courrier (LABEL GARANTIE 37 avenue Général de Gaulle 69300 Caluire-et-Cuire) ou par mail (contact@labellegarantie.com) dans les 30 jours qui suivent la vente les informations demandées pour le transfert de la garantie au nouveau titulaire (copie de l’acte de vente et pièce d’identité de l’acheteur).
+					</p>
+				</div>
+
+				<div class="rounded-lg py-2 border border-gray-600 border-opacity-25 px-6 bg-white mt-4 hide-div" onclick="afficher_masquer_faq(13)">
+					<div class="grid grid-cols-12 cursor-pointer items-center">
+						<h2 class="Oswald font-medium col-start-1 col-span-11 pt-2">
+							Mon contrat reste-t-il valable si j’ai plusieurs pannes ?
+						</h2>
+						<div class="col-start-12 h-6 lg:h-7 w-6 lg:w-7" style="justify-self: right;" id="faq_+_13">
+							<svg xmlns='http://www.w3.org/2000/svg' class='ionicon object-right text-gray-900 text-lg' viewbox='0 0 512 512'>
+								<path fill='currentColor' stroke='none' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z'/>
+							</svg>
+						</div>
+					</div>
+					<p class="WorkSans text-base leading-none faq_texte_13 mt-4" id="faq_texte_13" style="display:none;">
+						Le nombre d’interventions est illimité sur toute la durée de votre contrat. Pas d’impact sur le prix que vous payez mensuellement ou annuellement, sur les dates de fin d’effet, ni sur les plafonds de remboursement ou la couverture de votre contrat.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 py-10 TekoMedium lg:text-4xl text-2xl text-center hide-div" style="color: #333333;">
+			<h2>Vous n’avez pas trouvé la réponse à vos questions ?</h2>
+
+			<div class="text-center pt-6" style="color: transparent;">
+				<a href="#footer-contact" class="relative text-red-600 w-40 py-3 px-8 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Contactez-nous</a>
+			</div>
+
+		</div>
+
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 pb-10 TekoMedium lg:text-4xl text-2xl hide-div">
+
+			<h2 class="text-4xl text-center pt-8">Protégez votre investissement avec nos garanties panne mécanique fiables et abordables !</h2>
+
+			<div class="flex flex-row justify-center">
+				<div>
+					<a class="mt-10" href="{{ path('app_offres_sweet') }}">
+						<div class="flex flex-col">
+							<div class="my-8">
+								<img src="{{ asset('build/img/sweet1.webp') }}" alt="Offre garantie SWEET" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+							</div>
+							<h3 class="sweet uppercase text-center text-4xl TekoMedium">
+								SWEET
+							</h3>
+							<h4 class="sweet text-center text-4xl TekoLight">
+								LA PLUS DOUCE
+							</h4>
+						</div>
+					</a>
+				</div>
+
+				<div>
+					<a class="mt-10" href="{{ path('app_offres_zen') }}">
+						<div class="flex flex-col">
+							<div class="my-8">
+								<img src="{{ asset('build/img/zen2.webp') }}" alt="Offre garantie ZEN" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+							</div>
+							<h3 class="zen uppercase text-center text-4xl TekoMedium">
+								ZEN
+							</h3>
+							<h4 class="zen text-center text-4xl TekoLight">
+								LA PLUS COOL
+							</h4>
+						</div>
+					</a>
+				</div>
+
+				<div>
+					<a class="mt-10" href="{{ path('app_offres_premium') }}">
+						<div class="flex flex-col">
+							<div class="my-8">
+								<img src="{{ asset('build/img/premium1.webp') }}" alt="Offre garantie PREMIUM" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+							</div>
+							<h3 class="premium uppercase text-center text-4xl TekoMedium">
+								PREMIUM
+							</h3>
+							<h4 class="premium text-center text-4xl TekoLight">
+								LA PLUS BELLE
+							</h4>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+
+	<script>
+		var a = "0";
+var i = "";
+
+function afficher_masquer_faq(i) {
+if (document.getElementById("faq_texte_" + i).style.display === "none") {
+if (a !== i && a != 0) {
+$(".faq_texte_" + a).hide("slow");
+document.getElementById("faq_+_" + a).style.display = "block";
+}
+$("#faq_texte_" + i).show("slow");
+document.getElementById("faq_+_" + i).style.display = "none";
+} else {
+$(".faq_texte_" + i).hide("slow");
+document.getElementById("faq_+_" + i).style.display = "block";
+} a = i;
+}
+	</script>
+
+{% endblock %}

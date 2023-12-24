@@ -1,0 +1,260 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+	{% if contrat.garantie.code == 'PREMIUM' %}
+		{% set i=premium %}
+	{% elseif contrat.garantie.code == 'ZEN' %}
+		{% set i=zen %}
+		{% else%}
+		{% set i=sweet %}
+	{% endif %}
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Pannier</h2>
+				</div>
+			</div>
+		</div>
+
+		{% set num_etape = {'etape_souscription' : etape_souscription} %}
+		{% include('./souscription/ariane.html.twig') with num_etape %}
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+			<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 xl:grid-cols-2 xl:grid-rows-1 lg:col-span-3 my-4 pt-4">
+				<div class="lg:row-start-1 lg:col-start-1 lg:col-span-1 col-start-1 row-start-1 col-span-full flex flex-col my-auto mx-auto">
+					<h1 class="TekoMedium lg:text-4xl text-3xl" style="color: #333333;">Votre Garantie</h1>
+					<div class="my-8">
+						<img src="{{ asset(i.image) }}" alt="Offre garantie" class=" mx-auto my-auto " width="150"/>
+					</div>
+					<h1 class="text-red uppercase text-4xl text-center TekoMedium">
+						{{ contrat.garantie.libelle }}
+					</h1>
+					<h3 class="text-4xl text-center TekoMedium" style="color: #333333;">{{ contrat.garantie.duree }}
+						mois</h3>
+					<p class="text-2xl text-center TekoMedium" style="color: #333333;">à partir du
+						{{ contrat.garantie.dateDebut | date("d/m/Y") }}</p>
+					<p class="text-2xl text-center TekoMedium" style="color: #333333;">{{ contrat.garantie.mtttc / contrat.garantie.duree }}
+						€/mois</p>
+				</div>
+				<div class="lg:row-start-1 lg:col-start-2 lg:col-span-1  row-start-2 col-span-full mx-auto flex flex-col">
+					<h1 class="TekoMedium lg:text-4xl text-3xl text-center" style="color: #333333;">Votre véhicule
+					</h1>
+					<table class="mt-5">
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Immatriculation:</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.immatriculation }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Kilométrage :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.kilometrage }}
+								km</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Valeur à neuf :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{  contrat.vehicule.prix }}
+								€</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Marque :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.marque }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Modèle :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.modele }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Date de mise en circulation :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.date | date("d/m/Y") }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Energie :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.energie }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Numéro de Série :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.serie }}</td>
+						</tr>
+						<tr>
+							<td class="TekoRegular text-xl" style="color: #333333;">Type MINE :</td>
+							<td class="TekoMedium text-xl" style="color: #333333;">{{ contrat.vehicule.mine }}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			{# {{ form_start(promo, {'attr': {'id': 'form_promo'}}) }}
+			<hr class="my-4"/>
+			<div class="flex flex-row">
+				<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+					{{ form_row(promo.code, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'code','placeholder': 'Code promo*'}}) }}
+					<span class="span-invalid hidden promo_code">Ce champ est obligatoire</span>
+				</div>
+				<div class="flex flex-col">
+					<div class="lg:mx-8 content-center items-center mx-auto">
+						<div class="grow flex flex-col ">
+							<div class="group mx-auto my-auto flex flex-row " style="color: transparent;">
+								{{ form_row(promo.OK, {'attr': {'class':'relative text-white bg-red-600 text-xl TekoRegular btn_shadow py-2 px-8 a_lbg','name':'creation','id':'ok'}})}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{{ form_end(promo) }} #}
+			<hr class="my-4"/>
+
+			<h3 class="TekoMedium lg:text-4xl text-3xl text-center pt-3" style="color: #333333;">Choisissez vos options de paiements</h3>
+
+			{{ form_start(pannier, {'attr': {'id': 'form_pannier'}}) }}
+
+			<div class="flex flex-col">
+
+				<div id="1foiscb" class="flex flex-row items-center py-4 border-b">
+					<label for="{{pannier.prelevement.3.vars.id}}" class="flex-none mx-4 pt-2">
+						{{ form_widget(pannier.prelevement.3, {'label':false, 'attr': {'class':'form-radio h-6 w-6 radio-pannier-couleur'}}) }}
+					</label>
+					<img src="{{ asset('build/img/carte-bancaire.png') }}" class="w-12 h-auto" alt="Carte bancaire">
+					<div class="flex flex-col">
+						<span class="pl-3 TekoRegular text-2xl pt-1">Par carte bancaire </span>
+						<span class="TekoRegular text-xl pt-2 pl-3">Paiement comptant de {{ contrat.garantie.mtttc }} €</span>
+					</div>
+
+				</div>
+
+				<div id="1fois" class="flex flex-row items-center py-4 border-b">
+					<label for="{{pannier.prelevement.2.vars.id}}" class="flex-none mx-4 pt-2">
+						{{ form_widget(pannier.prelevement.2, {'label':false, 'attr': {'class':'form-radio h-6 w-6 radio-pannier-couleur'}}) }}
+					</label>
+					<img src="{{ asset('build/img/banque.png') }}" class="w-12 h-auto" alt="Prelevement">
+					<div class="flex flex-col">
+						<span class="pl-3 TekoRegular text-2xl pt-1">Prélèvement - En 1 fois</span>
+						<span class="TekoRegular text-xl pt-2 pl-3">1 Prélèvement de {{ contrat.garantie.mtttc }} €</span>
+					</div>
+
+				</div>
+
+				<div id="mensuel" class="flex flex-row items-center py-4 border-b">
+					<label for="{{pannier.prelevement.0.vars.id}}" class="flex-none mx-4 pt-2">
+						{{ form_widget(pannier.prelevement.0, {'label':false, 'attr': {'class':'form-radio h-6 w-6 radio-pannier-couleur'}}) }}
+					</label>
+					<img src="{{ asset('build/img/banque.png') }}" class="w-12 h-auto" alt="Prelevement">
+					<div class="flex flex-col">
+						<span class="pl-3 TekoRegular text-2xl pt-1">Prélèvement - Mensuel</span>
+						<span class="TekoRegular text-xl pt-2 pl-3">{{ contrat.garantie.duree }} Prélèvements de {{ contrat.garantie.mtttc / contrat.garantie.duree }} €</span>
+					</div>
+
+				</div>
+
+				<div id="3fois" class="flex flex-row items-center py-4 border-b">
+					<label for="{{pannier.prelevement.1.vars.id}}" class="flex-none mx-4 pt-2">
+						{{ form_widget(pannier.prelevement.1, {'label':false, 'attr': {'class':'form-radio h-6 w-6 radio-pannier-couleur'}}) }}
+					</label>
+					<img src="{{ asset('build/img/banque.png') }}" class="w-12 h-auto" alt="Prelevement">
+					<div class="flex flex-col">
+						<span class="pl-3 TekoRegular text-2xl pt-1">Prélèvement - En 3 fois</span>
+						<span class="TekoRegular text-xl pt-2 pl-3">3 Prélèvements de {{ contrat.garantie.mtttc / 3 }} €</span>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="mx-2 mt-6 mb-3 TekoMedium text-lg text-center">
+				{{ form_widget(pannier.accepte, {'label':false}) }}
+				<label for="{{pannier.accepte.vars.id}}">J'accepte les
+					<a class="links-offres" href="{{ i.cg }}" target="_blank">
+						conditions générales de vente
+					</a>
+					et les<a class="links-offres" href="{{ i.cp }}" target="_blank">
+						conditions particulières du contrat*</a>
+				</label>
+
+			</div>
+			
+			<div class="flex flex-col">
+				<div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+					<div class="grow flex flex-col-reverse ">
+						<div class="group mx-auto my-auto flex flex-row" style="color: transparent;">
+							{{ form_widget(pannier.valider, {'attr': {'class':'relative text-white text-2xl bg-red-600 w-40 py-2 px-4 text-center TekoRegular a_lbg','name':'creation','id':'creation'}})}}
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			{{ form_end(pannier) }}
+
+
+		</div>
+
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+	<script>
+		let radioButtons = document.querySelectorAll("input[type=radio]");
+console.log(radioButtons);
+let mensuel = document.getElementById('mensuel');
+let uneFois = document.getElementById('1fois');
+let troisFois = document.getElementById('3fois');
+let uneFoisCB = document.getElementById('1foiscb');
+let typeP ="{{ contrat.typePaiement }}";
+console.log(typeP);
+radioButtons.forEach((e) => {
+e.addEventListener('change', (event) => {
+if (e.value == 'mensuel' && e.checked) {
+mensuel.classList.add('border-grey');
+uneFois.classList.remove('border-grey');
+uneFoisCB.classList.remove('border-grey');
+troisFois.classList.remove('border-grey');
+} else if (e.value == '1fois' && e.checked) {
+mensuel.classList.remove('border-grey');
+uneFoisCB.classList.remove('border-grey');
+uneFois.classList.add('border-grey');
+troisFois.classList.remove('border-grey');
+} else if (e.value == '3fois' && e.checked) {
+mensuel.classList.remove('border-grey');
+uneFoisCB.classList.remove('border-grey');
+uneFois.classList.remove('border-grey');
+troisFois.classList.add('border-grey');
+} else if (e.value == '1foiscb' && e.checked) {
+mensuel.classList.remove('border-grey');
+mensuel.classList.remove('border-grey');
+uneFois.classList.remove('border-grey');
+uneFoisCB.classList.add('border-grey');
+}
+})
+if (! typeP) {
+mensuel.classList.add('border-grey');
+}
+if (typeP == 'Règlement mensuel') {
+mensuel.classList.add('border-grey');
+radioButtons[0].checked = true;
+}
+if (typeP == 'Règlement en 3 fois') {
+troisFois.classList.add('border-grey');
+radioButtons[1].checked = true;
+}
+if (typeP == 'Règlement en 1 fois') {
+uneFois.classList.add('border-grey');
+radioButtons[2].checked = true;
+}
+if (typeP == 'Par Carte Bancaire') {
+uneFoisCB.classList.add('border-grey');
+radioButtons[3].checked = true;
+}
+e.style.accentColor = 'red';
+});
+	</script>
+{% endblock %}

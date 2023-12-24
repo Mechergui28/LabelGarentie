@@ -1,0 +1,158 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces freinage | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le système de freinage de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces du système de freinage, y compris les plaquettes de frein, les disques de frein, les étriers et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Freinage
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Freinage :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le freinage moteur est une technique de freinage utilisée dans les véhicules équipés d'un moteur à combustion interne. Il se produit lorsque le moteur est utilisé pour ralentir le véhicule en convertissant l'énergie cinétique en énergie thermique dans le moteur. Cela se fait en coupant l'alimentation en carburant et en utilisant la compression du moteur pour freiner le véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Maître-cylindre de freins :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le maître-cylindre de freins dans un moteur est un composant qui transforme la force exercée sur la pédale de frein en pression hydraulique pour actionner les freins. Il joue un rôle crucial dans la performance et la sécurité du système de freinage.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Répartiteur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le répartiteur de freinage est un dispositif qui répartit la pression de freinage sur les roues d'un véhicule en fonction de la charge et de la répartition du poids sur les roues. Il garantit une freinage équilibré et améliore la stabilité du véhicule lors du freinage.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Servofrein :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le servofrein est un système de freinage qui utilise une pompe à vide pour amplifier la force exercée sur la pédale de frein. Cela permet une réponse plus rapide et plus facile à la pression exercée sur la pédale, ce qui améliore la sécurité de conduite. Le servofrein est couramment utilisé dans les voitures modernes.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe d’assistance :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe d'assistance est un dispositif mécanique utilisé pour fournir un soutien supplémentaire à un système de circulation, tel que la circulation sanguine dans le corps humain ou la circulation de liquides dans les systèmes industriels.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Cylindres de roues :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les cylindres de roue de freinage sont des composants importants du système de freinage d'une voiture. Ils sont situés à l'intérieur des roues et se composent d'un cylindre métallique qui comporte un piston actionné par la pédale de frein. Lorsque la pédale de frein est enfoncée, le fluide de frein est envoyé vers les cylindres de roue, ce qui pousse les pistons vers l'extérieur pour appuyer sur les plaquettes de frein, causant ainsi un freinage. Les cylindres de roue doivent être en bon état pour garantir un freinage efficace et sécurisé.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Bloc ABS et capteurs ABS/ABR :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les blocs ABS (Anti-lock Braking System) et les capteurs ABS/ABR (Anti-lock Brake / Wheel Speed) sont des composants importants du système de freinage d'un véhicule. Le bloc ABS est le composant central du système, il gère la pression de freinage et empêche les roues de bloquer en cas de freinage brusque. Les capteurs ABS mesurent la vitesse des roues et transmettent ces informations au bloc ABS pour aider à contrôler la pression de freinage. L'objectif de ces composants est d'améliorer la stabilité et la sécurité du véhicule lors de freinages d'urgence en permettant aux roues de tourner même en cas de freinage intense.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Contacteur de pédale :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un contacteur de pédale de freinage est un dispositif électrique qui s'active lorsque le conducteur appuie sur la pédale de frein d'un véhicule. Il permet de couper ou d'interrompre le circuit électrique de la voiture lorsque la pédale de frein est enfoncée. Cela peut être utilisé pour déclencher diverses fonctions, telles que l'allumage des feux de freinage, la mise en marche d'un système de freinage supplémentaire ou l'envoi d'un signal d'arrêt d'urgence.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Maître-cylindre :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le maître-cylindre est un composant du système de freinage d'un véhicule qui convertit la force exercée sur la pédale de frein en pression hydraulique pour actionner les étriers de frein et arrêter la voiture.
+							</p>
+						</div>
+
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à vide :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe à vide est un dispositif qui utilise un vide pour aspireé un fluide ou gaz et le transporter d'un endroit à un autre. Les pompes à vide sont utilisées dans de nombreuses applications industrielles telles que la manipulation de gaz, la déshydratation de liquides et la vente de vide pour des tests en laboratoire.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Étriers :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les étriers de frein sont des composants qui se trouvent sur les véhicules et qui permettent de freiner en appliquant une force de friction sur les disques de frein ou les tambours de frein. Ils sont activés par la pédale de frein et transmettent la force de freinage aux roues du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Répartiteur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le répartiteur de freinage est un composant de système de freinage automobile qui permet de répartir la pression de freinage entre les roues avant et arrière pour assurer une répartition optimale de la force de freinage et améliorer la stabilité du véhicule pendant le freinage.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

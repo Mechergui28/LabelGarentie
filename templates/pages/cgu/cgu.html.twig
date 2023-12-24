@@ -1,0 +1,234 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	CGU | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Pour tout savoir sur les conditions générales d'utilisation, consultez notre page d'informations détaillées. Découvrez les règles et les limites d'utilisation de notre service pour une expérience en ligne optimale.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+
+		<div class="bg-offres bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						CGU
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 TekoRegular text-xl pt-4" style="color: #333333;">
+			<p>Les présentes conditions générales d'utilisation (C.G.U.) sont conclues entre :</p>
+			<ul class="list-disc my-4 px-10">
+				<li>
+					le gérant du site intemet: ci-après désigné « l'Éditeur »</li>
+				<li>
+					toute personne souhaitant accéder au site,: ci-après appelé « l'Utilisateur »</li>
+			</ul>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 1 -Principes</h2>
+			<hr class="border-top-red my-4" style="color: #171616;"/>
+			<p>Les présentes conditions générales d'utilisation ont pour objet l'encadrement juridique de l'utilisation du site LABEL GARANTIE et de ses services.</p>
+			<p>Le site Internet
+				<a class="link-cgu" target="_blank">www.labellegarantie.com</a>
+				est un service de LABEL GARANTIE SAS :</p>
+			<ul class="list-disc my-4 px-10">
+				<li>domiciliée 37 Avenue Général de Gaulle 69300 Caluire-et-Cuire</li>
+				<li>adresse URL du site : www.labellegarantie.com</li>
+				<li>e-mail : contact@labelgarantie</li>
+				<li>numéro de téléphone : 04-87-91-49-74</li>
+			</ul>
+			<p class="my-4">
+				Le site internet
+				<a class="link-cgu" target="_blank">www.labellegarantie.com</a>
+				est la propriété dans son ensemble de LABEL GARANTIE SAS, 37 avenue Générale de Gaulle
+				            69300 CALUIRE ET CUIRE. Les présentes conditions générales d'utilisation détaillent les règles applicables et l’accès à
+				            l’utilisation du site
+				<a class="link-cgu" target="_blank">www.labellegarantie.com</a>. Elles doivent être acceptées par tout Utilisateur, et son accès au site vaut
+					            acceptation de ces conditions. Ainsi, dès la première visite ou utilisation du site, l’Utilisateur reconnait disposer des
+					            informations techniques nécessaires, avoir pris connaissance des dites CGU, des mentions légales et de la politique de
+					            Confidentialité.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 2 - Evolution et durée des CGU</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				Les présentes conditions générales d'utilisation sont conclues pour une durée indéterminée. Le contrat produit ses effets à l'égard
+				            de l'Utilisateur à compter du début de l'utilisation du service.
+			</p>
+			<p class="my-4">
+				LABEL GARANTIE SAS se réserve le droit de modifier les clauses des présentes conditions générales d'utilisation à tout moment et sans justification.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 3 - Accès au site</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				Tout Utilisateur ayant accès à internet peut accéder gratuitement et depuis n'importe où au site
+				<a class="link-cgu" target="_blank">www.labellegarantie.com</a>.
+					            Les frais supportés par l'Utilisateur pour y accéder connexion internet, matériel informatique, etc.) ne sont pas à la charge de
+					            l'Éditeur.
+			</p>
+			<p class="my-4">
+				Le site et ses différents services peuvent être interrompus ou suspendus par l'Éditeur: notamment à l'occasion d'une maintenance:
+				            sans obligation de préavis ou de justification.
+			</p>
+			<p class="my-4">L'Utilisateur du site a accès aux services suivants :</p>
+			<ul class="my-4 list-disc px-10">
+				<li>Prendre contact avec notre Service Client par formulaire numérique, téléphone ou courriel</li>
+				<li>
+					Souscrire à l’un de nos produits de garantie Panne Mécanique ou établir un devis en ligne, sur notre simulateur dédié,</li>
+				<li>
+					Créer et accéder à son Espace Client personnalisé.</li>
+			</ul>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 4 - Responsabilités</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				La responsabilité de l'Éditeur ne peut être engagée en cas de défaillance, panne; difficulté ou interruption de fonctionnement,
+				            empêchant l'accès au site ou à une de ses fonctionnalités.
+			</p>
+			<p class="my-4">
+				Le matériel de connexion au site utilisée est sous rentière responsabilité de l'Utilisateur qui doit prendre toutes les mesures
+				            appropriées pour protéger le matériel et les données notamment d'attaques virales par Internet L'utilisateur est par ailleurs
+				            le seul responsable des sites et données qu'il consulte.
+			</p>
+			<p class="my-4">
+				L'Éditeur ne pourra être tenu responsable en cas de poursuites judiciaires à l'encontre de l'Utilisateur :
+			</p>
+			<ul class="list-disc px-10">
+				<li>
+					du fait de l' usage du site ou de tout service accessible via Internet ;
+				</li>
+				<li>du fait du non-respect par l'Utilisateur des présentes conditions générales.</li>
+			</ul>
+			<p class="my-4 TekoMedium">
+				L'Éditeur n'est pas responsable des dommages causés à l'Utilisateur, à des tiers et ou à l'équipement de l'Utilisateur du fait
+				            de sa connexion ou de son utilisation du site et l'Utilisateur renonce à toute action contre l'Éditeur de ce fait.
+			</p>
+			<p class="my-4">
+				Si l’éditeur venait à faire l’objet d’une procédure amiable ou judiciaire, en raison de l’utilisation du site par l’ Utilisateur,
+				            il pourrait se retourner contre lui pour obtenir indemnisation de tous les préjudices: sommes: condamnations et frais qui
+				            pourraient découler de cette procédure.
+			</p>
+			<p class="my-4">
+				LABEL GARANTIE SAS se réserve ainsi le droit le cas échéant et , sans aucune mise en demeure préalable :
+			</p>
+			<ul class="my-4 list-disc">
+				<li>de supprimer, tout contenu déposé par l’Utilisateur sur le site
+					<a class="link-cgu" target="_blank">www.labellegarantie.com</a>
+					contraire à la législation applicable en France et aux dispositions prévues dans le cadre de la protection des données,</li>
+				<li>de mettre en cause la responsabilité civile et/ou pénale de l’Utilisateur en cas de message incitant à la haine, au crime ou délit, à caractère injurieux, raciste, diffamant ou pornographique.</li>
+			</ul>
+			<p class="my-4">
+				Il est de la responsabilité de l’utilisateur de ne pas perturber ou interrompre l’accès au bon fonctionnement du site
+				<a class="link-cgu" target="_blank">www.labellegarantie.com</a>, d’essayer d’accéder à des données et ressources qui ne vous sont pas destinées, de tester la
+					            vulnérabilité du système, d’usurper l’identité d’une autre personne, de procéder à des déclarations inexactes ou mensongères.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 5 - Propriété- intellectuelle</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="mt-4">
+				Tous les documents techniques, produits, photographies: textes, logos: dessins, vidéos: etc.: sont soumis à des droits d'auteur et
+				            sont protégés par le Code de la propriété intellectuelle. Lorsqu'ils sont remis à nos clients, ils demeurent la propriété exclusive
+				            de LABEL GARANTIE SAS seule titulaire des droits de propriété intellectuelle sur ces documents, qui doivent lui être rendus à
+				            sa demande.
+			</p>
+			<p class="mb-4">
+				Nos clients s'engagent à ne faire aucun usage de ces documents: susceptibles de porter atteinte aux droits de propriété industrielle
+				            ou intellectuelle du fournisseur et s'engagent à ne les divulguer à aucun tiers: en dehors d'une autorisation expresse et préalable
+				            donnée par l'Éditeur.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 6 - Liens hypertextes</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				La mise en place par l'Utilisateur de tous liens hypertextes vers tout ou partie du site est strictement interdite, sauf
+				            autorisation préalable et écrite de l'Éditeur, sollicitée par courriel à l'adresse suivante :<a href="mailto:contact@labelgarantie.com" class="link-cgu" target="_blank">contact@labelgarantie.com</a>
+				.
+			</p>
+			<p class="my-4">
+				L'Éditeur est libre de refuser cette autorisation sans avoir à justifier de quelque manière que ce soit sa décision. Dans le cas où l’éditeur accorderait son autorisation,
+				            celle-ci n'est dans tous les cas que temporaire et pourra être retirée à tout moment: sans obligation de justification à la charge de l'Éditeur.
+			</p>
+			<p class="my-4">Dans tous les cas: tout lien devra être retiré sur simple demande de l'Éditeur.</p>
+			<p class="my-4">Toute information accessible via un lien vers d'autres sites n'est pas sous le contrôle de l'Éditeur qui décline toute responsabilité quant à leur contenu.</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 7 - Cookies</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				Le site www.labellegarantie.com peut collecter automatiquement des informations standards. Toutes les informations collectées
+				            indirectement ne seront utilisées que pour suivre le volume, le type et la configuration du trafic utilisant ce site, pour
+				            en développer la conception et l'agencement et à d'autres fins administratives et de planification et plus généralement pour
+				            améliorer le service que nous vous offrons. Nous vous invitons à consulter notre document dédié à l’utilisation des Cookies ainsi
+				            que notre politique de Confidentialité.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 8 – CGU particulières</h2>
+			<hr class="border-top-red my-4"/>
+			<h3 class="text-center text-2xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3">
+				L’Espace Client
+			</h3>
+			<p class="my-4">
+				La création de votre Espace Client se fait de manière automatique à la suite d’une souscription à l’un de nos contrats de
+				            Garantie Panne Mécanique PREMIUM – ZEN ou SWEET. Lors de l’adhésion, l’Utilisateur se doit de communiquer des informations
+				            exactes et une adresse électronique valide. Les Identifiants sont strictement personnels et confidentiels à chaque personne
+				            détenant un Espace Client. Celle-ci s’interdit de les communiquer à des tiers sous quelque forme que ce soit et s’engage à mettre
+				            tout en œuvre pour maintenir leur confidentialité. En cas de perte de ces informations, nous vous invitons à contacter le service
+				            client :
+			</p>
+			<p class="my-4">
+				LABEL GARANTIE SAS par courrier, 37 avenue Général de Gaulle 69300 CALUIRE ET CUIRE, ou par messagerie à l’adresse :
+				<a href="mailto:contact@labelgarantie.com" class="link-cgu" target="_blank">contact@labelgarantie.com</a>.
+					            L’accès à votre Espace Client sera automatiquement résilié au terme de la durée de vie de votre contrat ou si ce dernier a fait l’objet d’une résiliation.
+			</p>
+			<h3 class="text-center text-2xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3">
+				Le module de tarification en ligne
+			</h3>
+			<div class="TekoMedium my-4">
+				Lors de cette étape, l’utilisateur doit obligatoirement communiquer à LABEL GARANTIE SAS un certain nombre d’informations
+				            relatives à son véhicule :
+				<ul class="list-disc">
+					<li>Immatriculation</li>
+					<li>Kilométrage</li>
+					<li>Type de couverture souhaitée (selon les produits éligibles à son véhicule)</li>
+					<li>Durée souhaitée de la garantie</li>
+					<li>Modalités de paiement</li>
+				</ul>
+			</div>
+			<p class="TekoMedium">
+				Il peut à tout moment modifier ou renouveler sa simulation, aucune des données n’étant enregistrées avant la validation définitive
+				            du contrat et du paiement. Il est de sa responsabilité de communiquer des informations exactes permettant une simulation
+				            significative et conforme aux caractéristiques réelles de son véhicule.
+				            Il conviendra, afin de finaliser le processus de souscription contractuel, de communiquer des informations financières et
+				            postales, dont l’exactitude, la qualité et la véracité dépendront de la responsabilité de l’Utilisateur.
+			</p>
+			<h2 class="text-center text-4xl  lg:text-left  TekoMedium tracking-wide  font-bold py-4 lg:py-3" style="color: #333333;">Article 9 - Loi applicable</h2>
+			<hr class="border-top-red my-4"/>
+			<p class="my-4">
+				Les présentes conditions générales d'utilisation sont soumises à l'application du droit français. En cas de difficultés dans
+				            l'application des dispositions du présent contrat, l’Assuré contacte par courrier LABEL GARANTIE 37 avenue Général de Gaulle
+				            69300 CALUIRE ET CUIRE ou par email : reclamation@labelgarantie.com. Si ce premier échange ne lui donne pas satisfaction,
+				            l’Utilisateur a la possibilité de solliciter l’avis du Médiateur par courrier à l’adresse suivante : Médiateur AFA -
+				            La Médiation de l’Assurance TSA 50 110 - 75 441 Paris cedex 09 ou via le site de médiation de l’assurance
+				            (le.mediateur@mediation-assurance.org)
+			</p>
+			<p class="my-4">Site internet :
+				<a href="https://www.mediation-assurance.org/" class="link-cgu" target="_blank">https://www.mediation-assurance.org/</a>
+			</p>
+			<p class="my-4">En cas d'échec de cette démarche, l’Utilisateur conserve naturellement l'intégralité de ses droits d'agir en
+				            justice et de soumettre le litige à la compétence des tribunaux français.</p>
+			<h3 class="text-center text-2xl  lg:text-left uppercase TekoMedium tracking-wide  font-bold py-4 lg:py-3">
+				QUESTIONS ET COORDONNÉES
+			</h3>
+			<p class="my-4">
+				Si vous souhaitez: corriger, modifier, supprimer ou accéder à toute information personnelle que nous avons à votre sujet,
+				            déposer une plainte, ou si vous souhaitez simplement avoir plus d'informations, contactez notre agent responsable des normes de
+				            confidentialité à contact@labelgarantie.com ou par courrier à Label Garantie SAS – Service Client - 37 avenue Général de Gaulle
+				            69300 CALUIRE ET CUIRE
+			</p>
+		</div>
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

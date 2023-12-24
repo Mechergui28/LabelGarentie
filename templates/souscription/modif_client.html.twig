@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Vérification de vos informations</h2>
+				</div>
+			</div>
+		</div>
+
+		{% set num_etape = {'etape_souscription' : etape_souscription} %}
+		{% include('./souscription/ariane.html.twig') with num_etape %}
+		<div class="xl:container py-12 md:py-28 px-2 md:px-16 lg:px-48">
+			<div id="form_vehicule" class="bg-white rounded-lg shadow-2xl py-8" id="Tab_data_car">
+				<h3 class="TekoRegular text-center text-3xl lg:text-5xl md:text-4xl text-gray-900 pb-4" style="color: #333333;">
+					Vérification de vos informations
+				</h3>
+				{{ form_start(form_modif, {'attr': {'id': 'form_modif'}}) }}
+				<div class="grid grid-cols-12 grid-rows-13 xl:grid-rows-8 xl:gap-x-5 gap-y-3 WorkSans">
+
+					<div class="col-start-2 xl:col-start-2 col-span-10 xl:col-span-2 row-start-1 relative">
+						{{ form_row(form_modif.civilite, {'label':false, 'attr': {'class':'form w-full text-2xl pb-1 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'civilite','placeholder': 'Civilité*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_civilite">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-4 col-span-10 xl:col-span-4 row-start-2 xl:row-start-1 relative">
+						{{ form_row(form_modif.nom, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'nom','placeholder': 'Nom*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_nom">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-8 col-span-10 xl:col-span-4 row-start-3 xl:row-start-1 relative">
+						{{ form_row(form_modif.prenom, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'prenom','placeholder': 'Prénom*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_prenom">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-2 col-span-10 row-start-4 xl:row-start-2 relative">
+						{{ form_row(form_modif.adresse, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'adresse','placeholder': 'Adresse*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_adresse">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-2 col-span-10 xl:col-span-5 row-start-5 xl:row-start-3 relative">
+						{{ form_row(form_modif.codePostal, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','onkeypress':'verifierCaracteres_Cp(event); return false;','name':'code_postal','placeholder': 'Code postal*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_codePostal">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-7 col-span-10 xl:col-span-5 row-start-6 xl:row-start-3 relative">
+						{{ form_row(form_modif.ville, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'ville','placeholder': 'Ville*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_ville">*Ce champ est obligatoire</span>
+					</div>
+
+					<div class="col-start-2 xl:col-start-2 col-span-10 xl:col-span-5 row-start-7 xl:row-start-4 relative">
+						{{ form_row(form_modif.telephone, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','onkeypress':'verifierCaracteres_Cp(event); return false;','name':'code_postal','placeholder': 'Téléphone*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_telephone">*Ce champ est obligatoire</span>
+					</div>
+					<div class="col-start-2 xl:col-start-2 col-span-10 row-start-9 xl:row-start-5 relative TekoRegular">
+						{{ form_widget(form_modif.accepte_mail, {'label':false}) }}
+						<label class="text-lg" for="{{form_modif.accepte_mail.vars.id}}">J'accepte de recevoir les informations de La Belle Garantie et de ses partenaires</label>
+					</div>
+
+
+				</div>
+				<div class="flex flex-col">
+					<div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+						<div class="grow flex flex-col-reverse ">
+							<div class="group mx-auto my-auto flex flex-row " style="color: transparent;">
+								{{ form_widget(form_modif.Valider, {'attr': {'class':'relative text-white text-2xl bg-red-600 w-40 py-2 px-4 text-center TekoRegular a_lbg mt-6','name':'creation','id':'creation'}})}}
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				{{ form_end(form_modif) }}
+			</div>
+		</div>
+
+
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+
+{% endblock %}

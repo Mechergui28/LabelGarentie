@@ -1,0 +1,77 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces embrayage | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez l'embrayage de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de l'embrayage, y compris le mécanisme, le disque, la butée et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Embrayage
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Mécanisme</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le mécanisme fait partie intégrante du dispositif d'embrayage. Il est responsable de la transmission de la puissance du moteur à la transmission de la voiture. Il se compose de plusieurs composants, notamment le volant moteur, la butée, l'emetteur et le récepteur.
+							</p>
+						</div>
+						
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Butée</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La butée est un composant du dispositif d'embrayage qui sert à limiter la course du mécanisme d'embrayage et à amortir les vibrations du moteur. Elle est généralement en caoutchouc ou en métal et est fixée à la boîte de vitesses.
+							</p>
+						</div>
+						
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Emetteur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'emetteur fait partie du dispositif d'embrayage et est responsable de la transmission de la puissance du moteur à la boîte de vitesses. Il est monté sur le volant moteur et comporte généralement un disque d'embrayage, un ressort et un ensemble de plaquettes de friction.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Récepteur</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le récepteur est un composant du dispositif d'embrayage qui est monté sur la boîte de vitesses. Il reçoit la puissance du moteur de l'emetteur et la transmet à la transmission de la voiture. Il est généralement composé d'un disque d'embrayage et d'un dispositif de serrage.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

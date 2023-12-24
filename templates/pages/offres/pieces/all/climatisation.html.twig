@@ -1,0 +1,177 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces climatisation | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le système de climatisation de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de la climatisation, y compris le compresseur, le condenseur, les évaporateurs et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Climatisation
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Climatisation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La climatisation dans une voiture est un système qui permet de contrôler la température et l'humidité de l'air à l'intérieur de l'habitacle. Elle fonctionne en éliminant la chaleur de l'air à l'intérieur du véhicule et en la rejetant à l'extérieur, tout en apportant de l'air frais pour maintenir une température confortable à l'intérieur de l'habitacle. La climatisation dans les voitures modernes peut être contrôlée par un système de commande manuel ou automatique et peut être réglée pour différentes températures et vitesses de circulation d'air.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Compresseur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le compresseur de climatisation d'un véhicule est un composant clé du système de climatisation qui est responsable de compresser et de transporter le réfrigérant (gaz frigorigène) à travers le système. Il est alimenté par la courroie d'accessoires du moteur et s'enclenche et se désengage en fonction des besoins en refroidissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Condenseur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le condenseur de climatisation d'un véhicule est un composant qui se trouve généralement devant le radiateur et qui sert à refroidir le gaz frigorigène comprimé provenant du compresseur. Il est conçu pour rejeter la chaleur captée à l'intérieur du véhicule vers l'extérieur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Evaporateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'évaporateur de climatisation d'un véhicule est un composant qui se trouve généralement à l'intérieur de l'habitacle et qui est chargé de refroidir l'air intérieur. Il est alimenté par le gaz frigorigène refroidi par le condenseur, ce qui fait évaporer le gaz frigorigène à l'intérieur de l'évaporateur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Détendeur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le détendeur de climatisation d'un véhicule est un composant qui régule la pression du gaz frigorigène en provenance du compresseur avant de le faire entrer dans l'évaporateur. Il permet de réguler la pression du gaz frigorigène pour assurer un refroidissement efficace de l'air intérieur sans endommager les composants du système de climatisation.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Ventilateur habitacle :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le ventilateur d'habitacle de climatisation d'un véhicule est un composant qui aide à distribuer l'air refroidi ou chauffé dans l'habitacle. Il est contrôlé par une unité de commande et peut être ajusté en fonction des besoins en climatisation.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Résistance :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La résistance de climatisation d'un véhicule est un composant optionnel qui peut être utilisé pour chauffer l'air intérieur lorsque le moteur n'est pas en marche. Elle peut être alimentée par le système électrique du véhicule ou par une batterie dédiée.
+							</p>
+						</div>
+
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Commande de chauffage :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La commande de chauffage d'un véhicule est un composant qui permet de contrôler le système de chauffage de l'habitacle. Elle peut inclure des boutons pour ajuster la température, la vitesse du ventilateur et la direction de l'air.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Calculateur de climatisation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un calculateur de climatisation est un outil en ligne ou une application qui aide à déterminer la taille de l'unité de climatisation nécessaire pour une maison ou un bâtiment donné. Il tient compte de facteurs tels que la taille de la pièce, l'isolation, la quantité de fenêtres et la direction du soleil pour déterminer la puissance de refroidissement nécessaire.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Déshydrateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un déshydrateur de climatisation pour véhicules est un appareil utilisé pour éliminer l'humidité et les impuretés du système de climatisation de votre voiture. Il peut être utilisé pour maintenir la qualité de l'air dans le véhicule, améliorer la performance du système de climatisation et prolonger la durée de vie du compresseur de climatisation.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Platine de commande de climatisation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une platine de commande de climatisation est un composant électronique qui contrôle les différentes fonctions d'un système de climatisation. Elle reçoit les entrées de l'utilisateur, telles que la température souhaitée, la vitesse du ventilateur, etc., et envoie les signaux appropriés aux composants du système de climatisation pour réguler la température et l'air ambiant.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Radiateur de climatisation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un radiateur de climatisation est un composant du système de climatisation d'un véhicule qui transfère la chaleur accumulée à l'extérieur du véhicule. Il est situé devant la grille d'aération du véhicule et utilise les conduits d'air pour dissiper la chaleur.
+							</p>
+						</div>
+
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Façade de climatisation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une façade de climatisation est la partie visible d'un système de climatisation, généralement située à l'intérieur d'un bâtiment. Elle peut être constituée de plusieurs éléments, tels que les entrées et sorties d'air, les filtres à air, les commandes de température et les ventilateurs.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Sonde évaporateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une sonde d'évaporateur est un capteur utilisé dans les systèmes de climatisation pour mesurer la température de l'air à l'intérieur de l'évaporateur. L'évaporateur est un composant clé du système de climatisation qui absorbe la chaleur de l'air à l'intérieur du bâtiment et la dissipe à l'extérieur.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

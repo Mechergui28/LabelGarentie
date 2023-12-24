@@ -1,0 +1,89 @@
+<div class="sticky top-0 shadow bg-white drawer h-full">
+	<input id="my-drawer-3" type="checkbox" class="drawer-toggle">
+	<div id="drawer-content" class="flex flex-col drawer-content">
+		<div class="sticky top-0 z-50">
+			<div class="sticky top-0 shadow-lg flex flex-wrap z-20 bg-white pl-6 pr-6 pt-3 pb-3 items-center">
+				<div class="flex-none lg:hidden">
+					<label for="my-drawer-3" class="btn btn-square btn-ghost">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</label>
+				</div>
+				<div class="flex-1 px-2 mx-2">
+					<a href="{{ path('app_index') }}">
+						<img src="{{ asset('build/img/logo.webp') }}" alt="Logo Label Garantie" class="w-32 md:w-40 h-auto">
+					</a>
+				</div>
+				<div class="flex-none hidden lg:block TekoRegular lg:text-3xl ">
+					<ul class="menu horizontal">
+						<li>
+							<a href="{{ path('app_index') }}" class="text-red  {% if active == 'index' %}menu-active{% endif %}">Accueil</a>
+						</li>
+						<li>
+							<a href="{{ path('app_apropos') }}" class="text-red {% if active == 'a propos' %}menu-active{% endif %}">A propos</a>
+						</li>
+						<li>
+							<a href="{{ path('app_expertise') }}" class="text-red {% if active == 'expertise' %}menu-active{% endif %}">Expertises</a>
+						</li>
+						<li>
+							<a href="{{ path('app_offres') }}" class="text-red {% if active == 'nos offres' %}menu-active{% endif %}">Nos offres</a>
+						</li>
+						<li>
+							<a href="{{ path('app_infos_vehicule') }}" class="text-red {% if active == 'souscription' %}menu-active{% endif %}">Souscription</a>
+						</li>			
+						<li>
+							<a href="{{ path('app_faq') }}" class="text-red {% if active == 'faq' %}menu-active{% endif %}">F.A.Q</a>
+						</li>
+						<li>
+							<a href="{{ path('app_encasdepanne') }}" class="text-red {% if active == 'encasdepanne' %}menu-active{% endif %}">En cas de panne</a>
+						</li>
+						<li>
+							<a href="https://espaceclient.labelgarantie.com/" target="_blank" rel="noopener" class="text-red {% if active == 'espace client' %}menu-active{% endif %}">Espace client</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+{# 			<div class="flex flex-row sticky top-16">
+				<div class="content-center text-white flex pl-1 flex-row  text-xl bg-red-600 TekoMedium items-center py-2 px-2" style="border-right:1px solid #DC2626">
+					<span class="pt-1 pr-1 hidden md:block align-middle">Règlements sinistres en temps réel</span>
+					<span class="pt-1 pr-1 block md:hidden  my-auto text-xl ">Sinistres</span>
+					<svg class="hidden xl:block" width="20px" height="20px" viewbox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff">
+
+						<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+						<g id="SVGRepo_iconCarrier">
+							<g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
+								<path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#ffffff"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+
+				<div class="ticker-wrapper-h flex-1" style="background-color: #2a3039;">
+					<ul class="news-ticker-h" id="news-ticker-h"></ul>
+				</div>
+
+			</div> #}
+
+			{# <div class="flex flex-row sticky top-16 z-50" style="background-color: #2a3039;">
+									<div class="content-center text-white flex pl-1 flex-row  text-xl bg-red-600 TekoMedium items-center" style="width: 17%; border-right:1px solid #DC2626">
+										<span class="pt-1 pr-1 hidden xl:block align-middle">Règlements sinistres en temps réel</span>
+										<span class="pt-1 pr-1 hidden md:block lg:hidden my-auto text-xl ">Règlements sinistres</span>
+										<span class="pt-1 pr-1 block md:hidden  my-auto text-xl ">Sinistres</span>
+										<svg class="hidden xl:block" width="20px" height="20px" viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff">
+						
+											<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+						
+											<g id="SVGRepo_iconCarrier"> <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)"> <path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#ffffff"/> </g> </g>
+						
+										</svg>
+									</div>
+									<div class="ticker-wrapper-h py-2" style="width: 83%;">
+										<ul class="news-ticker-h" id="news-ticker-h" >
+						
+										</ul>
+									</div>
+								</div> #}
+		</div>

@@ -1,0 +1,290 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+	{% include('./Modal/pwd_oublie.html.twig') %}
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Infos client</h2>
+				</div>
+			</div>
+		</div>
+
+		{% set num_etape = {'etape_souscription' : etape_souscription} %}
+		{% include('./souscription/ariane.html.twig') with num_etape %}
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 pt-10">
+			<div class="">
+				{% if app.user %}
+					<h3 class="text-center text-black lg:text-5xl text-2xl TekoMedium font-medium py-5" style="color: #333333;">
+						Est-ce bien vous ?
+					</h3>
+				{% else %}
+					<h3 class="text-center text-black lg:text-5xl text-2xl TekoMedium font-medium py-5" style="color: #333333;">
+						Vous êtes déjà client ? Connectez vous !
+					</h3>
+				{% endif %}
+
+				{% if app.user %}
+					<div class="TekoMedium text-lg lg:text-3xl TekoMedium pl-5 mt-5">
+						<p>
+							Vous êtes connecté en tant que :
+							<span class="TekoMedium">{{ app.user.username }}</span>
+						</p>
+					</div>
+
+					<div class="flex flex-row space-x-6 lg:my-4 lg:mx-0 place-content-center lg:place-content-start xl:place-content-start">
+						<div class="flex flex-col-reverse ">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="/logout" class="relative text-red-600 w-40 py-2 px-4 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Se déconnecter</a>
+							</div>
+						</div>
+						<div class="flex flex-col  ">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="{{ path('app_modif_client') }}" class="relative text-white w-40 py-2 px-4 text-2xl bg-red-600 shadow-xl text-center TekoRegular a_lbg">Continuer</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if not app.user %}
+				<form method="post" action="{{ path('app_check_client') }}">
+					<div class="grid grid-cols-3 grid-rows-1 lg:grid-cols-8 lg:grid-rows-1 gap-y-6 gap-x-6 mx-2 my-2">
+						<div class="flex flex-col row-start-1 col-span-full lg:col-span-3 lg:col-start-1 lg:row-start-1">
+							<input class="form w-full text-2xl py-3 pl-3 form-login text-sm h-fit" type="email" value="" name="email" id="inputEmail" placeholder="Adresse email*" required autofocus>
+							<span class="span-invalid text-red-600 hidden text-base TekoRegular inputEmail">Ce champ est obligatoire</span>
+							{% if error %}
+								<div>
+									<div class="text-red-700 TekoMedium">Adresse mail ou mot de passe inconnu</div>
+								</div>
+							{% endif %}
+
+						</div>
+						<div class="flex flex-col row-start-2 col-span-full lg:col-span-3 lg:col-start-4 lg:row-start-1">
+							<input class="form w-full text-2xl py-3 pl-3 form-login text-sm h-fit" type="password" name="password" id="inputPassword" placeholder="Mot de passe*" minlength="1" required>
+							<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+							<span class="span-invalid text-red-600 hidden text-base TekoRegular inputPassword">*Ce champ est obligatoire</span>
+							<a type="button" id="myBtn" href="#PWD" class="myBtn links-offres TekoRegular underline text-lg">Mot de passe oublié ?</a>
+						</div>
+						<div class="col-span-full row-start-3 lg:col-span-2 lg:col-start-7 lg:row-start-1">
+							<div class="grow flex flex-col-reverse ">
+								<div class="group mx-auto flex flex-row" style="color: transparent;">
+									<button class="relative text-white w-40 py-2 px-4 text-2xl bg-red-600 shadow-xl text-center TekoRegular a_lbg">Se connecter</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</form>
+			</div>
+		{% endif %}
+
+		{% if errorRegister %}
+			<div>
+				<div class="text-red-700 TekoMedium text-center my-5 text-lg">{{errorMessage}}</div>
+			</div>
+		{% endif %}
+
+		<hr class="border border-t-gray-300 my-10">
+		{% if not app.user %}
+			<div>
+				<h3 class="text-center text-black lg:text-5xl text-2xl TekoMedium font-medium py-5" style="color: #333333;">
+					Créez un compte Labellegarantie
+				</h3>
+				{{ form_start(form_create, {'attr': {'id': 'form_create'}}) }}
+				<div class="grid grid-rows-1 grid-cols-1 lg:grid-cols-2 mx-2 my-4 lg:w-96">
+					<div class="flex flex-col row-start-1   lg:col-start-1 lg:row-start-1">
+						{{ form_row(form_create.civilite, {'label':false, 'attr': {'class':'form w-full text-2xl pb-1 pl-3 custom-select text-sm h-fit','minlength':'1','maxlength':'','name':'civilite','placeholder': 'Civilité*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_civilite">*Ce champ est obligatoire</span>
+					</div>
+
+				</div>
+				<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-y-2 gap-x-6 mx-2 my-2">
+					<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+						{{ form_row(form_create.nom, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'nom','placeholder': 'Nom*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_nom">*Ce champ est obligatoire</span>
+					</div>
+					<div class="flex flex-col row-start-2 col-span-full lg:col-span-1 lg:col-start-2 lg:row-start-1">
+						{{ form_row(form_create.prenom, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'prenom','placeholder': 'Prénom*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_prenom">*Ce champ est obligatoire</span>
+					</div>
+
+				</div>
+
+				<div class="flex flex-col mx-2 my-2">
+					{{ form_row(form_create.adresse, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'adresse','placeholder': 'Adresse*'}}) }}
+					<span class="span-invalid text-red-600 hidden text-base TekoRegular form_adresse">*Ce champ est obligatoire</span>
+				</div>
+				<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-y-2 gap-x-6 mx-2 my-2">
+					<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+						{{ form_row(form_create.codePostal, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'codePostal','placeholder': 'Code Postal*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_codePostal">*Ce champ est obligatoire</span>
+					</div>
+					<div class="flex flex-col row-start-2 col-span-full lg:col-span-1 lg:col-start-2 lg:row-start-1">
+						{{ form_row(form_create.ville, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'ville','placeholder': 'Ville*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_ville">*Ce champ est obligatoire</span>
+					</div>
+
+				</div>
+				<div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1 gap-y-2 gap-x-6 mx-2 my-2">
+					<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+						{{ form_row(form_create.telephone, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'telephone','placeholder': 'Telephone*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_telephone">*Ce champ est obligatoire</span>
+					</div>
+				</div>
+				<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-y-2 gap-x-6 mx-2 my-2">
+					<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+						{{ form_widget(form_create.mail.first, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'telephone','placeholder': 'Email*'}}) }}
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_mail_first">Email Invalide</span>
+					</div>
+					<div class="flex flex-col row-start-2 col-span-full lg:col-span-1 lg:col-start-2 lg:row-start-1">
+						{{ form_widget(form_create.mail.second, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'dateNaissance','placeholder': 'Confirmation Email*'}}) }}
+						<div class="span-invalid text-red-600 hidden text-base TekoRegular">
+							{{ form_errors(form_create.mail.first) }}
+						</div>
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_mail_second">*Ce champ est obligatoire</span>
+					</div>
+
+				</div>
+				<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-y-2 gap-x-6 mx-2 my-2">
+					<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+						<div class="relative w-full">
+							<div class="absolute inset-y-0 bg-gray-300 mb-2.5 py-1 right-0 flex items-center px-2 z-10" , style="margin-bottom:10px">
+								<input class="hidden password-first" id="toggle" type="checkbox"/>
+								<label class="hover:bg-gray-400 rounded text-center text-sm text-gray-600 font-mono cursor-pointer password-label" for="toggle">
+									<svg class="h-8 w-8 text-gray-500 mx-auto my-auto" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+									</svg>
+
+								</label>
+							</div>
+							{{ form_widget(form_create.pwd.first, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit pr-16 js-password-first','minlength':'8','maxlength':'20','onkeypress':'verifPassword(event,"form_pwd_first")','name':'pwd','placeholder': 'Mot de passe*'}}) }}
+
+						</div>
+						<div class="relative flex flex-row">
+							<div class="span-invalid text-red-600 hidden text-base TekoRegular form_pwd_first">*Ce champ est obligatoire</div>
+
+							<div id="strengthbarPassword" class="col-span-2"></div>
+							<label id="textStrengthPassword" class="absolute TekoRegular text-lg right-0"></label>
+
+						</div>
+
+
+					</div>
+					<div class="flex flex-col row-start-2 col-span-full lg:col-span-1 lg:col-start-2 lg:row-start-1">
+						<div class="relative w-full">
+							<div class="absolute inset-y-0 bg-gray-300 mb-2.5 py-1 right-0 flex items-center px-2 z-10" style="margin-bottom:10px">
+								<input class="hidden password-confirm" id="toggle1" type="checkbox"/>
+								<label class="hover:bg-gray-400 rounded text-center text-sm text-gray-600 font-mono cursor-pointer password-confirm-label" for="toggle1">
+									<svg class="h-8 w-8 text-gray-500 mx-auto my-auto" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+									</svg>
+								</label>
+							</div>
+
+							{{ form_widget(form_create.pwd.second, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit pr-16 js-password-second','minlength':'1','maxlength':'','name':'pwd','placeholder': 'Confirmation mot de passe*'}}) }}
+
+						</div>
+						<div class="TekoMedium text-red-600 ">
+							{{ form_errors(form_create.pwd.first) }}
+						</div>
+						<span class="span-invalid text-red-600 hidden text-base TekoRegular form_pwd_second">Ce champ est obligatoire</span>
+
+					</div>
+
+				</div>
+				<div class="mx-2 my-2 TekoRegular lg:text-xl text-lg mt-5" style="color: #333333;">
+					{{ form_widget(form_create.accepte_mail, {'label':false}) }}
+					<label for="{{form_create.accepte_mail.vars.id}}">J'accepte de recevoir les informations de La Belle Garantie et de ses partenaires</label>
+				</div>
+				<div class="mx-2 my-2 TekoRegular lg:text-xl text-lg" style="color: #333333;">
+					{{ form_widget(form_create.CGU, {'label':false}) }}
+					<label for="{{form_create.CGU.vars.id}}">J'accepte les
+						<a class="links-offres" href="{{ path('cgu') }}" target="_blank">conditions générales d'utilisation</a>
+					</label>
+				</div>
+
+				<div class="flex flex-col">
+					<div class="flex flex-col">
+						<div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+							<div class="grow flex flex-col-reverse ">
+								<div class="relative group mx-auto my-auto flex flex-row " style="color: transparent;">
+									{{ form_widget(form_create.creation, {'label': 'Création', 'attr': {'class':'text-white  text-2xl bg-red-600 w-40 py-2 px-4 text-center TekoRegular a_lbg','name':'creation','id':'creation'}})}}
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				{{ form_end(form_create) }}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+<script>
+	const passwordToggle = document.querySelector('.password-first')
+const passwordConfirmToggle = document.querySelector('.password-confirm')
+
+
+passwordToggle.addEventListener('change', function () {
+const password = document.querySelector('.js-password-first')
+if (password.type === 'password') {
+password.type = 'text'
+} else {
+password.type = 'password'
+} password.focus()
+})
+
+passwordConfirmToggle.addEventListener('change', function () {
+const password = document.querySelector('.js-password-second')
+if (password.type === 'password') {
+password.type = 'text'
+} else {
+password.type = 'password'
+} password.focus()
+})
+var btn = document.getElementsByClassName("myBtn");
+
+btn[0].onclick = function (e) {
+e.preventDefault();
+$('#myModal').css("display", "block")
+}
+function closeA(myModal) {
+if (!$("#loading").hasClass("hidden")) {
+$("#loading").addClass("hidden")
+}
+if (!$("#success").hasClass("hidden")) {
+$("#success").addClass("hidden");
+
+}
+if (!$("#error").hasClass("hidden")) {
+$("#error").addClass("hidden")
+
+}
+if ($("#form_pwd").hasClass("hidden")) {
+$("#form_pwd").removeClass("hidden");
+
+}
+
+$('#' + myModal).css("display", "none")
+}
+</script>
+
+{% include('footer.html.twig') %}
+{% include('Header2.html.twig') with vars %}{% endblock %}

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .logo_lbg {
+            width: 10%;
+        }
+    </style>
+</head>
+
+{% block body %}
+    {% if contrat.client.civilite == "M" %}
+        {% set C = "Monsieur"%}
+    {% elseif contrat.client.civilite == "Mme" %}
+        {% set C = "Madame"%}
+    {% endif %}
+    <div class="WorkSans">
+        <p>Objet : Confirmation de l'adhésion.</p>
+        <p>Bonjour
+            {{ C }}
+            <span class="uppercase">{{ contrat.client.nom }}</span>
+            {{ contrat.client.prenom }}</p>
+
+        <p>
+            Nous vous remercions pour votre adhésion au contrat
+            <span class="uppercase font-medium">{{ contrat.garantie.code }}</span>
+            sous le numéro
+            <span class="uppercase font-medium">{{ contrat.numeroContrat }}
+				</span> pour le véhicule suivant :
+            <span class="uppercase font-medium">{{ contrat.vehicule.marque }}
+                {{ contrat.vehicule.modele }}</span>.
+            <br>
+            <br>
+            Cette garantie de
+            <span class="uppercase font-medium">{{ contrat.garantie.duree }}
+					mois</span>
+            prendra effet au
+            <span class="uppercase font-medium">{{ contrat.garantie.datedebut | date("d/m/Y")  }}</span>.
+            <br>
+            <br>
+            Vous recevrez prochainement tous les documents relatifs à votre adhésion.
+            <br>
+            <br>
+            Notre service de relation client reste à votre disposition pour répondre à toutes vos questions.
+            <br>
+            <br>
+            A très bientôt,<br>
+            Le service client<br>
+            04-28-63-20-20<br>
+            contact@labellegarantie.com<br>
+            37 Avenue Général de Gaulle<br>
+            69300 Caluire-et-Cuire<br>
+            <br>
+            <img class="logo_lbg" src="cid:logo" style="width:160px; height:36.641px">
+        </p>
+    </div>
+{% endblock body %}
+
+</html>

@@ -1,0 +1,278 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Bulletin d'adhésion</title>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+			.Teko {
+				font-family: 'Teko', sans-serif;
+			}
+			.tx-blue {
+				color: #24315F
+			}
+			.float-right {
+				float: right;
+			}
+			.float-left {
+				float: left;
+			}
+			.w-full {
+				width: 100%;
+			}
+			.text-center {
+				text-align: center;
+			}
+		</style>
+
+	</head>
+
+	<body
+		class="Teko" style="background-color: #ffffff;">
+
+		{# Logo #}
+		<div class="w-full float-left">
+			<img style="width:160px; height:36.641px" class="float-right" src="{{ absolute_url(asset('build/img/logo.png')) }}">
+		</div>
+
+		{# Titre #}
+		<div class="w-full float-left" style="padding-top:32px; font-size:32px; font-weight:500; text-transform: uppercase;">
+			<span class="tx-blue">Bulettin d'adhesion</span>
+		</div>
+
+		{# Garantie #}
+		<div class="w-full float-left" style="padding-top:10px">
+			<span class="tx-blue float-left" style="font-weight:500;">Garantie :
+				<span style="color: black;">
+					{{ libelle }}&nbsp;
+				</span>
+			</span>
+		</div>
+
+		{# Contrat / Durée / Date effet #}
+		<div
+			class="w-full float-left" style="padding-top:10px">
+			{# Contrat #}
+			<span class="tx-blue" style="padding-right:10%; font-weight:500;">Numéro de contrat :
+				<span style="color: black;">
+					{{numero}}&nbsp;
+				</span>
+			</span>
+			{# Durée #}
+			<span class="tx-blue" style="padding-right:10%; font-weight:500;">Durée :
+				<span style="color: black;">
+					{{duree}}
+					mois&nbsp;
+				</span>
+			</span>
+			{# Date effet #}
+			<span class="tx-blue" style="font-weight:500;">Date d'éffet :
+				<span style="color: black;">
+					{{dateDebut |date("d/m/Y") }}&nbsp;
+				</span>
+			</span>
+		</div>
+
+		{# Le véhicule assuré #}
+		<div class="w-full float-left" style="margin-top:10px; border: 1px solid #f6c2a0; box-sizing: border-box;">
+			<div class="w-full float-left text-center" style="background-color:#ff5050;">
+				<span style="color: white; font-weight:500; font-size:20px">
+					Le véhicule assuré
+				</span>
+			</div>
+
+			{# Titre marque #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Marque</span>
+			</div>
+
+			{# Titre date de circulation #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Date de première mise en circulation</span>
+			</div>
+
+			{# Valeur marque #}
+			<div class="float-left text-center" style="width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{marque}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Valeur date de circulation #}
+			<div class="float-left text-center" style="width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{date | date('d/m/Y')}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Titre modèle #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Modèle</span>
+			</div>
+
+			{# Titre N° Serie #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">N° de série</span>
+			</div>
+
+			{# Valeur modèle #}
+			<div class="float-left text-center" style="width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{modele}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Valeur N° Serie #}
+			<div class="float-left text-center" style="width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{serie}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Titre Immatriculation #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Immatriculation</span>
+			</div>
+
+			{# Titre Type MINE #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Type MINE</span>
+			</div>
+
+			{# Valeur Immatriculation #}
+			<div class="float-left text-center" style="width:50%; border-right: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{immatriculation}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Valeur Type MINE #}
+			<div class="float-left text-center" style="width:50%; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{mine}}&nbsp;</span>
+				</div>
+			</div>
+		</div>
+
+		{# Propriétaire #}
+		<div class="w-full float-left" style="margin-top:10px; border: 1px solid #f6c2a0; box-sizing: border-box;">
+			<div class="w-full float-left text-center" style="background-color:#ff5050;">
+				<span style="color: white; font-weight:500; font-size:20px">
+					Propriétaire
+				</span>
+			</div>
+
+			{# Titre Nom #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Nom - Prénom</span>
+			</div>
+
+			{# Titre Téléphone #}
+			<div class="float-left text-center" style="background-color:#fbe4d5; width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Téléphone</span>
+			</div>
+
+			{# Valeur Nom #}
+			<div class="float-left text-center" style="width:50%; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{nom}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Valeur Téléphone #}
+			<div class="float-left text-center" style="width:50%; border-bottom: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{telephone}}&nbsp;</span>
+				</div>
+			</div>
+
+			{# Titre Adresse #}
+			<div class="float-left w-full text-center" style="background-color:#fbe4d5; border-right: 1px solid #f6c2a0; border-bottom: 1px solid #f6c2a0; box-sizing: border-box;">
+				<span class="tx-blue" style="font-size:16px; font-weight:500;">Adresse</span>
+			</div>
+
+			{# Valeur Adresse #}
+			<div class="float-left w-full text-center" style="border-right: 1px solid #f6c2a0; box-sizing: border-box; height:40px; display:table;">
+				<div style="display:table-cell; vertical-align: middle;">
+					<span style="font-size:18px">{{adresse}}&nbsp;</span>
+				</div>
+			</div>
+		</div>
+
+		{# Que faire en cas de panne #}
+		<div class="w-full float-left" style="margin-top:10px; border: 1px solid #b4c6e7; box-sizing: border-box;">
+			<div class="w-full float-left text-center" style="background-color:#003366;">
+				<span style="color: white; font-weight:500; font-size:20px">
+					Que faire en cas de panne ?
+				</span>
+			</div>
+
+			{# Texte #}
+			<div class="w-full float-left" style="padding:5px">
+				<span>Je me rends dans le garage réparateur de mon choix.</span><br>
+				<span>Le réparateur transmet directement à l'assureur le devis des réparations, qui lui renvoie son accord de prise en charge, avec le montant
+														correspondant. Le réparateur m'informe du devis et du montant pris en charge par l'assureur. Après lui avoir donné mon accord, il effectue les
+														réparations</span><br>
+				<span>Je n'avance pas d'argent, l'assureur paie directement le réparateur.</span>
+			</div>
+		</div>
+
+		{# Informations à destination du garage réparateur #}
+		<div class="w-full float-left" style="margin-top:10px; border: 1px solid #b4c6e7; box-sizing: border-box;">
+			<div class="w-full float-left text-center" style="background-color:#003366;">
+				<span style="color: white; font-weight:500; font-size:20px">
+					Informations à destination du garage réparateur
+				</span>
+			</div>
+
+			{# Texte #}
+			<div class="w-full float-left" style="padding:5px">
+				<span>IMPORTANT : Avant toute réparation, et après examen du véhicule, merci de transmettre votre devis au service technique par mail à devis@labelgarantie.com.</span><br>
+				<span>En indiquant :</span>
+				<ul style="list-style: inside; margin:0px">
+					<li>Le numéro de la garantie et l'identité de propriétaire.</li>
+					<li>Le kiloémtrage compteur et le numéro d'immatriculaton du véhicule.</li>
+					<li>Vos coordonées complètes.</li>
+					<li>La nature et l'estimation du sinistre (devis chiffré).</li>
+				</ul>
+			</div>
+		</div>
+
+		{# Téléphone service technique#}
+		<div class="w-full float-left">
+			<span style="font-weight:500;">Tel service technique : 04 87 91 49 74</span>
+		</div>
+
+		{# Signature #}
+		{% if moyenPaiement == 'Paiement par carte bancaire' %}
+			<div class="float-right" style="width:33%; margin-top:10px; border: 1px solid #b4c6e7; box-sizing: border-box;">
+				<div class="w-full float-right text-center" style="background-color:#003366;">
+					<span style="color: white; font-weight:500; font-size:20px">
+						Signature
+					</span>
+				</div>
+
+				<div class="w-full float-left" style="padding:5px">
+					<div style="display: table; height:80px; width:80%;">
+						<div class="text-center" style="display: table-cell; vertical-align: middle; color:white;">
+							<span class="text-center" style="font-size:3rem;">[[s|0 ]]</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+
+
+		{#Footer#}
+		<div class="w-full float-left text-center" style="position: absolute; bottom:0px">
+			<img style="width:8%; height:auto;" src="{{ absolute_url(asset('build/img/logo.png')) }}">
+			<div class="w-full float-left text-center">
+				<span>LABEL GARANTIE 37 Avenue Général de Gaulle 69300 CALUIRE ET CUIRE</span><br>
+				<span>Immatriculé auprès du registre de commerce et des sociétés de Lyon N°882 077 696,enregistré sous le nom de l’ORIAS sous le N° 200 027 19</span><br>
+			</div>
+		</div>
+
+	</body>
+
+</html>

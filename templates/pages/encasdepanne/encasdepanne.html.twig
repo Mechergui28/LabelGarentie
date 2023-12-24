@@ -1,0 +1,45 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Que faire en cas de panne | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+	Découvrez comment nous aidons nos clients en cas de panne mécanique avec notre guide pratique. Suivez nos étapes simples pour retrouver la route en un rien de temps.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'encasdepanne'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content -mb-20 lg:-mb-0">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						En cas de panne
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+
+			<div class="text-center pt-20">
+				<h2 class="TekoRegular text-4xl lg:text-5xl">Vous êtes en panne ?</h2>
+				<p class="TekoRegular text-4xl lg:text-5xl">Pas de panique,
+					<span class="text-red-600">suivez les 4 étapes !</span>
+				</p>
+				<p class="WorkSans text-base lg:text-lg pt-10">Votre réparateur doit nous transmettre votre devis d'intervention par mail à : <span class="font-bold">devis@labelgarantie.com</span></p>
+			</div>
+
+			<img src="{{ asset('build/img/en-cas-de-panne.jpg') }}" class="w-5/6 lg:w-4/6 h-auto mx-auto pt-10 -pb-20 lg:pb-0" alt="Je déclare ma panne">
+		</div>
+
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

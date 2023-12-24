@@ -1,0 +1,295 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+	Assurez votre véhicule en toute tranquillité avec Bestgarantie.com ! Découvrez nos offres exceptionnelles d'assurance automobile, incluant la garantie mécanique et tous risques. Faites confiance à notre expertise.
+{% endblock %}
+
+{% block body %}
+
+	{% if user_status != null %}
+		{% include('./Modal/deconnection_user.html.twig') %}
+	{% endif %}
+
+	{% include('./Modal/invalidEnergie.html.twig') %}
+	{% include('./Modal/confirmation_contact.html.twig') %}
+	{% set vars = {'active': 'index'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="bg-center bg-no-repeat bg-cover home_header">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 bg-home-header">
+				<div class="bg-gray-900 bg-opacity-10 bg-cover lg:py-14">
+					<div class="bg-no-repeat bg-center bg-fixed text-center mx-2">
+						<h1 class="pt-12">
+							<p class="lg:text-6xl text-3xl text-red-600 pb-11 lg:px-3 text-center TekoRegular" id="css_animate_1">
+								SI VOTRE VOITURE TOMBE EN PANNE. QUI VA REMBOURSER VOS RÉPARATIONS ?
+							</p>
+
+							<p class="lg:text-7xl text-5xl font-header text-center text-white text-uppercase ITCAvantGarde" id="css_animate_2">
+								LA BELLE GARANTIE
+							</p>
+						</h1>
+					</div>
+
+					<div class="pt-12 pb-10 TekoRegular">
+						<h2 class="lg:text-3xl text-xl pb-3 text-white text-center">
+							Retrouvez la garantie adaptée à votre véhicule en un clic grâce à notre simulateur.
+						</h2>
+						{{ form_start(form_immat,{'attr': {'id': 'form_vehicule'}}) }}
+
+						<div class="grid grid-cols-12 gap-1 lg:gap-0 ">
+
+							<div class="col-start-1 col-span-full mx-2 lg:mx-0  lg:col-start-3 lg:col-span-3">
+								{{ form_row(form_immat.immat, {'attr': {'class':'form form-border w-full text-2xl py-3 pl-3','type':'text','minlength':'4','maxlength':'','onkeypress':'return verifieImmat(event, "form_immat");','onkeyup':'this.value=this.value.toUpperCase()','name':'immatriculation','placeholder': 'Votre Immatriculation*'}})}}
+								<span class="span-invalid text-white text-lg hidden form_immat">*Ce champ est obligatoire</span>
+							</div>
+							<div class="col-start-1 col-span-full mx-2 lg:mx-0  lg:col-start-6 lg:col-span-3">
+								{{ form_row(form_immat.km, {'attr': {'class':'form form-border w-full border-l-2 text-2xl py-3 pl-3','type':'number','minlength':'1','maxlength':'10','onkeypress':'return verifieNum(event, "form_km");','name':'kilometrage','placeholder': 'Votre Kilométrage(km)*'}})}}
+								<span class="span-invalid text-lg text-white  hidden form_km">*Ce champ est obligatoire</span>
+							</div>
+							<div class="col-start-1 col-span-4 mx-2 lg:mx-0 lg:col-start-9 lg:col-span-2 relative">
+								{{ form_row(form_immat.calculer, {'attr': {'class':'relative w-full form-border bg-red-600 text-white lg:text-2xl text-lg  py-3 btn_lbg','type':'submit','name':'calculer'}})}}
+							</div>
+							<div class="col-start-1 col-span-full mx-2 lg:mx-0 lg:col-start-3 lg:col-span-4 text-white text-xl btn-form underline pb-8 pt-4">
+								<a href="{{ path('app_infos_vehicule') }}" class="text-center">
+									ou renseignez vos informations manuellement
+								</a>
+							</div>
+						</div>
+						{{ form_end(form_immat) }}
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 relative animation ">
+			<div class="grid grid-cols-2 text-center">
+				<div class="text-white bg-gray-light col-span-2 lg:col-span-1 pt-14 relative flex flex-col -mb-0.5 lg:-mb-0 xl:-mb-0" style="background-color: #2a3039;">
+					<div class="items-center">
+						<img src="{{ asset('build/img/img_2.webp') }}" class="mx-auto" alt="Protegez votre budget auto">
+					</div>
+					<h3 class="lg:text-4xl xl:text-4xl text-2xl pt-5 pb-3 TekoMedium">
+						PROTÉGEZ VOTRE BUDGET AUTO
+					</h3>
+					<div class="xl:text-xl lg:text-xl text-lg leading-none px-8 pb-8 TekoRegular">
+						Parce qu’une voiture bien entretenue préserve toute sa valeur, assurez-vous de protéger correctement votre auto contre les risques de sinistres aléatoires. Comme pour votre domicile, votre téléphone ou vos biens d’équipement, votre investissement mérite d’être garanti contre les impondérables !
+					</div>
+					<div class="grow flex flex-col-reverse lg:py-0 xl:py-0 py-2 z-10">
+						<div class="relative">
+							<a href="https://labelgarantie.com/" class="relative text-red-600 py-3 px-8 text-xl bg-white shadow-xl text-center TekoRegular a_lbg">Plus d'infos</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-white bg-gray-light col-span-2 lg:col-span-1 pt-14 relative flex flex-col" style="background-color: #2a3039;">
+					<div class="items-center">
+						<img src="{{ asset('build/img/img_3.webp') }}" class="mx-auto" alt="Valorisez votre bien">
+					</div>
+					<h3 class="lg:text-4xl xl:text-4xl text-2xl pt-5 pb-3 TekoMedium">
+						VALORISEZ VOTRE BIEN
+					</h3>
+					<div class="xl:text-xl lg:text-xl text-lg leading-none px-8 pb-8 TekoRegular">
+						Parce qu’une panne mécanique, électronique ou électrique coûte chère, n’attendez pas la « tuile » pour vous protéger contre les risques. Imaginées comme une « mutuelle » auto, nos garanties sur- mesure vous permettent de sécuriser votre budget pour l’avenir et de continuer à rouler l’esprit serein.
+					</div>
+					<div class="grow flex flex-col-reverse lg:py-0 xl:py-0 py-2 z-10">
+						<div class="relative">
+							<a href="{{ path('app_infos_vehicule') }}" class="relative text-red-600 py-3 px-8 text-xl bg-white shadow-xl text-center TekoRegular a_lbg">Votre devis en 1 clic</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="triangle_01 right-0 left-0 -mx-0.5 lg:-mx-0 "></div>
+		</div>
+
+		{#	<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 relative animation ">
+							<h2 class="text-6xl lg:text-7xl pt-24 TekoMedium text-center" style="color: #333333;">Règlements sinistres en temps réel</h2>
+							<div class="grid grid-cols-1 text-center md:grid-cols-5 md:text-left pt-20">
+								{% set columns = 2 %}
+								{% for sinistre in sinistres %}
+									{% if loop.index % columns %}
+				
+									<div class="md:col-start-2 md:col-span-2 text-xl">
+										<span class="TekoBold">{{sinistre.date}}</span>
+										<span class="TekoRegular">{{sinistre.nature}}</span>
+										<span class="TekoRegular text-2xl" style='color: #23DE0F'>{{sinistre.montant|number_format(2, '.', ',')}} € </span>
+									</div>
+				
+									{% else %}
+				
+									<div class="md:col-start-4 md:col-span-2 text-xl">
+										<span class="TekoBold">{{sinistre.date}}</span>
+										<span class="TekoRegular">{{sinistre.nature}}</span>
+										<span class="TekoRegular text-2xl" style='color: #23DE0F'>{{sinistre.montant|number_format(2, '.', ',')}} € </span>
+									</div>
+				
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>#}
+
+		<div class="bg-cover relative home_01 pb-20 animation lg:mt-5 xl:mt-5">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 pb-20">
+				<div class="text-center">
+					<h2 class="text-4xl lg:text-7xl xl:text-7xl  pt-24 pb-4 TekoMedium" style="color: #333333;">
+						La garantie panne mécanique pour tous les véhicules neufs et d’occasion
+					</h2>
+				</div>
+				<div class="grid grid-cols-2 text-center pt-20" style="color: #333333;">
+					<div class="col-span-2 lg:col-span-1">
+						<h3 class="lg:text-4xl  text-2xl pb-4 TekoMedium">
+							Les plus belles des garanties
+						</h3>
+						<div class="xl:text-xl lg:text-xl text-lg text-base normal-case leading-none TekoRegular px-8 pb-6">
+							Trois offres simples et extrêmement couvrantes adaptées aux caractéristiques de votre véhicule. à votre budget et vos besoins. Une solution de garantie pour tous les véhicules jusqu’à 20 ans et 200 000 km. toutes énergies confondues.
+						</div>
+						<div class="grow flex flex-col-reverse z-50">
+							<div class="group mx-auto flex flex-row relative" style="color: transparent;">
+								<a href="{{ path('app_offres') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl text-center text-center TekoRegular a_lbg underline">Plus d'infos</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-span-2 lg:col-span-1">
+						<h3 class="lg:text-4xl  text-2xl TekoMedium pb-4">
+							Une souscription simple, rapide et digitalisée
+						</h3>
+						<div class="xl:text-xl lg:text-xl text-lg text-base leading-none TekoRegular px-8 pb-6">
+							Estimation du coût de votre garantie et de votre mensualité en quelques clics. Documentation et paiement en ligne. mensuel ou comptant. Espace client personnalisé. Pour toute question, contactez notre équipe de conseillers pour vous aider.
+						</div>
+						<div class="grow flex flex-col-reverse z-50">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="{{ path('app_apropos') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl text-center TekoRegular a_lbg underline">Plus d'infos</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="triangle_02"></div>
+		</div>
+
+
+		{#  Sinistres #}
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 py-24 hide-div " >
+			<div>
+				<h2 class="text-4xl lg:text-7xl xl:text-7xl pt-18 lg:pt-24 TekoMedium text-center" style="color: #333333;">
+					Les engagements de la
+					<span class="font-bold underline">La Belle Garantie</span>
+				</h2>
+				<h2 class="text-4xl lg:text-7xl xl:text-7xl TekoMedium text-center">
+					face à vos
+					<span style="color: #DC2626;">pannes mécaniques</span>
+				</h2>
+
+				<div class="grid grid-rows-3 lg:grid-rows-4 lg:grid-cols-3 xl:grid-rows-4 xl:grid-cols-3 gap-4 h-full pt-24">
+					<div class="row-span-1 lg:row-span-4 lg:col-span-1 xl:row-span-4 xl:col-span-1 bg-no-repeat bg-cover grow flex flex-col-reverse pb-6 lg:pb-10" id="div-mecan-accueil">
+						<div class="group mx-5 flex flex-col text-white">
+							<p class="text-5xl md:text-8xl WorkSans loading h-12" style="width: 50%;" id="nombre-sinistre"></p>
+							<p class="text-2xl md:text-3xl WorkSans ">Pannes prises en charge depuis 1er janvier 2023</p>
+						</div>
+					</div>
+					<div class="row-span-1 lg:col-span-2 lg:row-span-2 xl:col-span-2 xl:row-span-2 bg-no-repeat bg-cover h-full grow flex flex-col" id="div-vehicule-accueil">
+						<div class="group mx-10 my-auto flex flex-col text-white">
+							<p class="text-5xl md:text-8xl WorkSans loading h-12" style="width: 50%;" id="sinistre-montant">
+
+							</p>
+							<p class="text-2xl md:text-3xl WorkSans md:pr-28">De pannes prises en charge depuis 1er janvier 2023</p>
+						</div>
+					</div>
+					<div class="row-span-1 lg:row-span-2 lg:col-span-2 xl:row-span-2 xl:col-span-2">
+						<div class="grid grid-cols-3 lg:gap-4 xl:gap-4 gap-0.5 h-full">
+							<div class="lg:col-span-2 xl:col-span-2 bg-no-repeat bg-cover " id="div-femme-accueil"></div>
+							<div class="lg:col-span-1 xl:col-span-1 col-span-full" style="background-color: #333333; color: white;">
+								<div class="flex flex-col my-2 lg:my-10">
+									<div class="text-white mx-2 my-2 text-center WorkSans">
+										<span class="text-lg uppercase">Une Panne ?
+										</span>
+										<br>
+										<span class="text-md">Pas de panique
+											<br>
+											Labelle Garantie
+											<br>
+											vous accompagne !<br></span>
+									</div>
+									<hr class="my-4 mx-4" style="border-top: 1px solid white">
+									<div class="TekoLight my-1 text-4xl text-center uppercase">
+										<a href="{{ path('app_offres') }}">Découvrez
+											<br>
+											Nos Offres !</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="pt-32 text-center">
+				<h2 class="text-4xl lg:text-7xl xl:text-7xl TekoMedium text-center" style="color: #333333;">
+					Qui sommes-nous ?
+				</h2>
+				<p class="xl:text-xl lg:text-xl text-lg py-10 TekoRegular px-10">
+					Une entreprise 100% française et indépendante. Automobile, réparation automobile et gestion des produits d’assurances, voilà nos domaines d'expertises depuis maintenant plus de 20 ans. 2020 marque le tournant de Label Garantie :  la garantie Panne Mécanique Automobile à destination de tous les professionnels de l’automobile et de tous les particuliers qui possèdent une automobile.
+				</p>
+
+				<div class="grow flex flex-col-reverse z-50">
+					<div class="group mx-auto flex flex-row" style="color: transparent;">
+						<a href="{{ path('app_apropos') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl text-center TekoRegular a_lbg underline">Plus d'infos</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		const form = document.querySelector('#form_vehicule');
+		form.addEventListener('submit', verify);
+		function verify(e) {
+			e.preventDefault();
+			var promiseVehicule = verifVehicule();
+			return Promise.all([promiseVehicule]).then(values => {
+				dataVehicule = JSON.parse(values[0]);
+
+				if (dataVehicule.response == 'OK') {
+					form.submit();
+				} else {
+					$('#confirmation_energie_verif').css("display", "block");
+
+					document.querySelector('#verif_non').onclick = function () {
+						$('#confirmation_energie_verif').css("display", "none")
+						window.location.replace("https://garantie-electrique.com/souscription/infos-vehicule?immat=" + $('#form_immat').val() + "&km=" + $('#form_km').val());
+
+					}
+
+					document.querySelector('#verif_oui').onclick = function () {
+						$('#confirmation_energie_verif').css("display", "none")
+						form.submit();
+					}
+				}
+			})
+
+
+		}
+		function verifVehicule() {
+
+			var formData = {
+				immat: $("#form_immat").val()
+			};
+
+			return $.ajax({type: 'POST', url: "{{ path('app_ajax_immat_vehicule') }}", data: formData});
+
+		}
+	</script>
+
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+
+{% endblock %}

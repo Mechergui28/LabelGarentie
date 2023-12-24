@@ -1,0 +1,57 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+<div id="myModal" class="absolute z-10 inset-0 overflow-y-auto h-screen" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="display:none;">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-72 xs:pb-20 text-center sm:block sm:p-0">
+
+    </div>
+</div>
+-->
+<!-- This example requires Tailwind CSS v2.0+ -->
+	<div id="myModal" class="absolute z-10 inset-0 overflow-y-auto h-screen" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="display:none;"> <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-72 xs:pb-20 text-center sm:block sm:p-0">
+		<div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+		<!-- This element is to trick the browser into centering the modal contents. -->
+		<span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+		<div class="inline-block align-bottom bg-white  text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+			<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+				<div class="flex flex-row justify-between">
+					<span class="text-xl TekoRegular mx-2">Réinitialiser mon mot de passe :</span>
+					<button onclick="closeA('myModal')">
+						<svg class="h-8 w-8 text-gray-900" width="24" height="24" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z"/>
+							<line x1="18" y1="6" x2="6" y2="18"/>
+							<line x1="6" y1="6" x2="18" y2="18"/></svg>
+					</button>
+				</div>
+				<div class="sm:flex sm:items-start">
+					<form method="post" id="form_pwd">
+						<div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1 gap-y-1 gap-x-1 mx-2 my-2">
+							<div class="flex flex-col row-start-1 col-span-full lg:col-span-1 lg:col-start-1 lg:row-start-1">
+								<input id="form_email" class="form w-full text-2xl py-3 pl-3 form-login text-sm h-fit" type="email" value="" name="email" id="inputEmail" placeholder="Adresse email*" required autofocus>
+							</div>
+							<div class="flex flex-col row-start-2 col-span-full lg:col-span-1 lg:col-start-2 lg:row-start-1 ">
+								<div class="grow flex flex-col ">
+									<div class="group mx-auto flex flex-row" style="color: transparent;">
+										<button class="relative text-white w-40 py-2 px-4 text-2xl bg-red-600 shadow-xl text-center TekoRegular a_lbg">Réinitialiser</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</form>
+					<div class="load-container text-center hidden mx-auto my-auto" id="loading">
+						<div class="linespinner"></div>
+					</div>
+					<div class="TekoRegular hidden text-red-600 text-lg mx-2" id="success">
+						Nous allons vous envoyer un e-mail contenant un lien de réinitialisation de votre mot de passe. Pensez a vérifier votre dossier de courrier indésirable (spam) au cas où l'e-mail serait filtré en tant que spam.
+					</div>
+					<div class="TekoRegular hidden text-red-600 text-lg mx-2" id="error">
+						Nous sommes désolés, mais l'adresse e-mail que vous avez fournie n'est pas valide. Veuillez la vérifier et la saisir à nouveau.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

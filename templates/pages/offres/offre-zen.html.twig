@@ -1,0 +1,131 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Offre ZEN - Garantie panne mécanique - La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Choisissez notre offre ZEN en garantie panne mécanique pour une protection intermédiaire complète de votre véhicule ! Profitez d'une couverture étendue et d'un prix abordable. 
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+	
+{# 		<div class="bg-center bg-no-repeat bg-cover bg_sweet animation h-fit">
+			<div class="lg:container py-20 px-2 md:px-16 lg:px-48">
+				<div>
+					<h1 class="text-center uppercase zen lg:text-8xl  text-5xl  tracking-wide Oswald TekoMedium py-4 lg:py-3">
+						la garantie zen
+					</h1>
+				</div>
+			</div>
+			<div class="bg-triangle-offre w-full h-32 bg-no-repeat bg-cover"></div>
+		</div> #}
+
+		<div class="bg_sweet bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36">
+					<h1 class="TekoMedium zen uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						La garantie ZEN
+					</h1>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="animation">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-40 px-4 hide-div pt-20 fadeIn">
+				<div class="grid lg:grid-cols-3 lg:grid-rows-1 xl:grid-cols-3 xl:grid-rows-1 grid-cols-1 grid-rows-1 gap-y-6 gap-x-6  h-fit">
+					<div class="lg:col-start-1 lg:col-span-1 lg:row-start-1 xl:col-start-1 xl:col-span-1 xl:row-start-1 row-start-1  col-start-1 bg-white py-8 hide-div shadow-lg rounded h-fit ">
+						<div class="my-8">
+							<img src="{{ asset('build/img/zen2.webp') }}" width="150" alt="Offre garantie ZEN" class="text-center mx-auto my-auto "/>
+						</div>
+						<h2 class="text-red uppercase text-center text-4xl TekoMedium">
+							ZEN
+						</h2>
+						<p class="text-center lg:text-2xl text-xl TekoRegular" style="color: #333333;">
+							+ de 100 pièces couvertes
+						</p>
+
+						<div class="flex flex-col text-left my-2 text-xl TekoLight link-offre">
+							<p class="mx-2 italic cursor-default text-lg py-2 text-red-600">Cliquez sur une famille de pièces pour plus de détail sur les composants couverts :</p>
+							<a href="{{ path('app_offres_pieces_zen') }}#moteur" class="mx-2 hover:underline">Moteur</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#systeme-alimentation" class="mx-2 hover:underline">Système d’alimentation</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#boite-de-vitesse" class="mx-2 hover:underline">Boîte de vitesses</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#dispositif-embrayage" class="mx-2 hover:underline">Dispositif d’embrayage</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#boite-vitesse-automatique" class="mx-2 hover:underline">Boîte de vitesses automatique</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#circuit-electrique-electronique" class="mx-2 hover:underline">Circuit électrique</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#circuit-electrique-electronique" class="mx-2 hover:underline">Circuit électronique</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#climatisation" class="mx-2 hover:underline">Climatisation</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#direction" class="mx-2 hover:underline">Direction</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#freinage" class="mx-2 hover:underline">Freinage</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#circuit-refroidissement" class="mx-2 hover:underline">Circuit de refroidissement</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#securite" class="mx-2 hover:underline">Sécurité</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#transmission" class="mx-2 hover:underline">Transmissions/Pont</a>
+							<a href="{{ path('app_offres_pieces_zen') }}#suspension" class="mx-2 hover:underline">Suspension</a>
+							<p class="mx-2">Ingrédients</p>
+							<p class="mx-2">Diagnostic</p>
+						</div>
+
+						<div class="text-center flex flex-col TekoLight text-xl pt-4">
+							<a href="{{ asset('build/docs/zen/cg_lbg_zen.pdf') }}" class="links-offres">Conditions générales de vente</a>
+							<a href="{{ asset('build/docs/zen/cp_lbg_zen.pdf') }}" class="links-offres">Conditions particulières</a>
+						</div>
+					</div>
+					<div class="lg:col-start-2 lg:col-span-2 lg:row-start-1 xl:col-start-2 xl:col-span-2 xl:row-start-1 row-start-2  col-start-1 my-4 flex flex-col h-fit hide-div">
+						<h2 class="zen uppercase text-center text-4xl TekoRegular flex-none">La plus cool</h2>
+						<p class="text-center text-2xl TekoRegular flex-none" style="color: #333333;">Votre sérénité assurée : épargnez vous toute mauvaise surprise et restez zen, vous êtes protégé contre les risques de pannes pouvant survenir sur une large liste de pièces.
+							                    Keep cool, vous avez fait le bon choix !</p>
+						<div class="bg-white grow grid lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-2 xl:grid-cols-2 grid-cols-1 grid-rows-4 gap-y-4 gap-x-4 h-fit shadow-xl rounded">
+							<div class="col-start-1 row-start-1 flex flex-col h-fit">
+								<div class="my-8">
+									<img src="{{ asset('build/img/hourglassbleu.webp') }}" width="100" alt="Offre garantie ZEN" class="text-center mx-auto my-auto  "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Possibilité de souscrire jusqu’à 60 mois sans aucune dégradation de la garantie liée au vieillissement de
+									                            la voiture ou de l’augmentation de son kilométrage durant toute la durée du contrat.
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-1 xl:col-start-2 xl:row-start-1 row-start-2 col-start-1 h-fit">
+								<div class="my-8">
+									<img src="{{ asset('build/img/liftbleu.webp') }}" width="100" alt="Eligibilite" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Éligibilité : 8 ans et/ou 120 000km en date de prise d’effet du contrat pour tous les véhicules de
+									                            moins de 150 000 €, valeur à neuf.
+								</p>
+							</div>
+							<div class="lg:col-start-1 lg:row-start-2 xl:col-start-1 xl:row-start-2 row-start-3 col-start-1 flex flex-col h-fit">
+								<div class="my-8">
+									<img src="{{ asset('build/img/car1.webp') }}" width="100" alt="Diagnostic" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Forfait diagnostic remboursé à hauteur de 150 € et forfait
+									                            ingrédients de 100 €
+								</p>
+							</div>
+							<div class="lg:col-start-2 lg:row-start-2 xl:col-start-2 xl:row-start-2 row-start-4 col-start-1  flex flex-col h-fit">
+								<div class="my-8">
+									<img src="{{ asset('build/img/transferbleu.webp') }}" width="100" alt="Vestuste" class="text-center mx-auto my-auto "/>
+								</div>
+								<p class="text-center text-xl TekoLight mx-2" style="color: #333333;">
+									Pas de vétusté, pas de franchise.
+								</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

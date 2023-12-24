@@ -1,0 +1,2 @@
+nzo_encryptor:
+    secret_key: Your_Secret_Encryption_Key   # Required, max length of 100 characters.

@@ -1,0 +1,209 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Comparatif de nos offres - Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Choisissez la garantie panne mécanique qui convient le mieux à vos besoins sur notre page dédiée ! Découvrez nos 3 offres exceptionnelles pour protéger votre véhicule contre les pannes.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content bg-white">
+
+		<div class="bg-offres bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Nos Offres
+					</h1>
+					<h2 class="TekoLight text-white text-2xl md:text-4xl animation-title px-4 md:pl-8">PROTEGEZ VOTRE AUTO, OPTEZ POUR LA PLUS BELLE DES GARANTIES avec www.labellegarantie.com</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="pt-8 pb-10">
+
+			<div class="xl:container xl:px-48 lg:px-24 md:px-48 px-4">
+
+				<h2 class="text-center lg:text-8xl text-5xl TekoMedium tracking-wide lg:my-0 py-4" style="color: #333333;">Nos 3 garanties</h2>
+
+				<div
+					class="flex w-full space-y-4 flex-col justify-center lg:space-y-0 lg:space-x-12 lg:flex-row">
+
+					{#Garantie Premium#}
+					<div class="flex-auto border-premium h-full lg:h-fit pt-4">
+						<a href="{{ path('app_offres_premium') }}">
+							<h3 class="premium uppercase text-center text-4xl TekoMedium">
+								PREMIUM
+							</h3>
+							<h4 class="premium text-center text-4xl TekoLight">
+								LA PLUS BELLE
+							</h4>
+							<div class="my-8">
+								<img src="{{ asset('build/img/premium1.webp') }}" alt="Offre garantie PREMIUM" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+							</div>
+						</a>
+						<hr class="border-top-premium my-2 mx-2">
+						<p class="text-center lg:text-3xl text-xl TekoRegular" style="color: #333333;">
+							+ de 250 pièces couvertes
+						</p>
+						<p class="text-center TekoMedium">
+							<span class="lg:text-xl text-lg" style="color: #333333;">à partir de</span>
+							<span class="text-2xl premium">32€/mois</span>
+						</p>
+						<hr class="border-top-premium my-2 mx-2">
+						<div class="text-left lg:text-2xl text-xl TekoLight px-2" style="color: #333333;">
+							<p>Moteur</p>
+							<p>Système d’alimentation</p>
+							<p>Boîte de vitesses</p>
+							<p>Dispositif d’embrayage</p>
+							<p>Boîte de vitesses automatique</p>
+							<p>Circuit électrique</p>
+							<p>Circuit électronique</p>
+							<p>Climatisation</p>
+							<p>Direction</p>
+							<p>Freinage</p>
+							<p>Circuit de refroidissement</p>
+							<p>Sécurité</p>
+							<p>Transmissions/Pont</p>
+							<p>Suspension</p>
+							<p>Vanne EGR</p>
+							<p>Organes de confort</p>
+							<p>Ingrédients</p>
+							<p>Diagnostic</p>
+						</div>
+						<div class="grow flex flex-col-reverse my-6">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="{{ path('app_offres_premium') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Plus d'infos</a>
+							</div>
+						</div>
+					</div>
+
+					{#Garantie Zen#}
+					<div class="flex-auto border-zen h-full lg:h-fit pt-4">
+						<a href="{{ path('app_offres_zen') }}">
+							<h3 class="zen uppercase text-center text-4xl TekoMedium">
+								ZEN
+							</h3>
+							<h4 class="zen text-center text-4xl TekoLight">
+								LA PLUS COOL
+							</h4>
+							<div class="my-8">
+								<img src="{{ asset('build/img/zen2.webp') }}" alt="Offre garantie ZEN" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+							</div>
+						</a>
+						<hr class="border-top-zen my-2 mx-2">
+						<p class="text-center lg:text-3xl text-xl TekoRegular" style="color: #333333;">
+							+ de 100 pièces couvertes
+						</p>
+						<p class="text-center TekoMedium">
+							<span class="lg:text-xl text-lg" style="color: #333333;">à partir de</span>
+							<span class="text-2xl zen">28€/mois</span>
+						</p>
+						<hr class="border-top-zen my-2 mx-2">
+						<div class="text-left lg:text-2xl text-xl TekoLight px-2" style="color: #333333;">
+							<p>Moteur</p>
+							<p>Système d’alimentation</p>
+							<p>Boîte de vitesses</p>
+							<p>Dispositif d’embrayage</p>
+							<p>Boîte de vitesses automatique</p>
+							<p>Circuit électrique</p>
+							<p>Circuit électronique</p>
+							<p>Climatisation</p>
+							<p>Direction</p>
+							<p>Freinage</p>
+							<p>Circuit de refroidissement</p>
+							<p>Sécurité</p>
+							<p>Transmissions/Pont</p>
+							<p>Suspension</p>
+							<p>Ingrédients</p>
+							<p>Diagnostic</p>
+						</div>
+						<div class="grow flex flex-col-reverse my-6">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="{{ path('app_offres_zen') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl bg-white shadow-xl  text-center TekoRegular a_lbg">Plus d'infos</a>
+							</div>
+						</div>
+					</div>
+
+					{#Garantie Sweet#}
+					<div class="flex-auto border-sweet h-full lg:h-fit pt-4">
+					<a href="{{ path('app_offres_sweet') }}">
+						<h3 class="sweet uppercase text-center text-4xl TekoMedium">
+							SWEET
+						</h3>
+						<h4 class="sweet text-center text-4xl TekoLight">
+							LA PLUS DOUCE
+						</h4>
+						<div class="my-8">
+							<img src="{{ asset('build/img/sweet1.webp') }}" alt="Offre garantie SWEET" class="text-center mx-auto my-auto w-1/3 md:w-1/3 lg:w-1/2"/>
+						</div>
+					</a>
+						<hr class="border-top-sweet my-2 mx-2">
+						<p class="text-center lg:text-3xl text-xl TekoRegular" style="color: #333333;">
+							+ de 50 pièces couvertes
+						</p>
+						<p class="text-center TekoMedium">
+							<span class="lg:text-xl text-lg" style="color: #333333;">à partir de</span>
+							<span class="text-2xl sweet">22€/mois</span>
+						</p>
+						<hr class="border-top-sweet my-2 mx-2">
+						<div class="text-left lg:text-2xl text-xl TekoLight px-2" style="color: #333333;">
+							<p>Moteur</p>
+							<p>Boîte de vitesses</p>
+							<p>Boîte de vitesses automatique</p>
+							<p>Pont</p>
+							<p>Carter</p>
+							<p>Circuit électrique</p>
+							<p>Circuit de refroidissement</p>
+							<p>Alimentation</p>
+							<p>Système de suspension</p>
+							<p>Compresseur de climatisation</p>
+							<p>Direction</p>
+							<p>Freinage</p>
+							<p>Ingrédients</p>
+							<p>Diagnostic</p>
+						</div>
+						<div class="grow flex flex-col-reverse my-6">
+							<div class="group mx-auto flex flex-row" style="color: transparent;">
+								<a href="{{ path('app_offres_sweet') }}" class="relative text-red-600 w-40 py-2 px-4 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Plus d'infos</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="pt-8 pb-10">
+				<h2 class="text-center lg:text-5xl text-5xl TekoMedium tracking-wide lg:my-0 py-4" style="color: #333333;">Plus de renseignements ?</h2>
+
+				<div class="flex flex-row items-center justify-center space-x-8 pt-6">
+
+					<div class="group" style="color: transparent;">
+						<a href="{{ path('app_expertise') }}" class="relative text-red-600 w-40 py-3 px-8 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Pourquoi souscrire ?</a>
+					</div>
+
+					<div class="group" style="color: transparent;">
+						<a href="{{ path('app_faq') }}" class="relative text-red-600 w-40 py-3 px-8 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">F.A.Q</a>
+					</div>
+
+				</div>
+
+			</div>
+
+{# 			<div class="animation bg-body-offres bg-no-repeat bg-cover hide-div fadeIn" style="height:70vh;">
+				<div class="faq_bloc_triangle w-full h-32 bg-no-repeat bg-cover"></div>
+			</div> #}
+		</div>
+	</div>
+	
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

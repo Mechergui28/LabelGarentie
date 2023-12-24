@@ -1,0 +1,31 @@
+</div>
+	<div class="drawer-side">
+		<label for="my-drawer-3" class="drawer-overlay"></label>
+		<ul class="p-4 overflow-y-auto menu w-80 bg-base-100 TekoRegular text-2xl">
+			<li>
+				<a <a href="{{ path('app_index') }}" class="text-red  {% if active == 'index' %}menu-active{% endif %}">Accueil</a>
+			</li>
+			<li>
+				<a href="{{ path('app_apropos') }}" class="text-red {% if active == 'a propos' %}menu-active{% endif %}">A propos</a>
+			</li>
+			<li>
+				<a href="{{ path('app_expertise') }}" class="text-red {% if active == 'expertise' %}menu-active{% endif %}">Expertises</a>
+			</li>
+			<li>
+				<a href="{{ path('app_offres') }}" class="text-red {% if active == 'nos offres' %}menu-active{% endif %}">Nos offres</a>
+			</li>
+			<li>
+				<a href="{{ path('app_infos_vehicule') }}" class="text-red {% if active == 'souscription' %}menu-active{% endif %}">Souscription</a>
+			</li>
+			<li>
+				<a href="{{ path('app_faq') }}" class="text-red {% if active == 'faq' %}menu-active{% endif %}">F.A.Q</a>
+			</li>
+			<li>
+				<a href="{{ path('app_encasdepanne') }}" class="text-red {% if active == 'encasdepanne' %}menu-active{% endif %}">En cas de panne</a>
+			</li>
+			<li>
+				<a href="https://espaceclient.labelgarantie.com/" target="_blank" rel="noopener" class="text-red {% if active == 'espace client' %}menu-active{% endif %}">Espace client</a>
+			</li>
+		</ul>
+	</div>
+</div>

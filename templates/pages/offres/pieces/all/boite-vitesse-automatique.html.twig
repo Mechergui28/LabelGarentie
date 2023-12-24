@@ -1,0 +1,138 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces boite de vitesse automatique | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez la boîte de vitesses automatique de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de la boîte de vitesses automatique.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Boite automatique
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boite vitesse Automatique :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une boîte de vitesse automatique est un type de transmission qui automatise les changements de vitesse dans un véhicule. Elle utilise un convertisseur de couple, des engrenages planétaires et des commandes hydrauliques pour changer les rapports de vitesse en douceur. Les boîtes de vitesse automatiques permettent une conduite plus confortable et moins fatigante pour le conducteur, car il n'a pas besoin de changer manuellement les vitesses.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pièces internes et lubrifiées :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les pièces internes et lubrifiées d'une boîte de transmission automatique peuvent inclure :
+								<br>
+								- Les roulements de support d'arbre de sortie et d'entrée de la boîte de vitesse<br>
+								- Les engrenages de l'arbre de sortie et d'entrée, qui peuvent être en forme de roue dentée conique ou cylindrique.<br>
+								- Les arbres de sortie et d'entrée qui soutiennent les engrenages.<br>
+								- Les joints d'étanchéité qui empêchent l'huile de fuir de la boîte de vitesse.<br>
+								- Les servo-mécanismes pour le passage des vitesses qui sont généralement à commande hydraulique.
+								<br>
+								- Les convertisseurs de couple qui assurent la transmission de la puissance entre le moteur et les roues.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Calculateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Dans une boîte de transmission automatique, le calculateur (aussi appelé boîtier de commande électronique ou ECU) est responsable de la gestion de la transmission. Il utilise des capteurs pour recueillir des informations sur la vitesse du véhicule, la position de la pédale d'accélérateur, la température de l'huile de transmission, entre autres. En utilisant ces données, il calcule la vitesse de rotation nécessaire pour chaque roue, et commande ensuite les servo-mécanismes pour effectuer les changements de vitesse.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Convertisseur de couple :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un convertisseur de couple est un composant de la transmission automatique d'un véhicule qui convertit la puissance mécanique produite par le moteur en puissance de rotation pour entraîner les roues. Il est généralement situé entre le moteur et la boîte de vitesse et est généralement fabriqué en acier inoxydable.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Electrovanne :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une électrovanne est un composant électronique qui est utilisé pour contrôler la transmission automatique d'un véhicule. Il est utilisé pour ouvrir ou fermer les conduits d'huile qui permettent de changer les rapports de vitesse de la boîte de vitesse. Il est généralement commandé par le calculateur de bord du véhicule qui reçoit des informations de la pédale d'accélérateur, du régime moteur, de la vitesse du véhicule, etc. pour décider quel rapport de vitesse utiliser.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Bloc hydraulique
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une électrovanne est un composant électronique qui est utilisé pour contrôler la transmission automatique d'un véhicule. Il est utilisé pour ouvrir ou fermer les conduits d'huile qui permettent de changer les rapports de vitesse de la boîte de vitesse. Il est généralement commandé par le calculateur de bord du véhicule qui reçoit des informations de la pédale d'accélérateur, du régime moteur, de la vitesse du véhicule, etc. pour décider quel rapport de vitesse utiliser.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Capteurs vitesse
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un capteur de vitesse de boîte de transmission automatique mesure la vitesse de rotation de l'arbre de sortie de la boîte de vitesse et envoie des informations au contrôleur de boîte de vitesse. Cela aide à déterminer la vitesse appropriée pour chaque rapport et à contrôler le passage des rapports en douceur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Capteur de pression d’huile
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un capteur de pression d'huile de boîte de transmission automatique mesure la pression de l'huile dans la boîte de vitesse et envoie des informations au contrôleur de boîte de vitesse. Cela aide à surveiller la performance de la boîte de vitesse et à détecter tout problème potentiel, comme un manque d'huile ou une surchauffe.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à Huile
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le pompe à huile est une partie cruciale d'un moteur de voiture avec une boîte automatique. Il assure que l'huile de transmission est correctement pressurisée pour lubrifier les composants de la boîte de vitesses et garantir son bon fonctionnement.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

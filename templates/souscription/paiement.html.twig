@@ -1,0 +1,205 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+    {% include('./Modal/chargement.html.twig') %}
+    {% include('./Modal/iban.html.twig') %}
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+<div class="content">
+
+        <div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Règlement</h2>
+				</div>
+			</div>
+		</div>
+
+    {% if contrat.typePaiement == 'Règlement mensuel' %}
+        {% set dd=contrat.garantie.duree  %}
+    {% elseif contrat.typePaiement == 'Règlement en 3 fois' %}
+        {% set dd=3 %}
+    {% elseif contrat.typePaiement == 'Règlement en 1 fois' %}
+        {% set dd=1 %}
+    {% endif %}
+
+    {% if contrat.garantie.code == 'PREMIUM' %}
+        {% set i=premium %}
+    {% elseif contrat.garantie.code == 'ZEN' %}
+        {% set i=zen %}
+    {% else%}
+        {% set i=sweet %}
+    {% endif %}
+    {% set num_etape = {'etape_souscription' : etape_souscription} %}
+{% include('./souscription/ariane.html.twig') with num_etape %}
+    <div class="container my-4">
+        <div class="grid grid-rows-1 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2 gap-x-4 gap-y-4">
+            <div class="lg:row-start-1 lg:col-start-1 lg:col-span-1 col-start-1 row-start-1 col-span-full flex flex-col my-4">
+                <h1 class="TekoMedium text-4xl text-center"style="color: #333333;">Votre garantie </h1>
+                <div class="my-8">
+                    <img  src="{{ asset(i.image) }}" alt="premium offre garantie" class=" mx-auto my-auto "  width="150" />
+                </div>
+                <h1 class="text-red uppercase text-4xl text-center TekoMedium">
+                    {{ contrat.garantie.libelle }}
+                </h1>
+                <h3 class="text-4xl text-center TekoMedium"style="color: #333333;">{{ contrat.garantie.duree }} mois</h3>
+                <p class="text-2xl text-center TekoMedium"style="color: #333333;">à partir du {{ contrat.garantie.dateDebut | date("d/m/Y") }} </p>
+                <p class="text-2xl text-center TekoMedium"style="color: #333333;">{{ contrat.garantie.mtttc / contrat.garantie.duree  }} €/mois</p>
+                <table class="table-auto my-7 border-none "style="color: #333333;">
+                    <thead>
+                    <tr class="h-12">
+                        <th class="text-left pl-1 TekoLight text-2xl font-thin">Prix/Mois</th>
+                        <th class="text-2xl text-left TekoLight font-semibold">{{ contrat.garantie.mtttc / dd }} €</th></tr>
+                    <tr class="h-12">
+                        <th class="text-left pl-1 TekoLight text-2xl bg-gray-100 font-thin">Total TTC/mois</th>
+                        <th class="text-2xl bg-gray-100 text-left TekoLight font-semibold">{{ contrat.garantie.mtttc / dd }} €</th></tr>
+                    <tr class="h-12">
+                        <th class="text-left pl-1 TekoLight text-2xl font-thin">Durée</th>
+                        <th  class="text-2xl text-left TekoLight font-semibold">{{ contrat.garantie.duree }} mois </th></tr>
+                    <tr class="h-12">
+                        <th class="text-left pl-1 TekoLight text-2xl bg-gray-100 font-thin">Total TTC</th>
+                        <th class="text-2xl bg-gray-100 text-left TekoLight font-semibold">{{ contrat.garantie.mtttc }} €</th></tr>
+                    </thead>
+                </table>
+
+            </div>
+          <div class="lg:row-start-1 lg:col-start-2 lg:col-span-1 col-start-1 row-start-2 col-span-full flex flex-col my-4">
+              {{ form_start(form, {'attr': {'id': 'form_paiement'}}) }}
+              <h1 class="TekoRegular lg:text-2xl text-xl"style="color: #333333;">Merci de compléter vos informations bancaires :</h1>
+              <div class="flex flex-col">
+                  {{ form_row(form.iban, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'iban','placeholder': 'IBAN*','onkeypress':'return verifieCaracteresEtNum(event, "form_iban");'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_iban" style="color: #dc0000;">*Ce champ est obligatoire</span>
+              </div>
+              <div class="flex flex-col">
+                  {{ form_row(form.bic, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'bic','placeholder': 'BIC*','onkeypress':'return verifieCaracteresEtNum(event, "form_bic");'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_bic">*Ce champ est obligatoire</span>
+              </div>
+              <h1 class="TekoRegular lg:text-2xl text-xl pt-5"style="color: #333333;">Titulaire du compte à débiter :</h1>
+              <div class="flex flex-col">
+                  {{ form_row(form.nomPrenom, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'nomPrenom','placeholder': 'Nom et Prenom*'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_nomPrenom">*Ce champ est obligatoire</span>
+              </div>
+              <div class="flex flex-col">
+                  {{ form_row(form.adresse, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'adresse','placeholder': 'Adresse*'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_adresse">*Ce champ est obligatoire</span>
+              </div>
+              <div class="flex flex-col">
+                  {{ form_row(form.cp, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','onkeypress':'return verifieNum(event, "form_cp");','name':'cp','placeholder': 'Code Postal*'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_cp">*Ce champ est obligatoire</span>
+              </div>
+              <div class="flex flex-col">
+                  {{ form_row(form.ville, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','onkeypress':'return verifieCaracteres(event, "form_ville");','name':'ville','placeholder': 'Ville*'}}) }}
+                  <span class="span-invalid text-red-600 hidden text-base TekoRegular form_ville">*Ce champ est obligatoire</span>
+              </div>
+              <div class="flex flex-col">
+                  <div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+                      <div class="grow flex flex-col-reverse ">
+                          <div class="group mx-auto my-auto flex flex-row" style="color: transparent;">
+                              {{ form_widget(form.valider, {'label' : 'Règlement', 'attr': {'class':'relative text-white text-2xl bg-red-600 w-40 py-2 px-4 text-center TekoRegular a_lbg','name':'creation','id':'creation'}})}}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              {{ form_end(form) }}
+   
+          </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const form = document.querySelector('#form_paiement');
+        form.addEventListener('submit', verify);
+
+        function verify(e){
+
+            e.preventDefault();
+
+            document.querySelector('#modal_chargement').style.display = 'block'
+
+            var promiseIban = verifIBAN();
+            var promiseBic	= verifBic();
+
+            return Promise.all([promiseIban, promiseBic]).then(values => {
+
+                dataIban 	= JSON.parse(values[0])
+                dataBic		= JSON.parse(values[1])
+
+                if(dataIban.response === "Ok" && dataBic.response === "Ok"){
+                    form.submit();
+                }else {
+
+                    $('#modal_chargement').css("display", "none")
+                    $('#confirmation_iban').css("display", "block")
+
+                    document.querySelector('#btn_iban_non').onclick = function() {
+                        $('#confirmation_iban').css("display", "none")
+                    }
+
+                    document.querySelector('#btn_iban_oui').onclick = function() {
+                        $('#confirmation_iban').css("display", "none")
+                        $('#modal_chargement').css("display", "block")
+                        form.submit();
+                    }
+                }
+
+            }).catch(function() {
+
+                $('#modal_chargement').css("display", "none")
+                $('#confirmation_iban').css("display", "block")
+
+                document.querySelector('#btn_iban_non').onclick = function() {
+                    $('#confirmation_iban').css("display", "none")
+                }
+                document.querySelector('#btn_iban_oui').onclick = function() {
+                    $('#confirmation_iban').css("display", "none")
+                    $('#modal_chargement').css("display", "block")
+                    form.submit();
+                }
+            });
+        }
+
+        function verifBic(){
+
+            var formData = {
+                bic: $("#form_bic").val(),
+            };
+
+            return $.ajax({
+                type: 'POST',
+                url: "{{ path('app_ajax_bic') }}",
+                data : formData,
+            });
+
+        }
+
+        function verifIBAN(){
+
+            var formData = {
+                iban: $("#form_iban").val(),
+            };
+
+            return $.ajax({
+                type: 'POST',
+                url: "{{ path('app_ajax_iban') }}",
+                data : formData,
+            });
+
+        }
+
+    </script>
+
+
+    {% include('footer.html.twig') %}
+    {% include('Header2.html.twig') with vars %}
+
+{% endblock %}

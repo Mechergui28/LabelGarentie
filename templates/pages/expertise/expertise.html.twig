@@ -1,0 +1,274 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Expertise | La belle garantie
+{% endblock %}
+
+{% block meta_description %}
+	Apprenez-en davantage sur notre expertise et notre engagement à offrir les meilleurs produits et services à nos clients.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'expertise'} %}
+	{% include('header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Expertises
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-container pb-20">
+
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="text-center pt-20">
+					<h2 class="text-5xl lg:text-5xl TekoRegular" style="color: #333333;">
+						<span>Pourquoi choisir</span>
+						<span class="underline TekoMedium">Label Garantie</span>
+						<span>
+							en
+						</span>
+						<span class="text-red-600 TekoBold">
+							3 points
+						</span>
+						<span class="TekoBold">?</span>
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 pt-10 lg:pt-20">
+
+					<div class="relative">
+						<img src="{{ asset('build/img/point-1.png') }}" class="w-64 h-64 lg:w-96 lg:h-96 mx-auto" alt="Rapport qualité prix">
+					</div>
+
+					<div class="text-center lg:text-left pt-6 lg:pt-0">
+
+						<h3 class="TekoRegular text-4xl uppercase" style="color: #333333;">Parce que nous avons la
+							<span class="TekoMedium font-bold">meilleure couverture</span>
+						</h3>
+
+						<p class="my-7 WorkSans text-xl" style="color: #333333;">Nos contrats sont sans vétusté et sans franchise temporelle ou financière !</p>
+
+						<p class="WorkSans text-base" style="color: #333333;">
+							Nos garanties sont parmi les plus couvrantes du marché pour protéger votre véhicule. En effet, nous sommes les seuls à vous proposer des durées de garantie aussi longues sans dévalorisation de couverture dans le temps. Nous vous proposons le meilleur rapport qualité/prix en termes couvertures et sans aucune avance de frais à effectuer.
+						</p>
+
+						<p class="mt-7">
+							<a class="TekoRegular uppercase underline text-red-600 text-3xl" href="{{ path('app_offres')}}">Découvrez nos offres !</a>
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class="grid grid-cols-1 grid-reverse lg:grid-cols-2 pt-10 lg:pt-20">
+
+					<div class="text-center lg:text-right row-start-2 lg:row-start-1 mt-7 lg:mt-0">
+
+						<h3 class="TekoRegular text-4xl uppercase" style="color: #333333;">Parce que
+							<span class="TekoMedium font-bold">
+								nous sommes réactifs</span>
+						</h3>
+
+						<p class="my-7 WorkSans text-xl" style="color: #333333;">Nous vous répondons sous 24h dès réception de toute demande</p>
+
+						<p class="WorkSans text-base" style="color: #333333;">
+							Notre service technique s’engage à vous répondre sous 24h dès réception de toute demande. De plus, la diversité de nos offres ainsi que l'expérience et la réactivité de notre service après-vente et notre service client vous permettront de faire le meilleur choix de produit au meilleur prix en prenant en compte vos besoins particuliers et la typologie de votre véhicule.
+						</p>
+						<p class="WorkSans text-base font-extrabold">
+							Exigez la meilleure des protections Panne Mécanique au juste prix !
+						</p>
+
+						<p class="mt-7 row-start-1 lg:row-start-1">
+							<a class="TekoRegular uppercase underline text-red-600 text-3xl" href="{{ path('app_offres')}}">Découvrez nos offres !</a>
+						</p>
+
+					</div>
+
+
+					<div class="relative col-start-1 lg:col-start-2">
+						<img src="{{ asset('build/img/point-2.png') }}" class="w-64 h-64 lg:w-96 lg:h-96 mx-auto" alt="Nous sommes réactifs">
+					</div>
+
+				</div>
+
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 pt-20">
+
+					<div class="relative">
+						<img src="{{ asset('build/img/point-3.png') }}" class="w-64 h-64 lg:w-96 lg:h-96 mx-auto" alt="Entreprise française">
+					</div>
+
+					<div class="text-center lg:text-left mt-7 lg:mt-0">
+
+						<h3 class="TekoRegular text-4xl uppercase" style="color: #333333;">
+							Parce que nous sommes 
+							<span class="TekoMedium font-bold">une entreprise française, indépendante</span>
+							et
+							<span class="TekoMedium font-bold">à capitaux privés</span>
+						</h3>
+
+						<p class="WorkSans text-base my-7" style="color: #333333;">
+							Nos équipes sont constituées de professionnels ayant de nombreuses années d’expérience dans le monde de l’automobile, de la réparation automobile et de la gestion des produits d’assurances. Notre plateau d’accueil téléphonique, constitué de techniciens qualifiés et de gestionnaires spécialistes de la relation clients, tous soucieux de vous apporter satisfaction, est implanté en France, dans la région lyonnaise.
+						</p>
+
+						<p class="mt-7">
+							<a class="TekoRegular uppercase underline text-red-600 text-3xl" href="{{ path('app_offres')}}">Découvrez nos offres !</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" style="background-color:#F9FAFA">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="py-12">
+
+					<div class="text-center">
+						<h2 class="text-5xl lg:text-5xl TekoRegular" style="color: #333333;">
+							<span class="TekoRegular font-bold underline">Label Garantie</span>
+							est là pour vous
+						</h2>
+					</div>
+
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 pt-20">
+
+						<div class="col-span-1">
+							<div class="flex flex-col h-full">
+								<div style="height:94px" class="flex flex-row">
+									<div class="flex-none">
+										<img src="{{ asset('build/img/perenniser.png') }}" class="w-16 h-auto my-auto mx-auto" alt="Rapport qualité prix">
+									</div>
+									<div class="flex-1 pl-4">
+										<h3 class="TekoRegular text-red-600 text-4xl uppercase">Nous vous aidons à
+											<br class="hidden lg:block">
+											<span class="TekoMedium font-bold">pérenniser votre achat </span>
+										</h3>
+									</div>
+								</div>
+
+								<div class="WorkSans text-base pt-4">
+									<p class="text-justify">
+										En tant que propriétaire d'un véhicule, la prolongation de la garantie est le moyen le plus sûr de s'assurer que votre voiture est bien couverte.
+									</p>
+								</div>
+
+								<div class="self-end mt-auto WorkSans text-base">
+									<p class="text-justify pt-4">
+										Grâce à des offres d'extension de garantie Panne Mécanique adaptées à votre budget, vous pouvez bénéficier d'une couverture optimale à un coût raisonnable, et réduire ainsi vos risques. Protégez votre voiture et valorisez votre bien en prolongeant la durée de couverture de votre véhicule !
+									</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-span-1 mt-10 lg:mt-0">
+							<div class="flex flex-col h-full">
+								<div style="height:94px" class="flex flex-row">
+									<div class="flex-none">
+										<img src="{{ asset('build/img/vendre.png') }}" class="w-18 h-auto my-auto mx-auto" alt="Rapport qualité prix">
+									</div>
+									<div class="flex-1 pl-4">
+										<h3 class="TekoRegular text-red-600 text-4xl uppercase">Nous vous aidons à
+											<br class="hidden lg:block">
+											<span class="TekoMedium font-bold">revendre votre véhicule</span>
+										</h3>
+									</div>
+								</div>
+
+								<div class="WorkSans text-base pt-4">
+									<p class="text-justify">
+										<span class="font-bold">Chez Label Garantie nous vous offrons un réel gage de confiance pour la revente :
+										</span>
+										toutes nos garanties sont cessibles ou résiliables immédiatement en cas de revente.<br>
+									</p>
+								</div>
+
+								<div class="self-end mt-auto WorkSans text-base">
+									<p class="text-justify pt-4">
+										Lors de la revente d’une voiture, la présence d’une garantie vous aidera à convaincre vos futurs acheteurs. Les acheteurs ont plus facilement confiance envers un véhicule assuré dans de bonnes conditions. Vous pourrez alors vendre votre véhicule rapidement et au bon prix grâce à votre garantie !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center pt-10">
+						<a class="relative TekoRegular text-3xl text-white px-8 py-3 bg-red-600 a_lbg" href="{{ path('app_infos_vehicule') }}">Votre devis en 1 clic</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="content mt-20">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
+						<div class="col-span-1">
+							<div class="flex flex-col h-full">
+								<div class="flex-none">
+									<img src="{{ asset('build/img/prestige.png') }}" class="w-16 h-16 my-auto mx-auto" alt="Rapport qualité prix">
+								</div>
+								<div class="flex-none text-center pt-4">
+									<h3 class="TekoRegular text-4xl uppercase" style="color: #333333;">
+										Propriétaire d’un 
+										<br>
+										<span class="TekoMedium font-bold">véhicule d'exception ?</span>
+									</h3>
+								</div>
+								<div class="WorkSans flex-none text-justify pt-4">
+									Pour protéger votre véhicule de prestige, nous vous proposons les meilleurs produits de garantie Panne Mécanique. 
+								</div>
+								<div class="WorkSans self-end mt-auto text-justify pt-4">
+									Nous avons une offre spécialement conçue pour vous assurer, avec des plafonds de remboursement et une couverture complète pour votre véhicule. 
+									<div class="text-center mt-6">
+										<a href="{{ path('app_offres')}}" class="TekoRegular text-3xl text-red-600 uppercase underline">Découvrez nos offres !</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-span-1 mt-10 lg:mt-0">
+							<div class="flex flex-col h-full">
+								<div class="flex-none">
+									<img src="{{ asset('build/img/electrique.png') }}" class="w-16 h-16 mx-auto" alt="Rapport qualité prix">
+								</div>
+								<div class="flex-none text-center pt-4">
+									<h3 class="TekoRegular text-4xl uppercase" style="color: #333333;">
+										Propriétaire d’un
+										<br>
+										<span class="TekoMedium font-bold">véhicule électrique ou hybride ?</span>
+									</h3>
+								</div>
+								<div class="WorkSans flex-none text-justify pt-4">
+									Restez connecté avec le meilleur des produits de garantie Panne Mécanique. 
+								</div>
+								<div class="WorkSans  self-end mt-auto text-justify pt-4">
+									Bénéficiez d'une couverture complète, incluant la batterie et la plupart des pièces électriques et électroniques. Vous serez ainsi couvert contre les pannes au même titre que les véhicules thermiques.
+									<div class="text-center mt-6">
+										<a href="https://garantie-electrique.com/nos-offres" class="TekoRegular text-3xl text-red-600 uppercase underline">Découvrez nos offres !</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

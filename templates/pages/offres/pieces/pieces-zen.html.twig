@@ -1,0 +1,190 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Pièces automobiles couvertes - Offre ZEN | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Découvrez toutes les pièces automobiles couvertes par notre offre ZEN en garantie panne mécanique ! Profitez d'une protection complète pour votre moteur, votre boîte de vitesses, votre système de freinage et bien plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'a propos'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						La garantie zen
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Liste des pièces couvertes</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<div id="moteur">
+							<a href="{{ path('app_offre_pieces_all_moteur') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur :</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">Les pièces lubrifiées en mouvement suivantes :<br>
+								Chemise, Pistons et axes, Segment, Bielles, Coussinets, Vilebrequin, Pompe à huile, Chaîne de distribution lubrifiée, Pignons, Poussoirs, Culbuteurs, Arbre à cames, Soupapes, Guides et valves, Culasse, Volant moteur
+							</p>
+						</div>
+
+						<div id="boite-de-vitesse">
+							<a href="{{ path('app_offre_pieces_all_boite_manuelle') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boite de vitesses manuelle :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Arbres, Roulements, Pignons, Anneaux de synchros, Baladeur, Axes et fourchettes de sélection interne, Différentiel,
+							</p>
+						</div>
+
+						<div id="boite-vitesse-automatique">
+							<a href="{{ path('app_offre_pieces_all_boite_automatique') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boite de vitesses automatique :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Convertisseurs, Arbre de turbine, Arbre de pompe à huile, Bloc hydraulique, Electrovanne, Pompe à huile
+							</p>
+						</div>
+
+						<div id="embrayage">
+							<a href="{{ path('app_offre_pieces_all_embrayage') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Embrayage :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Récepteur hydraulique, Mécanisme
+							</p>
+						</div>
+
+						<div id="transmission">
+							<a href="{{ path('app_offre_pieces_all_transmission') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pont :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Pièces lubrifiées à l’intérieur du pont :
+								<br>
+								Pignons, Roulements, Couronne planétaire et satellite, Boite de transfert
+							</p>
+						</div>
+
+						<div id="carter">
+							<a href="{{ path('app_offre_pieces_all_carter') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Carter :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Bloc moteur, Boîte de vitesses et Pont suite aux dommages causés uniquement par le bris d’un des organes internes couvert
+							</p>
+						</div>
+
+						<div id="transmission">
+							<a href="{{ path('app_offre_pieces_all_transmission') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pont :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Arbre longitudinal, Transmissions, Soufflets (sauf flectors)
+							</p>
+						</div>
+
+						<div id="alimentation">
+							<a href="{{ path('app_offre_pieces_all_alimentation') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Alimentation :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Turbocompresseur, Electrovanne de turbo, Pompe à injection, Pompe à carburant, Débitmètre d’air, Vanne EGR, Calculateur d’injection, Injecteurs, Sonde lambda, Boitier papillon
+							</p>
+						</div>
+
+						<div id="circuit-refroidissement">
+							<a href="{{ path('app_offre_pieces_all_circuit_refroidissement') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Refroidissement :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Radiateurs d’eau et d’huile, Pompe à eau, Sonde d’eau, Calorstat, Thermostat, Thermo-contact, Moto-ventilateur de refroidissement, Joint de culasse
+							</p>
+						</div>
+
+						<div id="circuit-electrique-electronique">
+							<a href="{{ path('app_offre_pieces_all_circuit_electrique_electronique') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Circuit électrique :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Alternateur, Démarreur, Régulateur de tension, Moteur d’essuie-glaces, Moteur de lève-vitres, Moteur pompe lave-glaces, Moteur de toit ouvrant (sauf decapote, de toit escamotable et de toit panoramique), Celluloïd électromagnétique des portes (y compris les serrures électriques), Ventilateur de chauffage Module électronique d’allumage, Bobines, Commodo d’éclairage, de clignotant et d’essuie-glaces
+							</p>
+
+							<a href="{{ path('app_offre_pieces_all_circuit_electrique_electronique') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Circuit électronique :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Autoradio et GPS à hauteur de 500 € TTC et – 6 ans au jour de la panne, les capteurs des pièces couvertes
+							</p>
+						</div>
+
+						<div id="suspension">
+							<a href="{{ path('app_offre_pieces_all_suspension') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Système de suspension :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Ressorts, Ressorts pneumatiques, Barres stabilisatrices, Système hydraulique
+							</p>
+						</div>
+
+						<div id="freinage">
+							<a href="{{ path('app_offre_pieces_all_freinage') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Freinage :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Maître-cylindre de freins, répartiteur, Servofrein, Pompe d’assistance, Groupe électropompe, ABS ou ABR (sauf capteurs), Etriers
+							</p>
+						</div>
+
+						<div id="direction">
+							<a href="{{ path('app_offre_pieces_all_direction') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Direction :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Crémaillère, Vérins de direction, Pompe d’assistance, Colonne, Soufflets
+							</p>
+						</div>
+
+						<div id="climatisation">
+							<a href="{{ path('app_offre_pieces_all_climatisation') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Climatisation :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Compresseur, Condenseur, Evaporateur, Détendeur, Ventilateur habitacle, Résistance, Commande de chauffage
+							</p>
+						</div>
+
+						<div id="securite">
+							<a href="{{ path('app_offre_pieces_all_securite') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Sécurité :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Prétensionneur de ceinture, Avertisseur sonore (sauf en cas de collision)
+							</p>
+						</div>
+
+						<div class="pt-4">
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">Sont également pris en charge en cas de panne couverte par le contrat : Le diagnostic à hauteur de 150 € TTC, Les ingrédients (huile moteur, huile de boite de vitesses, huile de direction, huile de pont, liquide de freins, liquide de refroidissement) à hauteur de 100 € TTC.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

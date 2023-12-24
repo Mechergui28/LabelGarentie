@@ -1,0 +1,85 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces carter | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le carter de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces du carter, y compris le carter d'huile, le carter de transmission et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Carter
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Carter
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le carter est un élément important du moteur qui sert à recueillir et contenir l'huile moteur nécessaire à la lubrification des différentes pièces en mouvement. Il permet également de protéger les pièces internes du moteur de la poussière, des débris et de l'eau. Le carter est généralement fabriqué en aluminium moulé ou en fonte pour résister aux pressions et aux contraintes mécaniques importantes auxquelles il est soumis. Il est fixé solidement au bloc moteur et à la boîte de vitesses.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Bloc moteur
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le bloc moteur renferme le moteur d'un véhicule. C'est le composant principal du groupe motopropulseur. Il est fabriqué en fonte ou en aluminium et sert de base pour fixer tous les autres éléments du moteur tels que les cylindres, les pistons, les arbres à cames et les soupapes.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boîte de vitesses
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La boîte de vitesses est un dispositif mécanique permettant de modifier le rapport de transmission entre le moteur et les roues du véhicule. Elle est généralement composée de plusieurs pignons qui peuvent être engagés ou désengagés pour changer les rapports de vitesse. La boîte de vitesses est nécessaire pour adapter le couple du moteur aux différentes conditions de conduite.
+							</p>
+						</div>
+						
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pont
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le pont est un composant du train de roulement d'un véhicule qui permet de transmettre la puissance du moteur aux roues motrices. Il est composé de différentes pièces telles que les arbres de transmission, les différentiels et les cardans. Le pont est généralement situé à l'arrière du véhicule et est fixé au châssis par des suspensions.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

@@ -1,0 +1,142 @@
+<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 pt-14">
+	<div class="grid grid-cols-3 sm:grid-cols-6 gap-y-4 gap-x-4 md:gap-x-6 lg:px-24">
+
+		<div class="col-start-1 row-start-1">
+			{% if etape_souscription == 1 %}
+
+					<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-800 w-full h-full">
+						<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor">Info véhicule</div>
+						<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">1</div>
+					</a>
+
+			{% elseif etape_souscription > 1 %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-gray-300 w-full h-full"  href="{{ path('app_infos_vehicule') }}">
+					<div class="w-full h-fit capitalize " aria-hidden="true" fill="currentColor"  >Info véhicule</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">1</div>
+				</a>
+				
+			{% endif %}
+		</div> 
+
+
+		<div class="col-start-2 row-start-1">
+			{% if etape_souscription == 2 %}
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl  text-lg font-medium TekoRegular text-center  bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 w-full h-full">
+					<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor"  >Notre offre</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6 text-md  bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">2</div>
+				</a>
+
+			{% elseif etape_souscription > 2  %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-gray-300 w-full h-full" href="{{ path('app_offres_garanties') }}" >
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"   style="color: #333333;">Notre offre</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6 text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">2</div>
+				</a>
+
+			{% else %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 w-full h-full">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"  style="color: #333333;" >Notre offre</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6 text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">2</div>
+				</a>
+
+			{% endif %}
+		</div> 
+
+
+		<div class="col-start-3 row-start-1">
+			{% if etape_souscription == 3 %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lgfont-medium TekoRegular text-center bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-800 w-full h-full">
+					<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor">Infos client</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">3</div>
+				</a>
+
+			{% elseif etape_souscription > 3  %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 w-full h-full"  href="{{ path('app_info_client') }}">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor" style="color: #333333;"  >Infos client</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">3</div>
+				</a>
+
+			{% else %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 w-full h-full">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor" style="color: #333333;"  >Infos client</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">3</div>
+				</a>
+
+			{% endif %}
+		</div>
+
+
+		<div class="col-start-1 sm:col-start-4 row-start-2 sm:row-start-1">
+			{% if etape_souscription == 4 %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-800 w-full h-full">
+					<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor">Infos garantie</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">4</div>
+				</a>
+
+			{% elseif etape_souscription > 4  %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-gray-300 w-full h-full" href="{{ path('app_info_garantie') }}">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"  style="color: #333333;" >Infos garantie</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">4</div>
+				</a>
+
+			{% else %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lgfont-medium TekoRegular text-center  bg-gray-300 w-full h-full">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor" style="color: #333333;">Infos garantie</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">4</div>
+				</a>
+
+			{% endif %}
+		</div>
+		<div class="col-start-2 sm:col-start-5 row-start-2 sm:row-start-1">
+			{% if etape_souscription == 5 %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-800 w-full h-full">
+					<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor">Panier</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">5</div>
+				</a>
+
+			{% elseif etape_souscription > 5  %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 w-full h-full" href="{{ path('app_pannier') }}">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"  style="color: #333333;" >Panier</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">5</div>
+				</a>
+
+			{% else %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 w-full h-full">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"  style="color: #333333;" >Panier</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">5</div>
+				</a>
+
+			{% endif %}
+		</div>
+
+
+		<div class="col-start-3 sm:col-start-6 row-start-2 sm:row-start-1">
+			{% if etape_souscription == 6 %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center  bg-red-600  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-800 w-full h-full">
+					<div class="w-full text-white h-fit capitalize" aria-hidden="true" fill="currentColor">Paiement</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md   bg-white  rounded-full  TekoMedium  " style="color: #1b1f25;">6</div>
+				</a>
+
+			{% else %}
+
+				<a class="inline-flex relative items-center py-1 px-4 lg:text-xl text-lg font-medium TekoRegular text-center bg-gray-300 w-full h-full">
+					<div class="w-full h-fit capitalize" aria-hidden="true" fill="currentColor"  style="color: #333333;"  >Paiement</div>
+					<div class="inline-flex absolute -top-3 -left-2 justify-center items-center w-6 h-6  text-md  bg-red-600  rounded-full  TekoMedium  " style="color: #ffffff">6</div>
+				</a>
+
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .logo_lbg {
+            width: 10%;
+        }
+    </style>
+</head>
+
+{% block body %}
+
+    <div class="WorkSans">
+
+        <p>Objet : Réinitialisation Mot de pass.</p>
+
+        <p>Bonjour
+            <span class="uppercase">{{ user.nom }}</span>
+            {{ user.prenom }}</p>
+       
+        <p>
+
+            Voici le lien pour la réinitialisation de votre mot de passe : {{ url }}
+            <br>
+            <br>
+            Notre service de relation client reste à votre disposition pour répondre à toutes vos questions.
+            <br>
+            <br>
+            A très bientôt,<br>
+            Le service client<br>
+            04-28-63-20-20<br>
+            contact@labellegarantie.com<br>
+            37 Avenue Général de Gaulle<br>
+            69300 Caluire-et-Cuire<br>
+            <br>
+            <img class="logo_lbg" src="cid:logo" style="width:160px; height:36.641px">
+        </p>
+    </div>
+{% endblock body %}
+
+</html>

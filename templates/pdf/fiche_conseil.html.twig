@@ -1,0 +1,313 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Fiche Conseil
+			{{contrat.garantie.libelle}}&nbsp;</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+		<style>
+			.page {
+				overflow: hidden;
+				page-break-after: always;
+			}
+			.open-sans {
+				font-family: 'Open Sans', sans-serif;
+			}
+			.red-text {
+				color: #C21832
+			}
+			.blue-text {
+				color: #24315F
+			}
+			.text-4xl {
+				font-size: 2.25rem;
+				line-height: 2.5rem;
+			}
+			.w-full {
+				width: 100%
+			}
+			.h-auto {
+				height: auto;
+			}
+			.pt-16 {
+				padding-top: 4rem;
+			}
+			.pt-2 {
+				padding-top: 0.5rem;
+			}
+			.pt-6 {
+				padding-top: 1.5rem;
+			}
+			.pl-6 {
+				padding-left: 1.5rem;
+			}
+			.pl-10 {
+				padding-left: 2.5rem;
+			}
+			.pr-2 {
+				padding-right: 0.5rem;
+			}
+			.mr-6 {
+				margin-right: 1.5rem;
+			}
+			.ml-6 {
+				margin-left: 1.5rem;
+			}
+			.mt-6 {
+				margin-top: 1.5rem;
+			}
+			.float-left {
+				float: left;
+			}
+			.float-right {
+				float: right;
+			}
+			.text-sm {
+				font-size: 0.875rem;
+				line-height: 1.25rem;
+			}
+			.pl-10 {
+				padding-left: 2.5rem;
+			}
+			.pt-10 {
+				padding-top: 2.5rem;
+			}
+			.text-center {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div
+			class="page open-sans">
+
+			{# Logo #}
+			<div class="w-full float-left" style="float:left; width:100%; text-align:center">
+				<img src="{{ absolute_url(asset('build/img/logo.png')) }}" style="width:30%" alt="Logo Label Garantie">
+			</div>
+
+			{# Titre #}
+			<div class="w-full float-left pt-6" style="text-align:center; font-weight:bold;">
+				<div class="text-4xl blue-text">FORMULAIRE D'INFORMATION ET CONSEIL</div>
+			</div>
+
+			{# Information #}
+			<div class="w-full float-left pt-6" style="text-align:center">
+				<div style="font-size:12px">(Le présent document est établi conformément aux articles L 520-1-II et R 520-2 du code des assurances.)</div>
+			</div>
+
+			{# Les renseignements vous concernant #}
+			<div
+				class="w-full float-left pt-6">
+
+				{# Titre #}
+				<div class="blue-text" style="text-decoration: underline; font-weight:bold;">Les renseignements vous concernant :</div>
+
+				{# Nom #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Nom :</div>
+					<div class="float-right" style="width:82%">{{contrat.client.nom}}&nbsp;</div>
+				</div>
+
+				{# Prénom #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Prénom :</div>
+					<div class="float-right" style="width:82%">{{contrat.client.prenom}}&nbsp;</div>
+				</div>
+
+				{# Adresse #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Adresse :</div>
+					<div class="float-right" style="width:82%">{{contrat.client.adresse}}&nbsp;</div>
+					<div class="float-left" style="width:150px">
+						&nbsp;
+					</div>
+					<div class="float-right" style="width:82%">{{contrat.client.codePostal}}
+						{{contrat.client.ville}}
+						&nbsp;</div>
+				</div>
+
+				{# Tél #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Tél :</div>
+					<div class="float-right" style="width:82%">{{contrat.client.telephone}}&nbsp;</div>
+				</div>
+
+				{# Email #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Email :</div>
+					<div class="float-right" style="width:82%">{{contrat.client.email}}&nbsp;</div>
+				</div>
+
+				{# Véhicule #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="width:150px; font-weight:bold;">Votre véhicule :</div>
+					<div class="float-right" style="width:82%">{{contrat.vehicule.marque}}
+						{{contrat.vehicule.modele}}
+						&nbsp;</div>
+					<div class="float-left" style="width:150px; ">&nbsp;</div>
+					<div class="float-right" style="width:82%">{{contrat.vehicule.date|date("d/m/Y")}}
+						-
+						{{contrat.vehicule.immatriculation}}
+						-
+						{{contrat.vehicule.kilometrage}}km &nbsp;</div>
+				</div>
+
+			</div>
+
+			{# Vos besoins et exigences de couverture du risque de pannes mécaniques #}
+			<div
+				class="w-full float-left pt-6">
+
+				{# Titre #}
+				<div class="blue-text" style="text-decoration: underline; font-weight:bold;">Vos besoins et exigences de couverture du risque de pannes mécaniques :</div>
+
+
+					{# SWEET #}
+					<div class="float-left w-full pt-2">
+						<div class="float-left" style="padding-left:110px">
+							<input type="checkbox" {% if contrat.garantie.code == 'SWEET' %} checked {% endif %}>
+						</div>
+						<div class="float-right" style="width:82%">
+							Moteur, Système d’alimentation, Boîte de vitesses (manuelle ou automatique), dispositif d’embrayage,
+							circuit électrique, carter, direction, freinage, circuit de refroidissement, pont, suspension, ingrédients,
+							diagnostic.
+						</div>
+					</div>
+
+					{# ZEN #}
+					<div class="float-left w-full pt-2">
+						<div class="float-left" style="padding-left:110px">
+							<input type="checkbox" {% if contrat.garantie.code == 'ZEN' %} checked {% endif %}>
+						</div>
+						<div class="float-right" style="width:82%">
+							Moteur, Système d’alimentation, Boîte de vitesses (manuelle ou automatique), dispositif d’embrayage,
+							circuits électriques et électroniques, climatisation, direction, freinage, circuit de refroidissement, sécurité,
+							transmissions, pont, suspension, ingrédients, diagnostic.
+						</div>
+					</div>
+
+				{# PREMIUM #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="padding-left:110px">
+						<input type="checkbox" {% if contrat.garantie.code == 'PREMIUM' %} checked {% endif %}>
+					</div>
+					<div class="float-right" style="width:82%">
+						Moteur, Système d’alimentation, Boîte de vitesses (manuelle ou automatique), dispositif d’embrayage,
+						circuits électriques et électroniques, climatisation, direction, freinage, circuit de refroidissement, sécurité,
+						transmissions, pont, suspension, vanne EGR, organes de confort, ingrédients, diagnostic.
+					</div>
+				</div>
+			</div>
+
+			{# Date d'effet souhaitée #}
+			<div class="w-full float-left pt-6">
+				<span class="blue-text" style="text-decoration: underline; font-weight:bold;">Date d'effet souhaitée :</span>
+				<span>{{ contrat.garantie.dateDebut  }}&nbsp;</span>
+			</div>
+
+			{# Notre proposition Commerciale #}
+			<div
+				class="w-full float-left pt-6">
+
+				{# Titre #}
+				<div class="blue-text" style="text-decoration: underline; font-weight:bold;">Notre proposition Commerciale :</div>
+
+
+					{# SWEET #}
+					<div class="float-left w-full pt-2">
+						<div class="float-left" style="padding-left:110px">
+							<input type="checkbox" {% if contrat.garantie.code == 'SWEET' %} checked {% endif %}>
+						</div>
+						<div class="float-right" style="width:82%">
+							Assurance Panne Mécanique – Couverture SWEET
+						</div>
+					</div>
+
+					{# ZEN #}
+					<div class="float-left w-full pt-2">
+						<div class="float-left" style="padding-left:110px">
+							<input type="checkbox" {% if contrat.garantie.code == 'ZEN' %} checked {% endif %}>
+						</div>
+						<div class="float-right" style="width:82%">
+							Assurance Panne Mécanique – Couverture ZEN
+						</div>
+					</div>
+
+				{# PREMIUM #}
+				<div class="float-left w-full pt-2">
+					<div class="float-left" style="padding-left:110px">
+						<input type="checkbox" {% if contrat.garantie.code == 'PREMIUM' %} checked {% endif %}>
+					</div>
+					<div class="float-right" style="width:82%">
+						Assurance Panne Mécanique – Couverture PREMIUM
+					</div>
+				</div>
+			</div>
+
+
+			<div class="float-left w-full pt-6">
+				Nous vous proposons cette formule car elle présente intégralement les avantages et besoins de couverture du risque de pannes mécaniques dont vous nous avez fait part.
+			</div>
+
+
+			<div class="w-full float-left">
+
+				<div class="float-left w-full pt-6">
+					Vous bénéficierez en plus des garanties demandées :
+				</div>
+
+				<div class="float-left w-full">
+					<ul>
+						<li>Vous ne paierez ni les pièces, ni la main d'œuvre ;</li>
+						<li>Votre contrat est cessible en cas de revente du véhicule ;</li>
+						<li>Aucune franchise à payer ;</li>
+						<li>Aucune vétusté contractuelle appliquée sur les prises en charge ;</li>
+						<li>Possibilité de souscrire la garantie pour une durée de 24,36, 48 ou 60 mois selon l'éligibilité du véhicule (âge et kilométrage en date de prise d'effet).</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div
+			class="open-sans">
+
+			{# Informations générales sur notre activité de courtier #}
+			<div
+				class="w-full float-left pt-6">
+
+				{# Titre #}
+				<div class="blue-text" style="text-decoration: underline; font-weight:bold;">Informations générales sur notre activité de courtier :</div>
+
+				<div class="float-left w-full pt-6" style="text-align:justify">
+					Ce contrat vous est proposé par LABEL GARANTIE SAS, intermédiaire d'assurance et de réassurance, dont le siège social est situé 37 Avenue Général de Gaulle 69300 CALUIRE-ET-CUIRE immatriculé auprès du registre de commerce et des sociétés de Lyon N° 882 077 696, enregistré à l'ORIAS sous le N° 200 027 19.<br>
+					L'immatriculation peut être contrôlée sur le site www.orias.fr . En application de l'article L.520-1-II-b du Code des Assurances, nous tenons à votre disposition la liste des entreprises d'assurance avec lesquelles nous travaillons pour l'assurances des risques concernés par votre demande. Si vous souhaiter obtenir une communication de cette liste ou toute précision et complément d'information, il vous suffit de nous adresser un courriel à l'adresse suivante contact@labelgarantie.com
+				</div>
+			</div>
+
+			{# Informations générales sur notre activité de courtier #}
+			<div
+				class="w-full float-left pt-6">
+
+				{# Titre #}
+				<div class="blue-text" style="text-decoration: underline; font-weight:bold;">Réclamations :</div>
+
+				<div class="float-left w-full pt-6" style="text-align:justify">
+					Pour toute réclamation, l'Assuré peut contacter par courrier LABEL GARANTIE – Service Réclamations – 37 avenue Général de Gaulle 69300 CALUIRE-ET-CUIRE ou par courriel : reclamation@labelgarantie.com<br>
+					Si l'Assuré n'est pas satisfait de la réponse apportée par le Service Réclamations Client, il a la possibilité de solliciter l'avis du Médiateur par courrier à l'adresse suivante Médiateur AFA - La Médiation de l'Assurance TSA 50 110 - 75 441 Paris cedex 09 ou via le site de médiation de l'assurance (le.mediateur@mediation-assurance.org) Site internet : https://www.mediation-assurance.org/
+					<br>
+					En cas d'échec de cette démarche, l'Assuré conserve naturellement l'intégralité de ses droits d'agir en justice.
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
+

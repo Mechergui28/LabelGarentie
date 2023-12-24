@@ -1,0 +1,210 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces circuit de refroidissement | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le circuit de refroidissement de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces du circuit de refroidissement, y compris le radiateur, le thermostat, les durites et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Circuit de refroidissement
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Circuit de refroidissement :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le circuit de refroidissement est un système dans un moteur qui permet de maintenir la température opérationnelle du moteur dans des limites appropriées pour garantir un fonctionnement sûr et efficace. Il comprend généralement un radiateur, un ventilateur, une pompe à eau, un thermostat, un tuyau d'eau et un liquide de refroidissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Radiateur moteur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								C'est un composant du système de refroidissement qui refroidit le liquide de refroidissement en éliminant la chaleur excédentaire. Il est formé de nombreux tubes parallèles entourés de ailettes qui augmentent la surface de dissipation de la chaleur. Le liquide de refroidissement circule à travers les tubes pour être refroidi par l'air qui passe à travers les ailettes.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Joint de culasse :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un joint de culasse est un composant crucial du moteur qui scelle l'espace entre le bloc-moteur et la culasse. Il empêche les gaz d'échappement et l'huile du moteur de fuir et assure une étanchéité étanche entre ces deux composants. Le joint de culasse est soumis à des températures élevées, à des pressions et à des cycles de dilatation thermique répétitifs, ce qui peut entraîner une usure prématurée au fil du temps.
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à eau :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La pompe à eau est un composant du système de refroidissement qui est responsable de pomper le liquide de refroidissement à travers le moteur et le radiateur. Elle est montée sur le bloc-moteur et est entraînée par une courroie ou une chaîne reliée au vilebrequin. La pompe à eau assure un débit constant de liquide de refroidissement pour maintenir la température du moteur à des niveaux appropriés.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Ventilateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le ventilateur aide à refroidir le radiateur en poussant de l'air à travers celui-ci. Il est généralement monté à l'avant du radiateur et est entraîné par une courroie reliée au moteur. Le ventilateur s'allume et s'éteint automatiquement en fonction de la température du moteur pour maintenir une température appropriée.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Calorstat :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le calorstat c'est un composant du système de refroidissement qui contrôle la température du liquide de refroidissement en agissant comme un robinet. Il est généralement monté sur le bloc-moteur et ouvre ou ferme pour permettre au liquide de refroidissement de circuler à travers le radiateur. Le calorstat agit pour maintenir une température stable du moteur en ouvrant ou en fermant en fonction de la température du liquide de refroidissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boîtier d’eau :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le boîtier d'eau est un composant du système de refroidissement qui retient le liquide de refroidissement. Il est généralement en plastique ou en métal et est monté sur le bloc-moteur. Le boîtier d'eau maintient le niveau de liquide de refroidissement et empêche celui-ci de s'échapper du moteur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Moteur chauffage :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le moteur chauffage fournit de la chaleur à l'intérieur de la voiture. Il est généralement monté sur le bloc-moteur et fonctionne en utilisant le liquide de refroidissement pour transférer la chaleur à l'intérieur de la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Thermo contact :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								C'est un composant qui est relié à la sonde de température et qui ouvre ou ferme un circuit électrique en fonction de la température. Il peut contrôler l'allumage d'un ventilateur ou d'autres composants.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Thermostat :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le thermostat contrôle la température du liquide de refroidissement en ouvrant ou fermant un passage dans le circuit de refroidissement.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Radiateur de chauffage :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le radiateur de chauffage est un composant optionnel du système de refroidissement qui fournit de la chaleur pour le système de chauffage de la voiture. Il peut être monté sur le moteur ou dans le compartiment habitacle.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Moto-ventilateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								C'est un ventilateur qui est entraîné par le mouvement de l'air pour aider à refroidir le radiateur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Échangeur air-air :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'échangeur air-air échange la chaleur entre l'air extérieur et l'air intérieur de la voiture. Il est généralement monté derrière le radiateur et peut aider à refroidir l'air qui entre dans la voiture.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Radiateur d’huile :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le radiateur d'huile est un composant qui refroidit l'huile moteur en évacuant la chaleur générée par l'huile lors de son utilisation dans le moteur. Il est généralement monté dans le compartiment moteur et peut être relié au système de refroidissement pour augmenter son efficacité.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Courroie de ventilation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								C'est une courroie qui entraîne le ventilateur et d'autres composants du système de refroidissement. Elle est généralement entraînée par le mouvement du moteur et peut être remplacée régulièrement pour maintenir un fonctionnement optimal.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Bouilloire :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La bouilloire est un composant optionnel du système de refroidissement qui peut être installé pour augmenter la capacité de refroidissement du liquide de refroidissement. Il peut être relié au radiateur ou être un composant séparé.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à eau :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La pompe à eau aide à transporter le liquide de refroidissement à travers le circuit de refroidissement. Il peut être monté sur le moteur ou sur le boîtier d'eau et peut être entraîné par une courroie reliée au mouvement du moteur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Tuyau de refroidissement :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								 C'est un tuyau qui transporte le liquide de refroidissement à travers le circuit de refroidissement. Il peut être en caoutchouc ou en métal et peut être relié à d'autres composants tels que le radiateur, le boîtier d'eau et la pompe à eau.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

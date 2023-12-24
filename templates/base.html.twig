@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="description" content="{% block meta_description %}La Belle Garantie{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{ asset('build/img/favicon.png') }}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('daisyui') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+    {% include('./Modal/chargement.html.twig') %}
+    {% include('./Modal/confirmation_contact.html.twig') %}
+        {% block body %}{% endblock %}
+    <!-- Chatra {literal} --> <script> (function(d, w, c) { w.ChatraID = '9MvkytXjLZ3jydjcY'; var s = d.createElement('script'); w[c] = w[c] || function() { (w[c].q = w[c].q || []).push(arguments); }; s.async = true; s.src = 'https://call.chatra.io/chatra.js'; if (d.head) d.head.appendChild(s); })(document, window, 'Chatra'); </script> <!-- /Chatra {/literal} -->
+    </body>
+</html>

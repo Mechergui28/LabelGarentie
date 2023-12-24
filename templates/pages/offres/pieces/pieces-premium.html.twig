@@ -1,0 +1,178 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Pièces automobiles couvertes - Offre PREMIUM | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Découvrez toutes les pièces automobiles couvertes par notre offre PREMIUM en garantie panne mécanique ! Profitez d'une protection complète pour votre moteur, votre boîte de vitesses, votre système de freinage et bien plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'a propos'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						La garantie premium
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Liste des pièces couvertes</h2>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-32 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<div id="moteur">
+							<a href="{{ path('app_offre_pieces_all_moteur') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Moteur :</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Bloc moteur, Joint d’étanchéité, Arbres à cames, Courroie de distribution *,Chaîne de distribution, Vilebrequin, Piston, Pompe à huile, Culasse, Galet de distribution, Joint couvre culasse, Joint spi, Poulie damper, Bielles, Carter (si bris interne), Collecteur d’admission, Coussinets de bielle, Culbuteurs, Guides de soupapes, Pochette de rodage, Poussoirs, Segments, Soupapes, Support moteur, Tresse de palier, Volant moteur, Rampe d’injecteurs, Tuyaux, Chemise, Cache culbuteur
+							</p>
+						</div>
+
+						<div id="systeme-alimentation">
+							<a href="{{ path('app_offre_pieces_all_alimentation') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">Système d’alimentation :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Turbo essence / diesel, Filtre à particules, Injecteurs, Injecteur pilote, Injecteur urée, Pompe injection, Débitmètre, Module d’injection, Régulateur de pression, Pompe à carburant, Réservoir à carburant, Réservoir d’urée, Carburateur, Puit de jauge, Moteur pas à pas, Pompe à vide, Electrovanne d’avance, Vanne EGR, Boîtier papillon, Doseur EGR, Pompe à air, Capteur différentiel, Electrovanne de turbo, Poumon dépression, Electrovanne EGR, Pompe HP, Capteur de pression de gazole, Installation GPL montée d’origine
+							</p>
+						</div>
+
+						<div id="boite-de-vitesse">
+							<a href="{{ path('app_offre_pieces_all_boite_manuelle') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boîte de vitesses manuelle :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Réfection de boite de vitesses, Arbres, Pignon, Synchro, Fourchettes, Roulements, Carter (si bris interne), Verrouillage, Capteur de vitesses, Différentiel, Eléments de synchro, Joint d’étanchéité (transfert), Joints d’étanchéité, Biellettes internes, Satellites et planétaires
+							</p>
+						</div>
+
+						<div id="dispositif-embrayage">
+							<a href="{{ path('app_offre_pieces_all_embrayage') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Dispositif d’embrayage :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Mécanisme, Butée, Emetteur, Récepteur
+							</p>
+						</div>
+
+						<div id="boite-vitesse-automatique">
+							<a href="{{ path('app_offre_pieces_all_boite_automatique') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boîte de vitesses automatique :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Pièces internes et lubrifiées, Calculateur, Convertisseur de couple, Electrovanne, Bloc hydraulique, Capteur de vitesses, Capteur de pression d’huile, Pompe à Huile
+							</p>
+						</div>
+
+						<div id="circuit-electrique-electronique">
+							<a href="{{ path('app_offre_pieces_all_circuit_electrique_electronique') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Circuit électrique/électronique
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Régulateur et limiteur de vitesse, Alternateur, Démarreur, Régulateur, Allumeur, Module d’allumage, Faisceaux, Calculateur moteur, Capteur PMH, Calculateur
+								toit ouvrant, Contacteur toit ouvrant, Moteur électrique toit ouvrant, Calculateur moteur, Moteurs et mécanismes de lève-vitres, Calculateur de recul, Capteur
+								de pression d’air, Capteur FAP, Fermeture centralisée (sauf clés et carte), Capteur pédale embrayage, Capteur de régime, Capteur de recul (sauf bris), Autres
+								capteurs, Moteur de coffre, Moteur de trappe, Réchauffeur de gazole, Actionneur de trappe, Résistance de moto-ventilateur, Contacteurs, Actionneur de porte,
+								Anti-démarrage codé, Moteur essuie-glaces, Moteurs lave-glaces (AV, AR), Relais préchauffage, Actionneur de coffre, BSI, BSM, Capteur de pluie, Com 2000,
+								Ecran vidéo, GPS et lecteur DVD (si montés d’origines), Autoradio, Installation Bluetooth, Afficheur tête-haute, Système d’aide au stationnement (si montés
+								d’origines), Commodo essuie-vitres, Commodo phare, Connexion air bag, Contacteur tournant, Bobine d’allumage, Bougies d’allumage, Sonde lambda, Antenne
+								transpondeur, Commodo de clignotant, Contacteur de frein à main, Motoréducteur de clim, Calculateur de FAP, Pompe à vide, Pompes lave- glaces (AV et AR),
+								Porte ampoule, Pulseur de chauffage (intérieur), Capteur pression d’admission, Contacteur de marche arrière, Relais de moto-ventilateur, Platine de lève-vitres,
+								Potentiomètre de pédale, Capteur de pédale, Contacteur de stop, Systèmes d’assistance à la conduite (correcteur d’assiette, suspension pilotée), Relais double,
+								Capteur d’arbre à came, Interrupteurs, Boîtier de préchauffage, Centrale clignotant, Relais, Résistance de pulseur, Sonde de température extérieure, Sonde de
+								niveau d’eau, Sonde température moteur, Sonde de niveau d’huile
+							</p>
+						</div>
+
+						<div id="climatisation">
+							<a href="{{ path('app_offre_pieces_all_climatisation') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Climatisation :
+							</a>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+								Compresseur de climatisation, Calculateur de climatisation, Condenseur, Déshydrateur, Platine de commande de climatisation, Radiateur de climatisation, Ventilateur de climatisation, Façade de climatisation, Sonde évaporateur, Evaporateur de climatisation, Détendeur
+							</p>
+						</div>
+
+						<div id="direction">
+                            <a href="{{ path('app_offre_pieces_all_direction') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Direction :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Crémaillère, Pompe de direction assistée, Vérin, Valve distributrice, Arbre, Rotules, Colonne, Axes, Cardans, Electropompe
+                            </p>
+                        </div>
+
+						 <div id="freinage">
+                            <a href="{{ path('app_offre_pieces_all_freinage') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Freinage  :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Cylindres de roues, Bloc ABS et capteurs ABS /ABR, Contacteur de pédale, Maître-cylindre, Servo frein (amplificateur), Pompe à vide, Étriers, Répartiteur
+                            </p>
+                        </div>
+
+						 <div id="circuit-de-refroidissement">
+                             <a href="{{ path('app_offre_pieces_all_circuit_refroidissement') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Circuit de refroidissement :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Radiateur moteur, Joint de culasse, Pompe à eau, Ventilateur, Calorstat, Boîtier d’eau, Moteur chauffage, Sonde température, Thermo contact, Thermostat,
+                                Radiateur de chauffage, Moto-ventilateur, Échangeur air-air, Radiateur d’huile
+                            </p>
+                        </div>
+
+						 <div id="securite">
+                            <a href="{{ path('app_offre_pieces_all_securite') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Sécurité :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Système airbag (sauf coussins), Prétentionneur de ceinture
+                            </p>
+                        </div>
+
+						<div id="transmission">
+                             <a href="{{ path('app_offre_pieces_all_transmission') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Transmission/Pont :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Cardans, Ponts, Arbres de transmission, Couronne, Pignons, Roulements (AV et AR), Boite de transfert, Soufflet de cardan, Arbre de roue, Joints
+                                d’accompagnement, Moyeux, Paliers
+                            </p>
+                        </div>
+						
+                        <div id="suspension">
+                             <a href="{{ path('app_offre_pieces_all_suspension') }}" class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+                                Suspension :
+                            </a>
+                            <p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">
+                                Barres stabilisatrices, Bras de suspension inférieurs et supérieurs, Ressorts, rotules, Roulements de moyeux, Sphères de suspension avant, arrière et centrale,
+                                Lames, Electrovanne, Amortisseurs
+                            </p>
+                        </div>
+
+						<div class="pt-4">
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray py-2">Sont également pris en charge en cas de panne couverte par le contrat : Le diagnostic à hauteur de 150 € TTC, Les ingrédients (huile moteur, huile de boite de vitesses, huile de direction, huile de pont, liquide de freins, liquide de refroidissement) à hauteur de 100 € TTC.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+
+{% endblock %}

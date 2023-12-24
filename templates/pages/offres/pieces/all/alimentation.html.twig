@@ -1,0 +1,301 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces alimentation | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez le système d'alimentation de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de l'alimentation, y compris les pompes à carburant, les injecteurs, les filtres et plus encore.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Alimentation
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Alimentation :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'alimentation désigne l'ensemble des aliments et boissons consommés par une personne ou un animal pour satisfaire les besoins nutritionnels. Cela peut inclure des aliments tels que des fruits, des légumes, des protéines, des glucides, des graisses et des boissons. L'alimentation peut être un facteur important pour la santé et le bien-être d'une personne, car les nutriments apportés par les aliments sont nécessaires pour le bon fonctionnement du corps. Une alimentation saine et équilibrée peut aider à prévenir certaines maladies et à maintenir un poids santé. Il est important de varier son alimentation pour obtenir un éventail de nutriments différents et d'éviter de consommer excessivement de certains aliments qui peuvent être nocifs pour la santé. Les recommandations en matière d'alimentation dépendent de facteurs tels que l'âge, le sexe, le niveau d'activité physique et d'autres considérations personnelles.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Injecteurs :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les injecteurs sont des dispositifs utilisés dans les moteurs à combustion interne pour injecter de la combustion dans les cylindres. Ils sont généralement alimentés par le système d'alimentation en carburant et peuvent être mécaniques ou électroniques. Les injecteurs modernes sont souvent électroniques et contrôlés par le système de gestion du moteur pour assurer une combustion efficace et une réduction des émissions nocives.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Débitmétre d'air :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un débitmètre d'air est un composant du système de gestion du moteur d'un véhicule. Il mesure la quantité d'air qui entre dans le moteur et envoie cette information au système de gestion du moteur. Le système de gestion du moteur utilise cette information pour déterminer la quantité de carburant nécessaire pour fonctionner de manière optimale. Si le débitmétre d'air ne fonctionne pas correctement, le système de gestion du moteur ne peut pas déterminer la quantité correcte de carburant à injecter, ce qui peut entraîner un fonctionnement incorrect du moteur, une perte de puissance et une augmentation de la consommation de carburant.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Vanne EGR :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La vanne EGR (Recirculation des Gaz d'échappement) est un composant automobile qui régule la quantité de gaz d'échappement qui est recirculée vers le moteur. Cela aide à réduire les émissions de gaz nocifs, telles que les oxydes d'azote (NOx), en injectant une partie des gaz d'échappement dans le moteur plutôt que de les laisser sortir par le système d'échappement. En régulant la quantité de gaz d'échappement qui est recirculée, la vanne EGR peut aider à réduire la température de combustion et à améliorer l'efficacité du moteur. La vanne EGR est souvent utilisée en conjonction avec d'autres technologies de réduction des émissions, telles que les systèmes de contrôle de la qualité des gaz d'échappement, pour atteindre les normes d'émissions en vigueur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe injection :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe d'injection est un composant automobile qui fournit de l'essence à la culasse d'un moteur à combustion interne. La pompe d'injection peut être soit mécanique, fonctionnant grâce à une transmission à courroie depuis le moteur, ou électronique, fonctionnant grâce à un contrôleur électronique qui ajuste la quantité d'essence délivrée en fonction des besoins du moteur. La pompe d'injection est responsable de la distribution précise de l'essence nécessaire à la combustion dans le moteur, ce qui permet d'optimiser les performances, la consommation de carburant et les émissions. Les pompes d'injection modernes sont souvent équipées de fonctionnalités telles que la compensation de la pression de carburant, la compensation de la température et la surveillance du débit, pour améliorer la performance et la fiabilité du système d'alimentation en carburant.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à carburant :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe à carburant est un composant automobile qui transfère le carburant du réservoir vers le moteur. Il existe plusieurs types de pompes à carburant, tels que les pompes mécaniques, électriques, à membrane, à diaphragme, etc. Les pompes à carburant peuvent être montées à l'intérieur ou à l'extérieur du réservoir et peuvent être alimentées soit par la pression de la batterie, soit par la pression du moteur. La pompe à carburant est un élément crucial pour le bon fonctionnement du moteur, car elle assure un débit constant et fiable de carburant vers le moteur. Les problèmes de la pompe à carburant peuvent entraîner une mauvaise performance du moteur, une perte de puissance et des problèmes de démarrage.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boîtier papillon :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le boîtier papillon est un composant automobile qui contrôle la quantité d'air qui entre dans le moteur. Il se compose d'un papillon qui s'ouvre et se ferme pour réguler le débit d'air et est commandé par l'accélérateur ou par un système de contrôle électronique. Le boîtier papillon joue un rôle clé dans la régulation de la puissance et de la performance du moteur, car il permet de contrôler la quantité d'air nécessaire à la combustion. Les boîtiers papillon modernes sont souvent équipés de capteurs qui surveillent les conditions opérationnelles, tels que la température, la pression, etc., et ajustent automatiquement la position du papillon en conséquence. Les problèmes de boîtier papillon peuvent entraîner des problèmes de performance du moteur, tels que des pertes de puissance, des retards de réponse de l'accélérateur, des problèmes de consommation de carburant, etc.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Turbo essence / diesel :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Cela désigne un moteur à combustion interne qui utilise un turbo compresseur pour améliorer la puissance et l'efficacité du moteur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Filtre à particules :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un filtre à particules, également appelé FAP, est un dispositif installé dans les véhicules diesel pour capturer les particules d'échappement, telles que les particules de suie, et les empêcher de sortir par la cheminée d'échappement. Le but est de réduire les émissions de polluants atmosphériques et de contribuer à la protection de l'environnement.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Injecteur pilote :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un injecteur pilote est un type d'injecteur de carburant utilisé dans les systèmes d'injection de carburant de moteur diesel. Il est utilisé pour injecter une petite quantité de carburant dans la chambre de combustion avant le cycle de compression, ce qui facilite l'allumage du carburant principal. Cela permet d'améliorer la performance du moteur, la consommation de carburant et les émissions de gaz nocifs.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Injecteur urée :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un injecteur d'urée est un équipement utilisé dans les systèmes de réduction catalytique sélective (SCR) pour les véhicules diesel. Il injecte de l'urée ou du DEF (Adblue) dans les gaz d'échappement, où elle réagit avec les oxydes d'azote pour former de l'azote et de l'eau. Cela permet de réduire les émissions de NOx (oxydes d'azote), qui sont considérées comme des polluants atmosphériques nocifs pour la santé humaine et l'environnement.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Module d’injection :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un module d'injection peut désigner différentes choses en fonction du contexte. Dans le domaine de l'informatique, un module d'injection peut être un logiciel qui injecte du code dans un autre programme pour étendre ou altérer ses fonctionnalités. Dans le domaine de l'automobile, un module d'injection peut être un composant qui gère l'injection de carburant dans les cylindres d'un moteur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Régulateur de pression :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un régulateur de pression est un dispositif utilisé pour maintenir une pression constante dans un système de gaz ou de liquide. Il fonctionne en régulant la quantité de fluide qui passe à travers le système, en ajustant la taille de l'ouverture ou en utilisant un détendeur pour limiter la pression. Les régulateurs de pression sont largement utilisés dans de nombreux secteurs industriels, tels que la production de gaz industriels, les systèmes de refroidissement et de climatisation, et les systèmes de contrôle de processus.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Réservoir à carburant :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le réservoir à carburant est un récipient utilisé pour stocker du carburant dans un véhicule ou un équipement à moteur. Il sert à alimenter le moteur en carburant pour permettre son fonctionnement. Les réservoirs à carburant peuvent être fabriqués à partir de différents matériaux tels que l'acier, le plastique ou le caoutchouc, et peuvent varier en taille et en capacité en fonction de l'application.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Réservoir d’urée :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un réservoir d'urée est un organe biologique qui stocke et contrôle la production et l'élimination de l'urée, un produit de décomposition des protéines qui doit être éliminé du corps. Les reins sont les principaux organes impliqués dans ce processus, en filtrant l'urée du sang et en la dirigeant vers la vessie pour être éliminée dans l'urine.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Carburateur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un carburateur est un dispositif qui mélange de l'air et du carburant pour un moteur à combustion interne. Il fournit le mélange d'air-carburant approprié au moteur pour la combustion et régule la puissance de sortie du moteur. Les carburateurs étaient couramment utilisés dans les véhicules plus anciens, mais ont été largement remplacés par des systèmes d'injection de carburant dans les véhicules modernes.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Puit de jauge :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un puits de jauge est un puits ou un forage utilisé pour mesurer les niveaux d'eau souterrains ou les nappes phréatiques. Il peut être utilisé pour surveiller les variations de niveau d'eau et pour collecter des échantillons pour des analyses environnementales. Les puits de jauge peuvent être temporaires ou permanents et peuvent être installés en surface ou en profondeur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Moteur pas à pas :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un moteur pas à pas est un moteur électrique qui peut être déplacé de manière contrôlée à des angles précis. Il est appelé "pas à pas" car il avance par petits pas, contrairement aux moteurs continuels qui tournent en continu. Les moteurs pas à pas sont couramment utilisés dans des applications telles que les imprimantes, les robots, les systèmes d'entraînement linéaire et les systèmes de contrôle de position.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à vide :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe à vide est un appareil qui crée un vide en aspirant de l'air ou un autre gaz. Elle peut être utilisée pour diverses applications, telles que la manipulation de liquides, la soudure sous vide, la vidange d'air d'un récipient hermétique, etc. Il existe plusieurs types de pompes à vide, tels que les pompes à vide à membrane, les pompes à vide à palettes, les pompes à vide à vis, etc.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Electrovanne d’avance :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'électrovanne d'avance est un composant utilisé dans le système de contrôle de l'avance à l'allumage des moteurs à combustion interne. Il s'agit d'un type de vanne électrique qui contrôle le débit de carburant dans le moteur en fonction du signal envoyé par le système de contrôle de l'allumage. L'électrovanne d'avance peut être utilisée pour optimiser les performances et la consommation de carburant du moteur en ajustant l'avance à l'allumage en fonction des conditions de fonctionnement.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Doseur EGR :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'EGR (Exhaust Gas Recirculation) est un système utilisé pour réduire les émissions d'oxydes d'azote (NOx) dans les moteurs diesel. Le doseur EGR est un composant clé de ce système qui mesure le volume d'air re-circulé et régule le débit de gaz d'échappement re-circulé dans le moteur. Il aide à maintenir la bonne quantité de mélange air-carburant et à contrôler les températures dans le moteur pour réduire la formation d'oxydes d'azote.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe à air :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un Pompe à air est un dispositif qui peut être utilisé pour gonfler des objets, tels que des ballons, des matelas gonflables, etc. Il peut être électrique ou manuel, et utilise de l'air comprimé pour pomper de l'air dans l'objet en question.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Capteur différentiel :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le capteur différentiel est un composant électronique qui mesure la différence de potentiel électrique entre deux points. Il peut être utilisé pour détecter des écarts dans des systèmes électriques, tels que la détection de courants de fuite dans les systèmes de sécurité électrique. Les capteurs différentiels peuvent également être utilisés pour mesurer des signaux analogiques, tels que la tension et le courant, dans les systèmes de contrôle de la qualité de l'alimentation électrique.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Electrovanne de turbo :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une électrovanne de turbo est un composant qui permet de contrôler la pression d'air fournie au moteur d'un véhicule. Elle est souvent utilisée pour réguler le fonctionnement du turbocharger en ouvrant ou en fermant le passage de l'air comprimé vers le moteur. Cela permet de maximiser les performances du moteur en fonction des conditions de conduite et de charge.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Poumon dépression :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La dépression pulmonaire peut être causée par une inhalation de gaz toxique dans un véhicule clos, comme un monoxyde de carbone. Il est important de maintenir une ventilation adéquate dans un véhicule et de faire régulièrement vérifier son système d'échappement pour éviter ce type de danger pour la santé.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pompe HP :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une pompe à haute pression dans un véhicule peut faire référence à la pompe d'injection de carburant, qui envoie du carburant sous pression à la rampe d'injection du moteur. Cette pompe est généralement située dans le réservoir de carburant ou près de celui-ci, et est commandée par le moteur pour fournir le carburant nécessaire à la combustion. Les défaillances de la pompe à haute pression peuvent causer des problèmes de démarrage ou des pertes de puissance, et il est donc important de maintenir correctement la pompe pour une performance optimale du moteur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Capteur de pression de gazole :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un capteur de pression de gazole est un dispositif utilisé pour mesurer la pression du carburant diesel dans un système d'alimentation en carburant. Il peut être utilisé pour surveiller la quantité de carburant dans un réservoir, contrôler la pression du carburant pour assurer un débit adéquat au moteur ou détecter les fuites dans le système d'alimentation en carburant. Les capteurs de pression de gazole sont souvent utilisés dans les véhicules diesel pour contrôler l'alimentation en carburant et améliorer la performance et l'efficacité du moteur.
+							</p>
+						</div>
+
+						<div class="pb-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Installation GPL montée d’origine :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une installation GPL montée d'origine est une installation de gaz de pétrole liquéfié (GPL) qui est installée sur un véhicule dès sa production en usine. Cela signifie que le véhicule est conçu pour fonctionner à la fois au essence et au GPL et que l'installation de GPL a été effectuée par le fabricant du véhicule plutôt que par un tiers après l'achat du véhicule.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

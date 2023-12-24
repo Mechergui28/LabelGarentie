@@ -1,0 +1,92 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Mentions Légales | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Consultez notre page de mentions légales pour en savoir plus sur notre société et nos politiques d'utilisation du site. Restez informé et naviguez en toute sécurité en ligne.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+    
+		<div class="bg-offres bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						MENTIONS LEGALES
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 my-4 text-sm" style="color: #333333;">
+			<h2 class="my-6 text-left text-5xl TekoMedium  " style="color: #333333;">EDITEUR DU SITE
+			</h2>
+		</div>
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4 my-4 text-base TekoRegular" style="color: #333333;">
+			<hr class="border-top-red my-1"/>
+			<p class="text-xl  lg:text-left TekoLight  tracking-wide  font-bold py-4 lg:py-3">
+				LABEL GARANTIE, SAS au capital de 10 000 €</p>
+			<p class="text-xl  lg:text-left TekoLight  tracking-wide  font-bold py-4 lg:py-3">
+				<span class="text-2xl TekoRegular">Adresse du siège social :
+				</span>
+				7 avenue Général de Gaulle 69300 CALUIRE ET CUIRE
+			</p>
+			<p class="text-xl  lg:text-left  TekoLight tracking-wide  font-bold py-4 lg:py-3">
+				<span class="text-2xl TekoRegular">N° Immatriculation RCS LYON :
+				</span>
+				882 077 696.
+			</p>
+			<p class="my-2 text-xl">Inscrite au registre unique des Intermédiaires tenu par l’Orias sous le N° : 200 027 19 (www.orias.fr) en qualité de Courtier d’assurance ou de réassurance (COA) et soumise au contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), 4 place de Budapest – CS 92459 – 75436 Paris Cedex 9.
+			</p>
+			<p class="my-2 text-xl TekoMedium">Email :
+				<spam class="link-cgu">
+					contact@labelgarantie.com</spam>
+			</p>
+			<p class="my-2 text-xl ">
+				LABEL GARANTIE exerce l’activité de courtage en assurance, spécialisée dans la Garantie Panne Mécanique et est soumis notamment aux obligations des intermédiaires en assurance de l'article L. 511-1 et suivants du Code des assurances et de l'article L. 519-1 et suivants du Code Monétaire et Financier et dispose d’une assurance de responsabilité civile professionnelle pour l’exercice de ses activités.
+			</p>
+			<p class="my-2 text-xl TekoMedium">
+				Directeur de la publication : Monsieur Sébastien RIVOIRE, président de LABEL GARANTIE SAS
+			</p>
+			<p class="my-2 text-xl TekoMedium">
+				Hébergeur du site : AGOM
+			</p>
+			<p class="text-4xl  lg:text-left TekoLight  tracking-wide  font-bold py-4 lg:py-3">
+				UTILISATION DU SITE
+			</p>
+			<hr class="border-top-red my-1"/>
+			<p class="my-2 text-xl ">L’accès au Site
+				<spam class="link-cgu">
+					www.labellegarantie.com
+				</spam>ainsi que l’utilisation de son contenu, de ses rubriques y compris son espace client s’effectue dans le cadre des Conditions Générales d’Utilisation que l’Utilisateur est invité à consulter et accepter.
+			</p>
+			<p class="text-4xl  lg:text-left TekoLight  tracking-wide  font-bold py-4 lg:py-3">PROPRIETE INTELLECTUELLE
+			</p>
+			<hr class="border-top-red my-1"/>
+			<p class="my-2 text-xl ">Le Site<spam class="link-cgu">
+					www.labellegarantie.com</spam> et son contenu appartiennent à LABEL GARANTIE SAS ou des tiers ayant autorisé cette dernière à l’utiliser. La propriété intellectuelle du Site
+				<spam class="link-cgu">
+					www.labellegarantie.com</spam> et de son contenu relève des dispositions des CGU, lesquelles n’entrainent aucun transfert de droit de propriété intellectuelle à l’Utilisateur.
+			</p>
+			<p class="text-4xl  lg:text-left TekoLight  tracking-wide  font-bold py-4 lg:py-3">PROTECTION DES DONNEES A CARACTERE PERSONNEL ET CONFIDENTIALITE
+			</p>
+			<hr class="border-top-red my-1"/>
+			<p class="my-2 text-xl ">Les données personnelles recueillies sur le Site<spam class="link-cgu">
+					www.labellegarantie.com</spam>
+				sont traitées par LABEL GARANTIE, ainsi que, le cas échéant, par le(s) Assureur(s), responsables conjoints de traitement. Pour obtenir l’exhaustivité des informations sur le traitement des données et l’exercice des droits sur ces données, l’Utilisateur est invité à se référer à notre Politique de Confidentialité.
+			</p>
+
+
+		</div>
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

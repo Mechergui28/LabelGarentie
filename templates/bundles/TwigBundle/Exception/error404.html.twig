@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    La Belle Garantie | ERROR 403
+{% endblock %}
+
+{% block body %}
+
+    {% set vars = {'active': ''} %}
+    {% include('Header.html.twig') with vars %}
+
+    <div class="content">
+        <div class="lg:container xl:container flex flex-col my-8">
+            <div>
+                <div class="bg-white relative w-56 place-self-center mx-auto">
+                    <h2 class="text-center text-green-light text-8xl TekoMedium font-extrabold -mb-10 text-red">404</h2>
+                </div>
+                <hr class=" rounded-lg bg-red-500 mx-auto max-w-full py-1"></hr>
+            </div>
+            <div class="TekoRegular font-medium -mt-10">
+                <p class="text-2xl pb-12 text-red">
+                    Oops, cette page est introuvable !
+                </p>
+                <p class="text-lg text-red text-center">
+                    La page que vous rechercher semble introuvable.
+                </p>
+            </div>
+            <div class="py-6 content-center self-center">
+                <a href="{{ path('app_index') }}" class="TekoMedium btn-gtb links-offres px-8 py-2">
+                    Retour à la page d'Accueil
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    {% include('footer.html.twig') %}
+    {% include('Header2.html.twig') with vars %}
+
+{% endblock %}

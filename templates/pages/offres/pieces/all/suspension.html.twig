@@ -1,0 +1,130 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces suspension | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez la suspension de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de la suspension, y compris les amortisseurs, les ressorts, les bras de suspension et plus encore. 
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Suspension
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Barres stabilisatrices
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les barres stabilisatrices sont des pièces métalliques reliées aux deux côtés de la suspension qui aident à maintenir la stabilité de la voiture lors de virages ou de manœuvres brusques.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Bras de suspension inférieurs et supérieurs
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les bras de suspension inférieurs et supérieurs sont des composants qui relient les roues au châssis et aident à absorber les vibrations et les mouvements du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Ressorts
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les ressorts de suspension sont des composants qui absorbent les mouvements du châssis en comprimant et décomprimant pour amortir les vibrations et maintenir les roues en contact avec la route.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Rotules
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les rotules sont des composants de la suspension qui permettent aux bras de suspension de bouger et de tourner pour absorber les mouvements et les vibrations du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Roulements de moyeux
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les roulements de moyeux sont des composants qui permettent un mouvement rotatif en douceur et sans friction des roues pendant le mouvement du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Sphères de suspension avant, arrière et centrale
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les sphères de suspension sont des composants en caoutchouc qui permettent de relier les bras de suspension au châssis et d'absorber les mouvements et les vibrations du véhicule. Il existe des sphères de suspension avant, arrière et centrale pour les différentes parties du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Lames
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les lames de suspension sont des pièces métalliques qui aident à absorber les mouvements du châssis en se déformant. Elles peuvent être utilisées avec des ressorts pour amortir les vibrations du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Electrovanne
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'électrovanne est un composant électrique qui peut être utilisé pour contrôler la suspension active, en ajustant la pression des amortisseurs en fonction des conditions de conduite.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Amortisseurs
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les amortisseurs sont des composants qui absorbent les vibrations et les mouvements du châssis en régulant la vitesse de compression et de décompression des ressorts de suspension.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Nos offres</h2>
+				</div>
+			</div>
+		</div>
+
+		{% set num_etape = {'etape_souscription' : etape_souscription} %}
+		{% include('./souscription/ariane.html.twig') with num_etape %}
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+			{% if offres is empty %}
+				<div class="text-center py-16 px-3">
+					<h4 class="TekoMedium text-3xl">
+						Aucune offre n'est disponible pour votre véhicule.
+						<br>
+						Vous pouvez nous contacter par téléphone au 04 28 63 20 20.
+					</h4>
+				</div>
+			{% else %}
+
+				<div class="text-center">
+					<h3 class="TekoRegular text-3xl lg:text-5xl md:text-4xl mt-8 text-gray-900 pb-4" style="color: #333333;">Sélectionnez la durée souhaitée</h3>
+				</div>
+
+				<div class="flex flex-row flex-wrap justify-items-center justify-center items-center">
+					{% for key,values in offres %}
+						{% if loop.first %}
+							<div class="mx-1 my-1">
+								<button id="mois_{{key}}" class="lg:w-40 w-28 text-lg TekoRegular btn_duree_offre btn_offre  py-2 px-8" onclick="afficheOffre({{key}})">{{key}}
+									mois</button>
+							</div>
+						{% else %}
+							<div class="mx-1 my-1">
+								<button id="mois_{{key}}" class="lg:w-40 w-28 text-lg TekoRegular btn_duree_offre  btn-light2  py-2 px-8" onclick="afficheOffre({{key}})">{{key}}
+									mois</button>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+
+				<hr class="border border-gray-300 my-10">
+
+				<div class="text-center">
+					<h3 class="TekoRegular text-3xl lg:text-5xl md:text-4xl mt-8 text-gray-900 pb-4" style="color: #333333;">Choisissez votre offre</h3>
+				</div>
+
+				{% for key,offre in offres %}
+
+					<div class="lg:px-16 pb-10 mois_garantie" id="leMois_{{key}}" style="{% if key != min(offres|keys) %} display:none;{% endif %}">
+
+						{% for item in offre %}
+							{% if item.ART_CODE == 'PREMIUM' %}
+								{% set i=premium %}
+							{% elseif item.ART_CODE == 'ZEN' %}
+								{% set i=zen %}
+								{% else%}
+								{% set i=sweet %}
+							{% endif %}
+							<div class="grid lg:grid-cols-3 lg:grid-rows-1 xl:grid-cols-3 xl:grid-rows-1 grid-rows-1 grid-cols-1 gap-x-8 gap-y-8  background">
+								<div class="flex flex-col py-4">
+									<div class="my-8">
+										<img src="{{ asset(i.image) }}" alt="{{ item.ART_CODE }}" class="text-center mx-auto my-auto w-1/3 md:w-1/4 lg:w-1/2"/>
+									</div>
+									<h1 class="text-red uppercase text-center text-4xl TekoMedium">
+										{{ item.ART_CODE }}
+									</h1>
+									<span class="text-center text-2xl TekoMedium" style="color: #333333;">
+										{{ i.subTitle }}
+									</span>
+									<a href="{{ asset(i.file) }}" target="_blank" class="links-offres text-center TekoRegular text-lg underline">
+										Listes des pièces couvertes
+									</a>
+									<p class="uppercase text-center text-xl TekoMedium {{ i.desc.class }}">
+										{{ i.desc.text }}
+									</p>
+
+								</div>
+								<div class="flex flex-col py-4 lg:mx-0 mx-8">
+									<ul class="TekoLight lg:text-xl text-lg list-disc text-sm" style="color: #333333;">
+										{% for k,e in i.infos  %}
+											<li>{{ e }}</li>
+										{% endfor %}
+									</ul>
+
+								</div>
+								<div class="flex flex-col py-4">
+									<div class="grow flex flex-col-reverse ">
+										<div class="text-center mx-auto my-auto ">
+											<h1 class="text-red text-center text-4xl TekoMedium my-4">
+												{{ (item.MT_TTC / key) }}
+												€ / Mois
+											</h1>
+											<div class="text-center ">
+												<form action="{{ path('app_offres_garanties') }}" method="post" class="py-4">
+													<input type="hidden" name="data" value="{{ nzo_encrypt(item|json_encode()) }}" autocomplete="nope"/>
+													<input type="hidden" name="token" value="{{ csrf_token('data_Offre') }}" autocomplete="nope"/>
+													<div class="grow flex flex-col-reverse">
+														<div class="group mx-auto flex flex-row" style="color: transparent;">
+															<button class="relative text-red-600 w-40 py-2 px-4 text-2xl bg-white shadow-xl text-center TekoRegular a_lbg">Choisir</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+
+
+									</div>
+
+								</div>
+
+
+							</div>
+							<hr class="border-top-{{ i.desc.class }} my-2 mx-2"/>
+						{% endfor %}
+					</div>
+				{% endfor %}
+
+			{% endif %}
+
+		</div>
+
+	</div>
+	<script>
+		function afficheOffre(val) {
+			$('.mois_garantie').hide();
+			$('#leMois_' + val).show();
+
+			$('.btn_duree_offre').removeClass('btn_offre');
+			$('.btn_duree_offre').addClass('btn-light2');
+
+			$('#mois_' + val).removeClass('btn-light2');
+			$('#mois_' + val).addClass('btn_offre');
+			}
+	</script>
+
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+
+{% endblock %}

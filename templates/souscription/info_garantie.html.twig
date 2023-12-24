@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block body %}
+
+	{% include('./Modal/verif_date.html.twig') %}
+	{% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+		<div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Infos garantie</h2>
+				</div>
+			</div>
+		</div>
+
+		{% if contrat.garantie.code == 'PREMIUM' %}
+			{% set i=premium %}
+		{% elseif contrat.garantie.code == 'ZEN' %}
+			{% set i=zen %}
+			{% else%}
+			{% set i=sweet %}
+		{% endif %}
+
+		{% set num_etape = {'etape_souscription' : etape_souscription} %}
+		{% include('./souscription/ariane.html.twig') with num_etape %}
+		
+		<div class="lg:container xl:container">
+			<div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 xl:grid-cols-2 xl:grid-rows-1 lg:col-span-3 my-4  ">
+				<div class="lg:row-start-1 lg:col-start-1 lg:col-span-1 col-start-1 row-start-1 flex flex-col my-auto mx-auto">
+					<h3 class="TekoRegular text-center text-3xl lg:text-5xl md:text-4xl mt-8 text-gray-900" style="color: #333333;">
+						Votre garantie</h3>
+					<div class="my-8">
+						<img src="{{ asset(i.image) }}" alt="Offre garantie" class="mx-auto my-auto" width="150"/>
+					</div>
+					<h1 class="text-red uppercase text-4xl text-center TekoMedium">
+						{{ contrat.garantie.libelle }}
+					</h1>
+					<h3 class="text-4xl text-center TekoMedium">{{ contrat.garantie.duree }}
+						mois</h3>
+				</div>
+				<div class="lg:row-start-1 lg:col-start-2 lg:col-span-2  row-start-2  my-auto mx-auto flex flex-col lg:-mt-0 -mt-8">
+					<h3 class="TekoRegular text-3xl lg:text-5xl md:text-4xl mt-8 text-gray-900 pb-4" style="color: #333333;">
+						Début de votre garantie :
+					</h3>
+					{{ form_start(form, {'attr': {'id': 'form_create'}}) }}
+					<div class="grid lg:grid-cols-3 lg:grid-rows-1 grid-rows-3 grid-cols-1 gap-x-6 gap-y-6 mx-3  ">
+						<div class="lg:col-start-1 lg:row-start-1 row-start-1 ">
+							{{ form_row(form.day, {'label':false, 'attr': {'class':'date-check form w-full text-2xl pb-1
+						pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'day','placeholder':
+						'Jours*'}}) }}
+							<span class="span-invalid hidden form_day">*Ce champ est obligatoire</span>
+						</div>
+						<div class="lg:col-start-2 lg:row-start-1 row-start-2">
+							{{ form_row(form.month, {'label':false, 'attr': {'class':'date-check form w-full text-2xl pb-1
+						pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'month','placeholder':
+						'Mois*'}}) }}
+							<span class="span-invalid hidden form_month">*Ce champ est obligatoire</span>
+						</div>
+						<div class="lg:col-start-3 lg:row-start-1 row-start-3">
+							{{ form_row(form.year, {'label':false, 'attr': {'class':'date-check form w-full text-2xl pb-1
+						pl-3 form-login text-sm h-fit','minlength':'1','maxlength':'','name':'year','placeholder':
+						'Année*'}}) }}
+							<span class="span-invalid hidden form_year">*Ce champ est obligatoire</span>
+						</div>
+					</div>
+					<div class="mx-2 my-2 TekoLight  lg:text-xl text-lg">
+						<span id="form_check_date" class="span-invalid hidden form_check_date text-xl">Ce champ est
+													obligatoire</span>
+					</div>
+					<div class="mx-2 my-2 TekoLight  lg:text-xl text-lg">
+						{{ form_widget(form.ficheclient, {'label':false}) }}
+						<label for="{{form.ficheclient.vars.id}}">Je reconnais avoir pris connaissance du contenu de la
+													présente
+							<a class="links-offres" href="{{ path('app_fiche_client_download') }}" target="_blank">fiche
+															conseil</a>
+							préalablement à la conclusion du contrat d'assurance
+						</label>
+					</div>
+					<div class="mx-2 my-2 TekoLight lg:text-xl text-lg">
+						{{ form_widget(form.ipid, {'label':false}) }}
+						<label for="{{form.ipid.vars.id}}">Je reconnais avoir pris connaissance des
+							<a class="links-offres" href="{{ i.cg }}" target="_blank">
+								Conditions Générales valant notice d’informations précontractuelles</a>
+							et de l'<a class="links-offres" href="{{ i.ipid }}" target="_blank">IPID</a>
+						</label>
+					</div>
+					<div class="flex flex-col">
+						<div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+							<div class="grow flex flex-col-reverse ">
+								<div class="group mx-auto my-auto flex flex-row " style="color: transparent;">
+									{{ form_widget(form.valider, {'attr': {'class':'relative text-white text-2xl bg-red-600
+								w-40 py-2 px-4 text-center TekoRegular a_lbg','name':'creation','id':'creation'}})}}
+								</div>
+							</div>
+
+						</div>
+					</div>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const form = document.querySelector('#form_create');
+
+		form.addEventListener('change', changeDate)
+		form.addEventListener('submit', verify);
+
+		function changeDate(e){
+			
+			let day = $('#form_day').val();
+			let month = $('#form_month').val();
+			let year = $('#form_year').val();
+
+			let formData = {
+				day,
+				month,
+				year
+			}
+
+			console.log($.ajax({ type: 'POST', url: "{{ path('app_ajax_change_date') }}", data: formData }))
+
+		}
+
+		function verify(e) {
+
+			e.preventDefault();
+			var promiseDate = verifDate();
+
+			return Promise.all([promiseDate]).then(values => {
+
+				data = JSON.parse(values[0])
+
+
+				if (data.response === "OK") {
+					form.submit();
+				} else {
+					console.log(document.querySelector('#verifDate'));
+					document.querySelector('#verifDate').style.display = 'block'
+				}
+
+			}).catch(function () { });
+		}
+		function verifDate() {
+
+			let day = $('#form_day').val();
+			let month = $('#form_month').val();
+			let year = $('#form_year').val();
+
+			let formData = {
+				day,
+				month,
+				year
+			}
+
+			return $.ajax({ type: 'POST', url: "{{ path('app_ajax_check_date') }}", data: formData });
+
+		}
+	</script>
+
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+
+{% endblock %}

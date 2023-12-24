@@ -1,0 +1,180 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	A propos de nous | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+	Découvrez qui nous sommes et notre histoire sur notre page A propos. Apprenez-en davantage sur notre expertise et notre engagement à offrir les meilleurs produits et services à nos clients.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'a propos'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						A propos
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-container pb-40">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+
+				<div class="text-center pt-20">
+					<h2 class="text-5xl lg:text-5xl TekoRegular" style="color: #333333;">
+						Chez
+						<span class="underline TekoMedium">Label Garantie,</span>
+						<br>
+						votre satisfaction est notre priorité
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 mt-20 gap-x-6">
+
+					<div class="text-center" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Une entreprise  <span class="TekoMedium font-bold">française</span>
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Créée en 2020 par des professionnels du secteur automobile et des assurances, Label Garantie est une entreprise de courtage implantée en France spécialisée dans la garantie panne mécanique, électrique et électronique pour les professionnels, revendeurs d’ automobiles neuves et d’occasions, ainsi que les particuliers.
+						</p>
+						<img src="{{ asset('build/img/100-francais.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="Entreprise française">
+					</div>
+
+					<div class="text-center mt-10 lg:mt-0" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Une entreprise <span class="TekoMedium font-bold">indépendante</span>
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Label Garantie est une entreprise indépendante 100% française, avec des capitaux privés et éloignée des grands groupes financiers étrangers.
+						</p>
+						<img src="{{ asset('build/img/independant.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="Entreprise indépendante">
+					</div>
+
+					<div class="text-center mt-10 lg:mt-0" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Des <span class="TekoMedium font-bold">experts</span> métiers
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Notre équipe est constituée d’experts de la garantie panne mécanique, électrique et électronique : depuis plus de 20 ans, nos collaborateurs ont acquis leurs savoir-faire à travers leurs différentes expériences aux services de professionnels et de particuliers.
+						</p>
+						<img src="{{ asset('build/img/expert.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="Entreprise indépendante">
+					</div>
+
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 mt-10 lg:mt-20 gap-x-6 lg:pt-10">
+
+					<div class="text-center" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Une équipe <span class="TekoMedium font-bold">dynamique et réactive</span>
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Notre plateau d’accueil téléphonique basé en France, près de Lyon, est constitué de techniciens qualifiés et de gestionnaires de la relation client, soucieux de défendre vos intérêts.<br>
+							Dynamiques, réactifs et d’une grande expérience terrain, les équipes de Label Garantie vous promettent la meilleure des garanties.
+						</p>
+						<img src="{{ asset('build/img/equipe.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="Equipe dynamique">
+					</div>
+
+					<div class="text-center lg:-mt-28 mt-10" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Conseil client et <span class="TekoMedium font-bold">transparence</span>
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Nous sommes fiers de notre ADN qui repose sur deux piliers : le conseil client et la transparence. Chez Label Garantie, nous nous engageons à vous offrir la meilleure garantie pour votre véhicule, en toute transparence et en vous accompagnant tout au long de votre parcours avec nous.
+						</p>
+						<img src="{{ asset('build/img/conseil.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="Conseil et transparence">
+						<div class="pt-16 hidden lg:block">
+							<a class="TekoMedium uppercase text-3xl underline text-red-600" href="{{ path('app_offres')}}">Découvrez nos offres !</a>
+						</div>
+					</div>
+
+					<div class="text-center mt-10 lg:mt-0" style="color: #333333;">
+						<h3 class="TekoRegular text-4xl uppercase">
+							Une présence <span class="TekoMedium font-bold">nationale</span>
+						</h3>
+						<p class="WorkSans pt-3 text-base">
+							Notre équipe commerciale est composée de technico-commerciaux présents sur tout le territoire pour rencontrer les professionnels de l'automobile et fournir un service de qualité. Nous maintenons des relations étroites avec les acteurs clés de l'industrie automobile afin de garantir des partenariats solides pour vous offrir un service rapide et efficace.
+						</p>
+						<img src="{{ asset('build/img/national.png') }}" class="w-18 h-auto pt-3 mx-auto" alt="présence national">
+						<div class="pt-16 block lg:hidden">
+							<a class="TekoMedium uppercase text-3xl underline text-red-600" href="{{ path('app_offres')}}">Découvrez nos offres !</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="-mb-40">
+			<img src="{{ asset('build/img/img-a-propos.png') }}" alt="a propos">
+		</div>
+
+		{# <div class="py-16 hide-div">
+					<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+						<h2 class="text-4xl lg:text-7xl xl:text-7xl text-center text-uppercase TekoMedium title-height" style="color: #333333;">
+							LA GARANTIE PANNE MÉCANIQUE 100% PROFESSIONNELLE PAR DES PROFESSIONNELS A 100% !
+						</h2>
+					</div>
+		
+					<div class="animation apropos_body bg-no-repeat bg-cover mid-h-screen w-full" style="height:80vh;">
+						<div class="faq_bloc_triangle w-full h-32 bg-no-repeat bg-cover"></div>
+					</div>
+		
+					<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+						<div class="grid grid-rows-1 grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 bg-light px-8 py-8 lg:px-12 lg:py-16 lg:-mt-96 gap-x-12 gap-y-12 lg:py-10">
+							<div class="lg:col-span-1 row-start-1">
+								<h3 class="text-2xl lg:text-4xl TekoMedium" style="color: #333333;">
+									Un concept né en 2001 conçu par une équipe de professionnels issus du monde
+								</h3>
+								<ul class="TekoRegular lg:text-3xl text-xl  list-disc px-10 py-2">
+									<li class="granite-gray">de l’Automobile,</li>
+									<li class="granite-gray">de la réparation automobile,</li>
+									<li class="granite-gray">de la gestion des produits d’assurances.</li>
+								</ul>
+								<p class="TekoRegular lg:text-3xl text-xl granite-gray">
+									Après 20 ans d’expérience dans la Garantie Panne Mécanique, l’équipe a décidé de se lancer un nouveau défi.</p>
+								<p class="TekoRegular lg:text-3xl text-xl granite-gray">
+									Créer une forme nouvelle de produits et de services autour du monde de la Garantie Panne Mécanique Automobile :
+								</p>
+								<ul class="TekoRegular lg:text-3xl text-xl granite-gray list-disc px-10 py-2">
+									<li class="granite-gray">Pour tous les professionnels de l’automobile,</li>
+									<li class="granite-gray">Pour tous les particuliers qui possèdent une automobile.</li>
+								</ul>
+							</div>
+							<div class="lg:col-span-2 lg:row-start-1 row-start-2 ">
+								<h3 class="text-2xl lg:text-4xl TekoMedium" style="color: #333333;">
+									Une société 100% française, indépendante, avec des capitaux privés
+								</h3>
+								<p class="TekoRegular lg:text-3xl text-xl granite-gray">Implanté en France, le plateau d’accueil téléphonique est constitué :</p>
+								<ul class="TekoRegular lg:text-3xl text-xl list-disc px-10 py-2">
+									<li class="granite-gray">de techniciens qualifiés,</li>
+									<li class="granite-gray">de gestionnaires professionnels de la relation clients,</li>
+								</ul>
+								<p class="TekoRegular lg:text-3xl text-xl granite-gray">
+									tous soucieux de défendre les intérêts de leurs clients.
+									Maillée sur tout le territoire français, l’équipe commerciale est composée de technico-commerciaux chargés
+									de rencontrer tous les professionnels de l’automobile, pour assurer et rassurer tous leurs clients.
+								</p>
+		
+							</div>
+						</div>
+					</div>
+		
+				</div> #}
+
+
+	</div>
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces boite de vitesse manuelle | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez la boîte de vitesses manuelle de votre véhicule avec notre garantie de pièces mécaniques ! Découvrez notre couverture complète pour les pièces de la boîte de vitesses manuelle, y compris les roulements, les synchros, les pignons et bien plus encore. 
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Boite manuelle
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Boite de vitesse manuelle :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Une boîte de vitesse manuelle est un système de transmission qui permet de changer les rapports de vitesse d'un véhicule de manière manuelle. Cela se fait en utilisant une pédale d'embrayage pour synchroniser les vitesses entre le moteur et les roues, et en utilisant une commande de changement de vitesse (souvent un levier de vitesse) pour sélectionner le rapport de vitesse souhaité.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Arbres :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les arbres de transmission sont des composants mécaniques qui transmettent la puissance du moteur d'un véhicule à ses roues motrices. Dans une boîte de vitesse manuelle, l'arbre de transmission est relié à la boîte de vitesse elle-même, qui permet au conducteur de sélectionner différents rapports de vitesse pour adapter la puissance du moteur à la vitesse de déplacement du véhicule.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Roulements :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les roulements de boîte de vitesse manuelle sont des composants mécaniques qui permettent un mouvement rotatif en douceur et sans frottement entre les différentes pièces mécaniques de la boîte de vitesse. Ils sont généralement installés sur l'arbre de sortie de la boîte de vitesse et sur l'arbre d'entrée du différentiel, et permettent de supporter les charges de la boîte de vitesse et de transmettre la puissance du moteur aux roues motrices
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Pignons :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les pignons de boîte de vitesse manuelle sont des composants mécaniques qui font partie intégrante de la boîte de vitesse. Ils sont reliés à l'arbre de sortie de la boîte de vitesse et à l'arbre d'entrée du différentiel, et permettent de transmettre la puissance du moteur aux roues motrices en changeant les rapports de vitesse.
+							</p>
+						</div>
+
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Anneaux de Synchros :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les anneaux de synchronisation (ou synchros) sont des composants mécaniques utilisés dans les boîtes de vitesse manuelles pour faciliter le passage des vitesses. Ils permettent de synchroniser la vitesse de rotation de l'arbre de sortie de la boîte de vitesse avec celle de l'arbre d'entrée du pignon correspondant, ce qui permet de changer de vitesse en douceur et sans à-coups.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Baladeur :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le baladeur entraîne, grâce à la pression des billes ; le moyeu jusqu’au contact de son cône femelle sur le cône mâle du pignon. La friction des deux cônes a pour effet d’amener progressivement le pignon à la même vitesse de rotation que celle de l’ensemble moyeu-baladeur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Axes et fourchettes de sélection interne :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les axes de fourchettes possèdent des encoches à leur extrémité. Par l'intermédiaire d'une tringlerie adaptée à chaque véhicule, l’axe de selection situé sur la boite de vitesses est relié au levier de vitesses
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Differenciel :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Il permet de limiter le glissement des roues arrière lorsque le véhicule est en virage, ce qui améliore la tenue de route et la stabilité
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Réfection de boite de vitesses :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								La réfection d'une boîte de vitesse consiste à remettre à neuf les composants internes de la boîte de vitesse afin de la remettre en état de fonctionnement optimal.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Carter :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un carter est une enveloppe protégeant un organe mécanique, souvent fermée de façon étanche, et contenant le lubrifiant nécessaire à son fonctionnement ou des organes qui doivent être isolés de l’extérieur.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Verrouillage :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Le verrouillage d'une boîte de vitesse manuelle est un système qui empêche l'utilisateur de changer de vitesse lorsque le véhicule est en mouvement. Il est généralement utilisé pour des raisons de sécurité et de performance, car il permet de maintenir le véhicule à une vitesse sélectionnée, même si l'utilisateur relâche la commande de changement de vitesse.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Capteur de vitesses :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un capteur de vitesse mesure la vitesse d'un objet en utilisant différentes techniques telles que l'utilisation de roues encoders, GPS, ou radar. Il peut être utilisé dans diverses applications, comme les systèmes de navigation pour véhicules, les systèmes de contrôle de vitesse pour les machines industrielles, et les systèmes de surveillance de la vitesse sur les routes.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Joint d’étanchéité :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un joint d'étanchéité de boîte de vitesses est un composant qui est utilisé pour empêcher les fuites d'huile de la boîte de vitesses
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Biellettes internes :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les biellettes internes de boîte de vitesse sont des pièces mécaniques qui relient les différents composants de la boîte de vitesse, comme les leviers de vitesses et les synchroniseurs
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Satellites et planétaires :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Les satellites et planétaires sont des composants clés de certaines boîtes de vitesse, notamment les boîtes automatiques et les boîtes à variation continue (CVT)
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}

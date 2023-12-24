@@ -1,0 +1,278 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Souscription Garantie panne mécanique | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Souscrivez à notre garantie panne mécanique et protégez votre véhicule contre les imprévus ! Découvrez notre gamme complète de produits d'assurance automobile et choisissez la formule qui vous convient le mieux.
+{% endblock %}
+
+{% block body %}
+    {% include('./Modal/num_serie.html.twig') %}
+    {% include('./Modal/type_mine.html.twig') %}
+    {% include('./Modal/error_immat.html.twig') %}
+    {% include('./Modal/InvalidVehiculeEnergie.html.twig') %}
+
+
+    {% set vars = {'active': 'souscription'} %}
+	{% include('Header.html.twig') with vars %}
+
+	<div class="content">
+
+        <div class="header_souscription bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Souscription
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Infos véhicule</h2>
+				</div>
+			</div>
+		</div>
+
+        {% set num_etape = {'etape_souscription' : etape_souscription} %}
+        {% include('./souscription/ariane.html.twig') with num_etape %}
+
+		<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+
+			<div class="text-center">
+				<h3 class="TekoRegular text-3xl lg:text-5xl md:text-4xl mt-8 text-gray-900 pb-4" style="color: #333333;">Trouver votre offre avec votre immatriculation</h3>
+			</div>
+
+			{{ form_start(form_immat) }}
+			<div class="grid grid-cols-1 md:grid-cols-12 md:gap-6 gap-y-2">
+				<div class="TekoRegular col-start-1 md:col-start-3 md:col-span-4">
+					{{ form_row(form_immat.immat, {'attr': {'class':'form w-full text-2xl py-3 pl-3 border border-gray-400','type':'text','minlength':'4','maxlength':'','onkeypress':'return verifieImmat(event, "form_immat");', 'onkeyup':'this.value=this.value.toUpperCase()','name':'immatriculation','placeholder': 'Votre immatriculation*'}})}}
+                    <span class="span-invalid text-red-600 hidden form_immat text-base">*Ce champ est obligatoire</span>
+                </div>
+				<div class="TekoRegular col-start-1 md:col-start-7 md:col-span-4">
+					{{ form_row(form_immat.km, {'attr': {'class':'form w-full text-2xl py-3 pl-3 border border-gray-400','name':'km','placeholder': 'Votre kilométrage (Km)*','onkeypress':'return verifieNum(event, "form_km");'}})}}
+                    <span class="span-invalid text-red-600 hidden form_km text-base">*Ce champ est obligatoire</span>
+                </div>
+			</div>
+            <div class="flex flex-col">
+                <div class="lg:mx-8 content-center items-center mx-auto">
+                    <div class="grow flex flex-col-reverse">
+                        <div class="group mx-auto my-auto flex flex-row relative mt-8" style="color: transparent;">
+                            {{ form_widget(form_immat.calculer, {'label' :'Trouver mon véhicule', 'attr': {'class':'text-white text-center text-2xl bg-red-600 w-40 py-2 px-10 TekoRegular a_lbg w-full','type':'submit','name':'calculer'}})}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+			{{ form_end(form_immat) }}
+
+			<hr class="border border-gray-300 my-10">
+
+            <div id="form_vehicule">
+
+                <div class="text-center">
+                    <h3 class="TekoRegular text-2xl lg:text-5xl md:text-4xl  mt-8 text-gray-900 pb-4"style="color: #333333;">Ou renseignez vos informations manuellement</h3>
+                </div>
+
+			    {{ form_start(form_vehicule,{'attr': {'id': 'form_vehicule_exe'}}) }}
+                <div class="grid grid-cols-12 grid-rows-10 gap-y-3 text-sm TekoRegular">
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-1 relative my-2">
+                        {{ form_row(form_vehicule.marque, {'label':false, 'attr': {'class':'form w-full text-2xl pb-1 pl-3 custom-select text-sm h-fit','name':'marque','placeholder': 'Marque'}})}}
+                        <span class="span-invalid text-red-600 hidden form_marque text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-2 relative mb-2">
+                        {{ form_row(form_vehicule.modele, {'label':false, 'attr': {'class':'form w-full text-2xl pb-1 pl-3 custom-select','name':'modele','placeholder': 'Modèle'}})}}
+                        <span class="span-invalid text-red-600 hidden form_modele text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-3 relative">
+                        {{ form_row(form_vehicule.immatriculation, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','name':'immatriculation','placeholder': 'Immatriculation','onkeypress':'return verifieImmat(event, "form_immatriculation");', 'onkeyup':'this.value=this.value.toUpperCase()'}})}}
+                        <span class="span-invalid text-red-600 hidden form_immatriculation text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-4 relative">
+                        {{ form_row(form_vehicule.kilometrage, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','onkeypress':'return verifieNum(event, "form_kilometrage");','name':'kilometrage','placeholder': 'Kilométrage'}})}}
+                        <span class="span-invalid text-red-600 hidden form_kilometrage text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-5 relative">
+                        {{ form_row(form_vehicule.prix, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','onkeypress':'return verifieNum(event, "form_prix");','name':'prix','placeholder': 'Valeur à neuf (€)'}})}}
+                        <span class="span-invalid text-red-600 hidden form_prix text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-6 relative mb-2">
+                        {{ form_row(form_vehicule.energie, {'label':false, 'attr': {'class':'form w-full text-2xl pb-1 pl-3 custom-select','name':'energie','placeholder': 'Carburant'}})}}
+                        <span class="span-invalid text-red-600 hidden form_energie text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-7 relative">
+                        {% set Today = "now"|date("Y-m-d") %}
+                        {{ form_row(form_vehicule.date, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','max':Today,'name':'date','placeholder': 'Date de première mise en circulation'}})}}
+                        <span class="span-invalid text-red-600 hidden form_date text-base">*Ce champ est obligatoire</span>
+                    </div>
+                    <div class="col-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-8 relative">
+                        {{ form_row(form_vehicule.serie, {'label':false, 'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','name':'serie','onkeypress':'return verifieCaracteresEtNum(event, "form_serie");','placeholder': 'N° Serie'}})}}
+                        <span class="span-invalid text-red-600 hidden form_serie text-base">*Ce champ est obligatoire</span>
+                        <a id="myBtn" type="button" href="#Série" class="myBtn text-base col-start-2 col-span-10 row-start-9 italic underline text-xs TekoMedium text-red-600 font-medium">Où trouver le numéro de série ?</a>
+
+                    </div>
+                    <div class="ccol-start-1 col-span-12 md:col-start-3 md:col-span-8 row-start-9 relative">
+                        {{ form_row(form_vehicule.mine, { 'label':false,'attr': {'class':'form w-full text-2xl py-3 pl-3 form-login','onkeypress':'return verifieCaracteresEtNum(event, "form_mine");','name':'mine','placeholder': 'Type MINE'}})}}
+                        <span class="span-invalid text-red-600 hidden form_mine text-base">*Ce champ est obligatoire</span>
+                        <a id="myBtn" type="button" href="#MINE" class="myBtn text-base col-start-2 col-span-10 row-start-11 italic underline text-xs text-red-600 TekoMedium font-medium">Où trouver le type MINE ?</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-5">
+                    <div class="lg:mx-8 lg:my-3 content-center items-center mx-auto">
+                        <div class="grow flex flex-col-reverse ">
+                            <div class="group mx-auto my-auto flex flex-row" style="color: transparent;">
+                                {{ form_widget(form_vehicule.calculer, {'label' :'Calculer', 'attr': {'class':'relative text-white text-center text-2xl bg-red-600 w-40 py-2 px-4 TekoRegular a_lbg mt-6','name':'calculer'}})}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+			    {{ form_end(form_vehicule) }}
+
+            </div>
+
+		</div>
+
+	</div>
+
+    
+	{% include('footer.html.twig') %}
+	{% include('Header2.html.twig') with vars %}
+
+
+    <script>
+        const formVehicule = document.querySelector('#form_vehicule_exe');
+        formVehicule.addEventListener('submit', verify);
+        function verify(e){
+            e.preventDefault();
+             const energie=$("#form_energie").val();
+            const energies=["ELECTRIC"]
+                if(!energies.includes(energie)){
+                    formVehicule.submit();
+                }
+                else{
+                    $('#confirmation_energie_vehicule_verif').css("display", "block");
+
+                    document.querySelector('#verif_vehicule_non').onclick = function() {
+                        $('#confirmation_energie_vehicule_verif').css("display", "none")
+                    }
+
+                    document.querySelector('#verif_vehicule_oui').onclick = function() {
+                        $('#confirmation_energie_vehicule_verif').css("display", "none")
+                        window.location.replace("https://garantie-electrique.com/souscription/infos-vehicule?immat="+$('#form_immatriculation').val()+"&km="+$('#form_kilometrage').val());
+                    }
+                }
+
+
+
+
+        }
+
+        var btn = document.getElementsByClassName("myBtn");
+
+        btn[0].onclick = function() {
+            $('#myModal').css("display", "block")
+        }
+
+        btn[1].onclick = function() {
+            $('#myModal2').css("display", "block")
+        }
+
+     window.addEventListener('load', function() {
+
+            $(document).ready(function () {
+                if($("#form_date").val() == ""){
+                    $("#form_date").prop("type", "text");
+                }
+                
+                $('#form_marque').change(function () {
+                    listModele();
+                })
+                $('#form_modele').change(function () {
+                    changeModele();
+                })
+
+                if($('#form_marque').val() != ""){
+                    var aTag = $("div[id='form_vehicule']");
+                    $('#drawer-content').animate({scrollTop: aTag.offset().top - 100},'slow');
+                }
+
+            });
+
+            $("#form_date").focus(function(){
+                $(this).prop("type", "date");
+                
+            })
+
+            $("#form_date").focusout(function(){
+                if($(this).val() === ""){
+                    $(this).prop("type", "text");
+                }
+            })
+
+            if({{bError}} === 1){
+            console.log('blablabla')
+            var aTag = $("div[id='form_vehicule']");
+            $('#drawer-content').animate({scrollTop: aTag.offset().top - 100},'slow');
+            $('#modalError').css("display", "block")
+        }
+
+        })
+
+        
+
+     function changeModele(){
+         var $url = "{{path('app_ajax_set_modele',{'modele':"val"})}}";
+         var idSelect = document.getElementById('form_modele');
+         var valSelect = idSelect.options[idSelect.selectedIndex].value;
+         $url = $url.replace("val", valSelect)
+         $.ajax({
+             url: $url,
+             success: function (data) {
+                 console.log(data);
+             }
+         });
+     }
+
+    function listModele(){
+            if($('#form_marque option:selected').val() != "") {
+                var idSelect = document.getElementById('form_marque');
+                var valSelect = idSelect.options[idSelect.selectedIndex].value;
+                
+                var $url = "{{path('app_ajax_modele',{'marque':"val"})}}";
+                $url = $url.replace("val", valSelect)
+
+                $.ajax({
+                    url: $url,
+                    success: function (data) {
+                        $('#form_modele').children().remove();
+                        
+                        $('#form_modele').placeholder = "Sélectionnez le modèle*"
+                        var o = new Option(0, "");
+                        $(o).html("Sélectionnez le modèle*");
+                        $('#form_modele').attr("selected", 'selected');
+                        $('#form_modele').append(o);
+
+                        data.forEach(val => {
+                            var o = new Option(val,val);
+                            $(o).html(val);
+                            $('#form_modele').append(o);
+                        });
+                    }
+                });
+        }else{
+            $('#form_modele').children().remove();
+
+            $('#form_modele').placeholder = "Sélectionnez le modèle*"
+            var o = new Option(0, "");
+            $(o).html("Sélectionnez le modèle*");
+            $('#form_modele').attr("selected", 'selected');
+            $('#form_modele').append(o);
+        }
+
+    }
+        function closeModal(myModal){
+            $('#'+myModal).css("display", "none")
+        }
+
+</script>
+
+{% endblock %}

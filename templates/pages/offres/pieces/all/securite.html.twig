@@ -1,0 +1,67 @@
+{% extends "./base.html.twig" %}
+
+{% block title %}
+	Garantie pièces sécurité voiture | La Belle Garantie
+{% endblock %}
+
+{% block meta_description %}
+Protégez la sécurité de votre véhicule avec notre garantie de pièces mécaniques pour les ceintures et les airbags ! Découvrez notre couverture complète pour ces pièces vitales de sécurité intérieure.
+{% endblock %}
+
+{% block body %}
+
+	{% set vars = {'active': 'nos offres'} %}
+	{% include('header.html.twig') with vars %}
+
+
+	<div class="content">
+		<div class="bg_apropos bg-center bg-cover bg-no-repeat relative">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="pt-24 pb-36" style="background-image: linear-gradient(180deg,rgba(0,0,0,0.12) 0%,rgba(255,255,255,0) 100%);">
+					<h1 class="TekoMedium text-white uppercase text-7xl lg:text-9xl pb-5 px-4 md:pl-8">
+						Sécurité
+					</h1>
+					<h2 class="TekoLight text-white text-3xl md:text-4xl animation-title px-4 md:pl-8">Définition et composants</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-1 hide-div">
+			<div class="xl:container xl:px-48 lg:px-24 md:px-16 px-4">
+				<div class="bg-light px-16 lg:px-24 lg:-mt-28 gap-x-12 gap-y-12 py-2 lg:py-6">
+					<div class="lg:col-span-1 row-start-1">
+
+						<p class="TekoRegular text-lg italic py-10">
+							Attention : Cette page à pour but de donner une définition des composants. Pour voir les pièces couvertes par nos garanties, référez vous à la page
+							<a class="text-red-600" href="#">
+								Nos offres
+							</a>
+						</p>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Prétensionneur de ceinture :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								Un prétensionneur de ceinture de sécurité est un dispositif de sécurité dans un véhicule qui se tend automatiquement en cas de freinage brusque ou d'accident. Il a pour but de retenir les occupants dans leurs sièges et de les protéger contre les blessures en limitant les mouvements de la ceinture de sécurité.
+							</p>
+						</div>
+
+						<div class="py-2">
+							<h2 class="font-bold text-2xl lg:text-3xl TekoMedium text-red-600">
+								Système airbag :
+							</h2>
+							<p class="TekoRegular lg:text-2xl text-xl granite-gray">
+								L'airbag est un système de sécurité de voiture qui se déploie en cas d'accident pour protéger les occupants. Il fonctionne en gonflant rapidement pour absorber l'impact et réduire les blessures causées par le choc. Les airbags peuvent se trouver dans le volant, le siège conducteur, le tableau de bord et les portes. Les airbags modernes peuvent également être adaptatifs et s'ajuster en fonction de la gravité de l'impact et de la taille de l'occupant.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include('footer.html.twig') %}
+	{% include('header2.html.twig') with vars %}
+{% endblock %}
